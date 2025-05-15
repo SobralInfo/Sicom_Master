@@ -1,0 +1,1263 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'frmPrincipal'
+  ClientHeight = 498
+  ClientWidth = 985
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 985
+    Height = 33
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 6710886
+    ParentBackground = False
+    TabOrder = 0
+    object lblCaption: TLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 908
+      Height = 27
+      Align = alClient
+      Alignment = taCenter
+      Caption = 'Pedidos'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      ExplicitWidth = 64
+      ExplicitHeight = 23
+    end
+    object Image1: TImage
+      Left = 982
+      Top = 0
+      Width = 3
+      Height = 33
+      Cursor = crHandPoint
+      Align = alRight
+      Center = True
+      Stretch = True
+      ExplicitLeft = 1382
+    end
+    object Image2: TImage
+      Left = 948
+      Top = 0
+      Width = 34
+      Height = 33
+      Cursor = crHandPoint
+      Hint = 'Fechar'
+      Align = alRight
+      Center = True
+      ParentShowHint = False
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000019
+        000000190806000000C4E9856300000006624B474400FF00FF00FFA0BDA79300
+        0001B4494441544889EDD5B94B03411406F06F26874BD8A898E091460888A018
+        08626B6561A569EC2D45B0F2821C6AE21108586BE79F102DADEC6C4210AC141B
+        B188048F88AE4934669F450E37D9B8D9AC76FA756FDEECFC8679C502FF69214C
+        59D0CCB0557A10438CD11401A281C324023B129F3E36593259A8AC9B959BCA40
+        50A5B7049147EAE40460BDB2C66B363079DAE0D97510F3296B5ED7B6FF0602A0
+        5D0351C732E903EF7737EC318713A6116F535113318F4FC03A3B0721185541CC
+        E184B01683B01A86C9A30D6922C5C429E4AB0B307B0784500CDC3DF0058462E0
+        3D2E502603F936651CA15C16F91D7F09124508FE284CDEB112D0EB02DDA5918B
+        AC80EED2C69186D072B82540175281DEF67781F702C03920CB783BD8D305E846
+        98C389B6E53060B5008512D436BF549DD18F91EA902B4F1458A899911E481351
+        019115C837D7C847032D419A88C9330ADEEB829C4E21B7B1589D01655FCBD025
+        98CD06DEDDA78998B59A1F27C70080E27912F4705FD32B417EF0C12114CF12C6
+        1125D428947D6D0A00AAE7A297A65FE8CBF3B708811FFE86400C71655DF35C62
+        97B4253DDA8881F90CFF1919E262A6B8FDD38BFEE17C029B7AB2DD8E9236A500
+        00000049454E44AE426082}
+      ShowHint = True
+      OnClick = Image2Click
+      ExplicitLeft = 1352
+      ExplicitHeight = 31
+    end
+    object Image22: TImage
+      Left = 914
+      Top = 0
+      Width = 34
+      Height = 33
+      Cursor = crHandPoint
+      Hint = 'Minimizar'
+      Align = alRight
+      Center = True
+      ParentShowHint = False
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000017
+        000000170806000000E02AD4A000000006624B474400FF00FF00FFA0BDA79300
+        00004C494441544889EDD0310A00210C44D12FF65ECBBDA9C75BB1176DB45952
+        99C56A1EA40881490888884BF8F411488EBC06746BF00015188E7A816C851767
+        F0AE6285E7B5F9B7CBAFFD5C440E4C4EE838FC6664F1E40000000049454E44AE
+        426082}
+      ShowHint = True
+      OnClick = Image22Click
+      ExplicitLeft = 1352
+      ExplicitHeight = 31
+    end
+  end
+  object Panel7: TPanel
+    Left = 337
+    Top = 33
+    Width = 648
+    Height = 440
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 16750899
+    ParentBackground = False
+    TabOrder = 1
+    object Image12: TImage
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 642
+      Height = 434
+      Align = alClient
+      AutoSize = True
+      Center = True
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D49484452000000A5
+        0000003208060000003D481B21000000017352474200AECE1CE9000000046741
+        4D410000B18F0BFC6105000000097048597300000EC200000EC20115284A8000
+        0012E649444154785EED9C099055D599C7BF0B344DB3AFCA2E8BA14104942D46
+        94045263628219E352515309934C8A4CE2A0D1AA98498C19629C6492386A62C6
+        689C98D1D1C9A28989834631C208DAB237DBA02D3BB209B209F44A73E7FBBD77
+        2F9E77FADCAD69CA26F57E55B7E877EF7D7739E77FBEED9C8737E121DF972245
+        5A116D827F8B146935144559A4D55114659156475194455A1D45511669751445
+        59A4D55114659156475194455A1DA75C3C6FDF56A4AC44A49DCADB0BF699A4BD
+        F8093DF178A3489D6EF5BA9D0AFDBB887CF2032253CFF16570B7FCF31D3F21B2
+        BF5A64DD5E9117377B52F19648EDF1E00B0E7A9689FC6DB9488776EFBD81A72F
+        B87C97274B77063B12A03D46F616993ED497C90344067615E9DC3E7F8C7BEF3B
+        26B2FE1DD167C95FF3404DFE58125C67FA509129837C19DA43A4AB5EB38DB67F
+        4D83C8CE23222B76E5DF9177A55DB3C07547F6F6C554C5BBF59EFCF10D9163F5
+        C18E1868EF8F9FEB4B5B4B0CF3B77A52A5EF9A866689B2AC9DC8B87E2293FBFB
+        32441BA5BB7660A98AF35468D4A7A8D38E3A5227B2E7A8C89BFB3D59BD4764DB
+        A16C0D7BF12091AF4CF4A55CC5E01A2450A3F759B44DE4172BBDDCF55D0CD3F7
+        7A68862FDD3B043B027EB952E4C11551577E8F5E1D45AE1BEDCB2774709CD529
+        D819018370C37E91A7AB3CF9F386E84159AAED3E6384C867F4BAE768E7B78979
+        0C04FEFC469127D67AB257C59F861215F68FFFC6972983831D01D52AF6AF3DEF
+        49A5F647129F1F27327B72D30EFBC9124F1E5F137C4820B328FBEB28BD71923E
+        F839792B793AC1B2CDD3867D7CB527076B839D314CD567BAFD523F67E5D2F086
+        8EDCBB16B94730A27C5045D9A319A21CDA5DE4B629BE4CEC1FEC4809E29935D7
+        939DEF063B0C3AAAB5A7DDAF1E25D23643D0B572B7C80F5FF564F3C160470CDD
+        F45D1FF8842F237A053B0C1ED277FE0F7DF738D0C3DD97F9F2A181C10E8327D7
+        8BFC489F230D9962CAAEA53A622EF265DAB0EC82E471D23DD27B606DAE1FAB96
+        4F475ED2FD06E960F9473D2FAD2001D77AF9703FF373C5D1AF737E6064152410
+        1EB89E05117EF1025FAE1D9D4D90305E3DDA37748024596BE8A6FD1BD57E13FA
+        F9390F19C720B5DEE50E4103ED428897864CAF385DC57891BAC7B41057B01D57
+        5B7C54FD335B83FE8DDB69A75B9CFB31E1BEE7F5093E44401C838532C1ED2FD3
+        F8EA57AB447EBB4EE3B77D85A10071DC93AF7BA9E3DE241838B326F832AE6FB0
+        C341A3C6B6EF6A88827B3DAA319AF93C513E6BDA1075D9E7BB05CBF5DE518F82
+        958D72FB0873E6388DF3127ABBB71A8130E6B539B7675E74715CA0EF1D256A06
+        05D63E0D994449E29046ED61E3551E6A947FA9AA93EB9755CB8C8A63B9ED334B
+        ABE5EBEB6AE5BF7734C8C6A32772B16412BCCCF08811081CBFC8E13288CF6E7B
+        D19307967972F76B9EDCAC71D1C31A471253920C7CFF15B7AB6C2E976AF870D9
+        F0E0830571D99F3514B97D81275F79D6932FAB9BBEF1394FBEFBB2277FD99C4F
+        7CECE400E8E4CF8DF535E10A7618BCA97128DFE75AB8FDDBFE924FE05C4D4A6C
+        3B3E66B0C0D92A1CE25617C4D617AAB8A340F0E41851F4D0F7C012A721932889
+        B392A05D6B74C4FEDB863AF9D4E263F2CFEB6BE5995D0D52B1BF31B73DBBBB41
+        EED363335754E78EAF7BB7D1D9193651231868301AD484A4E9D90D5ECE1A851C
+        D2B8F4914A913BB5235B5A900C8CAB46BAC30CACD85D0BF3027C49058898B66A
+        8285E57E4E07CE7754A8DFD3E33BF4796CEFF111B592A31C5E62C301913BF47B
+        087DFB61CDBAF5BBAF6ED76BFDAF27F3F51E36B4DF15E5F1D6927CC1BCBD6DC9
+        27AA0B8F324AB867D39B61B519FC21DC9F702C0D994449209C0496EFDE4D7572
+        C7EBB5B2BB463FF0968E8D97DDA1C78FA86F6757120D11AE091042892506DAD2
+        6585B92F96898E6C49466B878C393BF8608085BC6FB1272FEA3D71B52E1A74FF
+        BC4D9A24A835C7B587601DA70F69DA3E74F8AF2ADDC9CB611D785415761D0976
+        1810E7127B47D1BF7361833178283385203ACA6D2EC69C555865785B07E26EE3
+        19A8CEF455E1A6219328ED8EB7C1E2551E6E949FA928731D60B466F7124F7AB7
+        F7A43D77E4DD75E3701A418269F16CB08AD4374DC20ECD9A18349789EABA5C89
+        00627B694BF02101AA0158F310EA91233419B3C1C256EC083E3840AC0B1CF724
+        663C5FC5E382816D8B86FB509E0B89FA3E7D3869805F60E55FD7EF9AA5288E45
+        09DA2653972525261C5EB0EFB8BC5317284E21A1993DBC545E98D2495EBCA493
+        FC7A52479935B4BD0CECD8464EA8320BC7A61BAC5B5CE1968E344765C8A74789
+        7CED83BE0C88B10E2D011D4A266F938F23BD02179885E19A5CB8E23092B7A442
+        F6D25D5E93C4872E29EFE57E18DC2BA233D97AD8CB15F743E8FF493AF86C1DF4
+        510B39CEF012DC8149067B32A09F6589A3C824CAA4C6C55D6EAF317C947E1E58
+        D6466E39B7BD4CEADE56C6746D2B57F62B91FBC795C9DC0F75929B86954A6755
+        6D9A478DF07C39885D5EDE66B5948258AED3ACF5FECB7DF907CD8AEDECBCA5A0
+        43FB39AC0031E2468DFD9ACB601D4CB600E8838D079ABEABCD360D4F4CAB1B82
+        F575C585C4E5E6440133607BD54A56EE2EBC176EDA162F03D27CFF832AC6557B
+        44F6371165BE4F92C824CAB8B80EA8B3959AADA87F1E6CF03599C94B8A06A53C
+        04E7776D23779ED741FF6D9B98817349BB886D43A6BD24C2A51147FDFDF8BC38
+        6F52CBC954584B8228BBE866C394DF312326CB4ACFB2A60D43964E09280966C6
+        5CA244782E61D8E5204222BEBF766FE1F427C990ED15C8BA990D0A2116DDAE03
+        F2404DA1A0B1A89D529485B28932CE5C295C6C8C8A0D71861C5651DEBCBA461E
+        D8529F1328EE9CC308917FF99C860BFAC6C787CCF8FCA8C293C531B1D6D93A52
+        3F375613B18FF972C5887C19A3252088373B25046144253749D02CAEBA1E162C
+        6ECE3E24EA3C4A3E2E4B493C698AB55ABF7B444304B2FA2A155908EF49FC1CE2
+        2A152D57EBCA7B3323670E2BCE4D932C67EA96244B49FB4FEFD34ECE53EB673E
+        CD966327E4E6353572EDD26AF9FDAE06A9D513D394814C2E1E9C2FA2C741464D
+        7985B24FDCE2062C25B31C33C7B58C307333318EF7696E2C190705F63413C351
+        E7F198AE67B5336F0614712B8668A5E5C22FEC9B9FDD830F68DC6B7A1E12D2CA
+        DDF9BF71DFA666B092B6EB77D1B2A2D4F71AAC09CCEDE5A5D25D33ED93C2D43F
+        B18C0B35099AB9A246BEB4B25A561E6ACCB96547FB38C16A308D387140B02302
+        2CE683CB3DB9E585FCCA164A242EB0185FB8C0CFCD969C2A241458261BDCA11D
+        13A685A673593AAC5C7B47966F13751ECF6A5B6F1ED18E8971DD619D91F97333
+        B14284CCF00056D32CEC6F3994CFFE816B98EF409BA7290B6512A5ABE16D10E6
+        55FD4BE4BEB1653248055A60BFF5ED6B549DBFDBD190B39A8F6DAFCFC59869FB
+        8D98E4EB6AE15CF540136E4939E307AF7872EB3C4FE6BE991FC13634E6D5A37C
+        A79BCC021DE68A1DE90096CD351712061B3AB6670A17D85107842B73A70E6A67
+        E52EB170EFF0BC2D2A32C416427B4D50974DFB31856982950CDB9A7BD9ED9E26
+        03CF24CA149ACC81C83E3BB0449E9CDC51AED57FCBF0D59638B7A94BBF6975AD
+        3CBCB5BEE05012CCBF7E736A7E695A120C90356FE75702DD3EDFCB05E036AC88
+        21233D1588BD581B6943821557AC4E62E791A6C3150BC81ACA24C874CD6C3A64
+        B766D4B6285DE5205C6F187EF07E584B933167FB39D73DC4A868705D4A412194
+        C408034CA855367DAB42328932CBC90878628FB6F2CBF11DE5D1096532A577BB
+        C287D10FC7D44C7EBFAA5656A82BCF126352A4CE120BE2AE9813BE67B1976B60
+        13467D9A153471E0A25C8227A89F3624CB902B64935A28FB79E1424DFA924A2B
+        58309707D8B0BF694353D9B0ADEA7E2B735EA171A52966D6737E706061D58112
+        989914D12EF692432CB2E9EE5D641265D6A48038B2837EE76A75E758CD6F8FEC
+        205DCD745BFF7CBBD697A735F949DB7558A4BB5FF564FDDE608701578E8BE158
+        48FBB63143019CEECA46B342A7B9AA1357944BECAA21139EC3B424246EB84E1B
+        AE1717C230C7CC6C960DEE94128F0D6111EEDEC42E3B31E8287185B0C0E2D2C1
+        851591D5EA95CC04931CC44E38B1C85D12166664EA8E34A24414A630681AE2C6
+        3EA59E7C5B13A0EF8EEA20A5D6755894614F13BA40903FD4389185072EA66AD2
+        F2A5F1D1EBFEC8FE6CEB419C1C3785991656C9BB0AE57DB4136EBBD897B10971
+        301687C4EB9AF3DE9BE5E2B9166D6F3ACA38F7EFC6B9D78ED247379CEF0E6F08
+        655CF3E5243966498BC1658B92F2CE5AFD7E08D6CE5C3B89AB375D37F01EF675
+        F01EBD2296B785B4A82879A4AA232764B3C68BB863539C3C349FAF195092CBD0
+        4DD3488928A9804E3271EF6B9E54440892154CB327F92ACA7C326417C879767E
+        4AD024A057F7429C75AA709D67AADC538AC4AD3FF8687E5689B9632C19C2C26D
+        F2DC578ECCAFD89E35A1B0800D518B4758AAF7AD4B7C19ADD763A091AC101B7F
+        75A29F9BC5B2C1F5CEDDD074EA11EC7250583837E18C652ABAF0FDE85A530FCC
+        91F39B201B3B0CE8A8CF999481671365E1F59BC0F18A03C7E5CAC5D572EFC6BA
+        9C3879093C76E8B5971D6C947DC6DC38F42CF19CC56713B2BA57B6051F2CE85C
+        7E17728E06DD5C96C2F87D1FF7E5968BF245F24FA90BFD8E26479F57EB62BB77
+        AC87EDD29BCB0B1B455ED3D8D505716B38ABF4D0277DF9B96EFCDC82ED5B97FA
+        27B358BBB6489CF6BBF56EB17F583DC34F3EE6E7AEF9537DDF07F49AFC46C615
+        6FF29B249787A13DEC7210098AB95A29E4FF5474AE840EA876B032C8064B693E
+        3B65AAA4C4329328ED0E75D14D05F6C691C6DC42DECB2B8EC9175656CBF7AAEA
+        E46E15E95757D5C88DAB6BE410CBCF0D266942945B3D14C326758D5125A9C96A
+        35F8C1980959EF0D63548C1FF6E50E15248B5CED009B24E24F6ADDD294BAD2C0
+        F5FE7D59FCEF61B0840C1EDC2B5692016536ABABB0FD3F552AF84DC1070BDC21
+        A101A226E376C1DACD872B3D67DD9336B1D7A29231BB421A3C8AB940C3249CC5
+        B1B10BE8BCDEA06E8E1166904994293429DDD42486BF6CDC7CF484FCE6AD0699
+        B3BE56BEB1B6561EDE522FBBF1D521FA6CC33AB791197D4B4C6FEEE46843F4DD
+        B14EBF7FBD6951380E84F8F81A4FE3A060470BC1E25B16F4A6FD39A98D4B3858
+        AEFB9778F2F2D660470670FDFC608B41ED82A4C32E071D5651BA9E8336B3E346
+        209921A6766116E143586812472651260987E35D70C5E170E71F7B0BD193BBEA
+        B9CCFE8C5061BADC93495CCC89ABE1279CF7EAE65ADC6A43FCF7F3E5F99F7C46
+        DD975770852B2E4B664386FB4F2F79F2F41BEE928E0B62668AFC4FA9AB76B14F
+        DDE05D8B3C796C75F42C9509C9CA2275D7D46759EA1605490799B4094272C59E
+        40866DBF1309DE5B1A66B8C0EADAA24CFAAD4FDBFE57CC9913FC9DC80D63E36B
+        4C74583501F59E063950AFBD1D25243DAFBC4B1BF9D7D16572DDC0F6A93A7AC9
+        4E4FD619D99F0D56929867C98EFCCF7159901C06E27410D686C505F3B7A88B5D
+        9AFF5D4C9CD08971A9DD6169B07E34FC66DD56ECF19C651A1B064A853E4BA59E
+        8FE521F4C9853F7A4FEE5BAF1DC5FEAD7A2D1601B35A1C41DA753D13AC17968A
+        B9686690783F365E830A07ABC44938F841DC23AB10B09798C4516027A4A026CA
+        3BF26EAFE973B3E0D8058387B621B6A45D6893799BDD1313C0A0E7FA2CF80DDB
+        91365DE8586A1892E977DF7FBCDE97B31232271A879872A92634FC706C93263B
+        EFA8401146990A85CCFB925EEDD465B793619D922D64C83D9A793FB52EF89002
+        3252DC12C2CA0D16ED30CA1A5881B42F1CD56CA91BCCA093760CD3835D75A31E
+        499C45DC46CC65CE2B6781CEA62CC4E208C4892871A56C69DB357CC7ACEF64B6
+        4DD2775DED18F79D4CA2FCCF4FFBCEE5F936B83D1E048BC09A5FE6BBF95BBDB5
+        7422E60C4677DA86E3B43B1778B9ECB6C85F3F2A8FF4607ED38000B198888919
+        1D4A3E7DDA7BB9DFE9501AE2785A410216204DACF8574D4F913FCC52F7ADDB6C
+        56E8189FEF71FDACD73EFF0C229328176C29FCC96A5AD05FB8350732D934715C
+        6B62F6B57941D89B5340450AC824CA653B449ED18CB2B9E26A0E04FE4FAC69DE
+        60680D6CAF1499F80BDD9ED2BFF5F3D48FB690E552AF7515D7D5EDD6881AE699
+        4A265192AC3CA259223533B228572DAB2540F48870B96691C49251538B6714DA
+        5E0B026B3FCDB096B6452DB0A4FAF7C963D7689218EC0EB927387652E409E743
+        F89D709B11EC6F4D34FBFFA7A4B6C55A3AA6A828C032B59566C6270E9E04E1B3
+        C094B201E512B2E63311C436B347DE525EB5AC70DFC297F2D60D814CD5FD8FAA
+        15BD5F455BF059FFFD43202CE7E7533DDFF83C47ADED5CFDB7B590C9529A201C
+        E6A39F7B53E4B76B45FE6B95BEAC76C0A96C8FE9357EBD46E4F90D925B9A76A6
+        0AD2895AB3692A48988FBB55AB86204407DE3C15085043052C69B96E394B671C
+        8F23E9FCF249D1F7FBA21E6B4D345B9445D231F8C242771A5AA5F2D0E5AA509F
+        E0B86E738606FB4C0E69A217FC998AA4F3B35EEF7DA028CAD3CCC94427D84237
+        59155A33B55C9F358EB385EEFEB4C06290E0CFD64A5194EF17EAC217F2AF5ACA
+        2FABEB0DC1CD92EC54E9F15C7EA7D6334D3292747E950A3DBCDF658195E6FF37
+        87474EE72068064551BE8FDCAA56F151B5949489C26CF80975F739D4927E53AD
+        2CCC31DC7F2429CEE77E0873A61EE35EAD31C9816667DF458A9C2E8A96B248AB
+        A328CA22AD0C91FF07853C62BF85C6C8130000000049454E44AE426082}
+      ExplicitWidth = 165
+      ExplicitHeight = 50
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 33
+    Width = 337
+    Height = 440
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = 16750899
+    ParentBackground = False
+    TabOrder = 2
+    object CategoryPanelGroup1: TCategoryPanelGroup
+      Left = 0
+      Top = 0
+      Width = 337
+      Height = 440
+      VertScrollBar.Tracking = True
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      ChevronColor = clNavy
+      ChevronHotColor = clBlack
+      Color = 16750899
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      GradientBaseColor = 16750899
+      GradientColor = 16750899
+      GradientDirection = gdHorizontal
+      HeaderAlignment = taCenter
+      HeaderFont.Charset = DEFAULT_CHARSET
+      HeaderFont.Color = clWhite
+      HeaderFont.Height = -13
+      HeaderFont.Name = 'Tahoma'
+      HeaderFont.Style = [fsBold]
+      HeaderStyle = hsImage
+      ParentFont = False
+      TabOrder = 0
+      object CategoryPanel2: TCategoryPanel
+        Top = 60
+        Height = 94
+        Caption = 'Consultas'
+        Color = 16750899
+        TabOrder = 0
+        object SpeedButton6: TSpeedButton
+          Left = 0
+          Top = 33
+          Width = 331
+          Height = 33
+          Cursor = crHandPoint
+          Align = alTop
+          Caption = 'Pedidos Cancelados'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 6710886
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = SpeedButton6Click
+          ExplicitTop = 8
+          ExplicitWidth = 314
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 331
+          Height = 33
+          Cursor = crHandPoint
+          Align = alTop
+          Caption = 'Pedidos Pendentes'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 6710886
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = SpeedButton1Click
+          ExplicitTop = 8
+        end
+        object Image9: TImage
+          Left = 13
+          Top = 6
+          Width = 28
+          Height = 22
+          Cursor = crHandPoint
+          Center = True
+          Picture.Data = {
+            0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000014
+            0000001408060000008D891D0D00000006624B474400FF00FF00FFA0BDA79300
+            00017349444154388DADD4BF4B96511407F08F96E09FD0AB166289B644E05029
+            3AE81C0EF14ED1EC5FE0E4E4D2A046438B73140E420EFD058A224DA134143845
+            50C14B240A0AE28FE1DEC76ED7E7F5F501BF7039DC73EEF9DEEFB9CF730ED78C
+            B612DF030C5C31FF1BB62F3B701B0D9C5E71FD416F33851D58C3234CE37B12EB
+            471D2F13DF1DCCE313C67094AB7B156F9D2B51FE164F4BFC733167210F8CE0A4
+            42A9F93AC130DC8C845D42F99BF851A2E432F4E009BA53C202AFB19CF9263198
+            EC37B09EECEB91504AB8176DAD44C1F398546036232C452776B15A12EBC350B2
+            BAB2F88CF08E6379E27B1CE356ABDB336CE1176E407B12E8C63EFE5620BB2F74
+            D64A14734E58C3283EE2B0026151FEEF3CF04C78871715C80865FEC4D7C2D19E
+            D92AEA08652E09C36428256A857758C44454956233DA3E2EFED88FA36D133AE0
+            2EEE613C9E9D12DEEB8330488E939CFF50D7BC4F0FF045F8926FF0B9C9B97AA1
+            847FFD98A2811DA1B74FB3583F1E96945E750EB4C6194694648E965D3B4F0000
+            000049454E44AE426082}
+        end
+        object Image4: TImage
+          Left = 13
+          Top = 39
+          Width = 28
+          Height = 22
+          Cursor = crHandPoint
+          Center = True
+          Picture.Data = {
+            0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000014
+            0000001408060000008D891D0D00000006624B474400FF00FF00FFA0BDA79300
+            00017349444154388DADD4BF4B96511407F08F96E09FD0AB166289B644E05029
+            3AE81C0EF14ED1EC5FE0E4E4D2A046438B73140E420EFD058A224DA134143845
+            50C14B240A0AE28FE1DEC76ED7E7F5F501BF7039DC73EEF9DEEFB9CF730ED78C
+            B612DF030C5C31FF1BB62F3B701B0D9C5E71FD416F33851D58C3234CE37B12EB
+            471D2F13DF1DCCE313C67094AB7B156F9D2B51FE164F4BFC733167210F8CE0A4
+            42A9F93AC130DC8C845D42F99BF851A2E432F4E009BA53C202AFB19CF9263198
+            EC37B09EECEB91504AB8176DAD44C1F398546036232C452776B15A12EBC350B2
+            BAB2F88CF08E6379E27B1CE356ABDB336CE1176E407B12E8C63EFE5620BB2F74
+            D64A14734E58C3283EE2B0026151FEEF3CF04C78871715C80865FEC4D7C2D19E
+            D92AEA08652E09C36428256A857758C44454956233DA3E2EFED88FA36D133AE0
+            2EEE613C9E9D12DEEB8330488E939CFF50D7BC4F0FF045F8926FF0B9C9B97AA1
+            847FFD98A2811DA1B74FB3583F1E96945E750EB4C6194694648E965D3B4F0000
+            000049454E44AE426082}
+        end
+      end
+      object CategoryPanel1: TCategoryPanel
+        Top = 0
+        Height = 60
+        Cursor = crHandPoint
+        Caption = 'Cadastros'
+        Color = 16750899
+        TabOrder = 1
+        object SpeedButton5: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 331
+          Height = 33
+          Cursor = crHandPoint
+          Align = alTop
+          Caption = 'Pedido'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 6710886
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = SpeedButton5Click
+          ExplicitTop = 5
+          ExplicitWidth = 308
+        end
+        object Image3: TImage
+          Left = 13
+          Top = 6
+          Width = 28
+          Height = 22
+          Cursor = crHandPoint
+          Center = True
+          Picture.Data = {
+            0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000014
+            0000001408060000008D891D0D00000006624B474400FF00FF00FFA0BDA79300
+            0000D749444154388DD592C10D824010451FC632B8D88307D13AA00FE903ED03
+            EEDA813462112662F0322B935997054EFA93C9CECFFEFCCCDF1DF83754401FA8
+            0E38C40C12C337C036A0ED802BF09862386664F1022E31E3B1A8B69EC03E3621
+            226EA5CF8046FA54F14C3405901BAFC6707A11E5D23B685E4B39BD2E0F53236B
+            C39BD4C7706D4C4F7296120B60A77869F46739B390E15CD463974B22570C1B02
+            C0CA98160C511329CDBD9FB4B0918FAA7793A48ABBB571B06FEA4D38173A9187
+            257BE8AD8D35FCB6A839E14FF1F4FA0D43A3B7E6EE1ED1FF38DE134966208418
+            2C270000000049454E44AE426082}
+        end
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    AlignWithMargins = True
+    Left = 3
+    Top = 476
+    Width = 979
+    Height = 19
+    Color = 14737632
+    Panels = <
+      item
+        Width = 230
+      end
+      item
+        Text = 'Tempo de Conex'#227'o: 00:00:00'
+        Width = 200
+      end
+      item
+        Width = 250
+      end
+      item
+        Text = 'Desenvolvido por Sobral Info | Acesse www.sobralinfo.com.br  '
+        Width = 250
+      end>
+  end
+  object ConexaoLocal: TFDConnection
+    Params.Strings = (
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'Database=C:\Users\sobra\OneDrive\Pedido (OnLine)\DB\PEDIDO.FDB'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 207
+    Top = 136
+  end
+  object dtsClientes: TDataSource
+    DataSet = qryClientes
+    Left = 263
+    Top = 176
+  end
+  object qryClientes: TFDQuery
+    Connection = ConexaoLocal
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'select * from clientes')
+    Left = 263
+    Top = 120
+    object qryClientesID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryClientesSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryClientesCPF_CNPJ: TStringField
+      FieldName = 'CPF_CNPJ'
+      Origin = 'CPF_CNPJ'
+      Size = 14
+    end
+    object qryClientesNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 100
+    end
+    object qryClientesLOGRADOURO: TStringField
+      FieldName = 'LOGRADOURO'
+      Origin = 'LOGRADOURO'
+      Size = 120
+    end
+    object qryClientesNUMERO: TStringField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+      Size = 30
+    end
+    object qryClientesCOMPLEMENTO: TStringField
+      FieldName = 'COMPLEMENTO'
+      Origin = 'COMPLEMENTO'
+      Size = 120
+    end
+    object qryClientesBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Size = 120
+    end
+    object qryClientesCIDADE: TIntegerField
+      FieldName = 'CIDADE'
+      Origin = 'CIDADE'
+    end
+    object qryClientesCONTATO: TStringField
+      FieldName = 'CONTATO'
+      Origin = 'CONTATO'
+      Size = 11
+    end
+    object qryClientesFONE_FIXO: TStringField
+      FieldName = 'FONE_FIXO'
+      Origin = 'FONE_FIXO'
+      Size = 10
+    end
+    object qryClientesREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'REFERENCIA'
+      Size = 250
+    end
+    object qryClientesCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Origin = 'CELULAR'
+      EditMask = '(99)99999.9999;0;_'
+      FixedChar = True
+      Size = 11
+    end
+    object qryClientescalcCPFCNPJ: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'calcCPFCNPJ'
+      Calculated = True
+    end
+  end
+  object dtsMunicipio: TDataSource
+    DataSet = qryMunicipio
+    Left = 335
+    Top = 176
+  end
+  object qryMunicipio: TFDQuery
+    Connection = ConexaoLocal
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'select * from cidade ORDER BY uf_sigla')
+    Left = 335
+    Top = 120
+    object qryMunicipioID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+    end
+    object qryMunicipioCID_CODIGO: TStringField
+      FieldName = 'CID_CODIGO'
+      Origin = 'CID_CODIGO'
+      Required = True
+      FixedChar = True
+      Size = 7
+    end
+    object qryMunicipioUF_SIGLA: TStringField
+      FieldName = 'UF_SIGLA'
+      Origin = 'UF_SIGLA'
+      Required = True
+      FixedChar = True
+      Size = 2
+    end
+    object qryMunicipioCID_NOME: TStringField
+      FieldName = 'CID_NOME'
+      Origin = 'CID_NOME'
+      Required = True
+      Size = 40
+    end
+  end
+  object qryFuncionarios: TFDQuery
+    Connection = ConexaoLocal
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'select * from FUNCIONARIOS')
+    Left = 408
+    Top = 128
+    object qryFuncionariosID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryFuncionariosSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryFuncionariosCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      Size = 30
+    end
+    object qryFuncionariosNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 120
+    end
+    object qryFuncionariosPERCENTUAL_COMISSAO: TFloatField
+      FieldName = 'PERCENTUAL_COMISSAO'
+      Origin = 'PERCENTUAL_COMISSAO'
+    end
+  end
+  object dtsFuncionarios: TDataSource
+    DataSet = qryFuncionarios
+    Left = 400
+    Top = 184
+  end
+  object dtsUnidades: TDataSource
+    DataSet = qryUnidades
+    Left = 472
+    Top = 176
+  end
+  object qryUnidades: TFDQuery
+    Connection = ConexaoLocal
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'select * from unidade_produtos ORDER BY sigla')
+    Left = 472
+    Top = 120
+    object qryUnidadesID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryUnidadesSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUnidadesDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 60
+    end
+    object qryUnidadesSIGLA: TStringField
+      FieldName = 'SIGLA'
+      Origin = 'SIGLA'
+      Size = 15
+    end
+    object qryUnidadesFATOR: TFloatField
+      FieldName = 'FATOR'
+      Origin = 'FATOR'
+      DisplayFormat = '#0.000'
+    end
+    object qryUnidadesPODE_FRACIONAR: TStringField
+      FieldName = 'PODE_FRACIONAR'
+      Origin = 'PODE_FRACIONAR'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUnidadescalcSTATUS: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'calcSTATUS'
+      Size = 15
+      Calculated = True
+    end
+  end
+  object qryProdutos: TFDQuery
+    Connection = ConexaoLocal
+    FetchOptions.AssignedValues = [evRowsetSize]
+    FetchOptions.RowsetSize = 100000000
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'select p.id,'
+      '       p.status,'
+      '       p.descricao,'
+      '       p.qtde_estoque,'
+      '       p.referencia,'
+      '       p.id_unidade,'
+      '       p.codigo_barras,'
+      '       p.valor_unitario,'
+      '       p.imprimir_cozinha,'
+      '       p.id_categoria,'
+      '       u.sigla as unidade,'
+      '       u.fator,'
+      '       '#39'N'#39' AS kit'
+      '  from produtos p,'
+      '       unidade_produtos u'
+      ' WHERE p.id_unidade = u.id'
+      ' UNION'
+      'select -1 AS id,'
+      '       k.status,'
+      '       k.descricao,'
+      '       0.00 AS qtde_estoque,'
+      '       '#39#39' AS referencia,'
+      '       1 AS id_unidade,'
+      '       k.gtin AS codigo_barras,'
+      '       K.valor AS valor_unitario,'
+      '       '#39'N'#39' AS imprimir_cozinha,'
+      '       1 AS id_categoria,'
+      '       '#39'UND'#39' as unidade,'
+      '       1 AS fator,'
+      '       '#39'S'#39' AS kit'
+      '  from kit_produto_cabecalho k'
+      '')
+    Left = 528
+    Top = 112
+    object qryProdutosID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryProdutosSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryProdutosDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 120
+    end
+    object qryProdutosQTDE_ESTOQUE: TFloatField
+      FieldName = 'QTDE_ESTOQUE'
+      Origin = 'QTDE_ESTOQUE'
+      DisplayFormat = '#0.000'
+    end
+    object qryProdutosREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'REFERENCIA'
+      Size = 80
+    end
+    object qryProdutosID_UNIDADE: TIntegerField
+      FieldName = 'ID_UNIDADE'
+      Origin = 'ID_UNIDADE'
+    end
+    object qryProdutosCODIGO_BARRAS: TStringField
+      FieldName = 'CODIGO_BARRAS'
+      Origin = 'CODIGO_BARRAS'
+      FixedChar = True
+      Size = 15
+    end
+    object qryProdutosVALOR_UNITARIO: TFloatField
+      FieldName = 'VALOR_UNITARIO'
+      Origin = 'VALOR_UNITARIO'
+      DisplayFormat = '###,#0.00'
+    end
+    object qryProdutosUNIDADE: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'UNIDADE'
+      Origin = 'SIGLA'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 15
+    end
+    object qryProdutosFATOR: TFloatField
+      AutoGenerateValue = arDefault
+      FieldName = 'FATOR'
+      Origin = 'FATOR'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object qryProdutosIMPRIMIR_COZINHA: TStringField
+      FieldName = 'IMPRIMIR_COZINHA'
+      Origin = 'IMPRIMIR_COZINHA'
+      FixedChar = True
+      Size = 1
+    end
+    object qryProdutosID_CATEGORIA: TIntegerField
+      FieldName = 'ID_CATEGORIA'
+      Origin = 'ID_CATEGORIA'
+    end
+    object qryProdutosKIT: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'KIT'
+      Origin = 'KIT'
+      ProviderFlags = []
+      ReadOnly = True
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object dtsProdutos: TDataSource
+    DataSet = qryProdutos
+    Left = 528
+    Top = 168
+  end
+  object dtsParametros: TDataSource
+    DataSet = qryParametros
+    Left = 576
+    Top = 167
+  end
+  object qryParametros: TFDQuery
+    Connection = ConexaoLocal
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'SELECT * FROM CONFIGURACOES')
+    Left = 576
+    Top = 112
+    object qryParametrosID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryParametrosBASE_LOCAL: TStringField
+      FieldName = 'BASE_LOCAL'
+      Origin = 'BASE_LOCAL'
+      FixedChar = True
+      Size = 1
+    end
+    object qryParametrosCAIXA: TStringField
+      FieldName = 'CAIXA'
+      Origin = 'CAIXA'
+      FixedChar = True
+      Size = 3
+    end
+    object qryParametrosTIPO_DESCONTO_PEDIDO: TStringField
+      FieldName = 'TIPO_DESCONTO_PEDIDO'
+      Origin = 'TIPO_DESCONTO_PEDIDO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryParametrosTIPO_IMPRESSAO: TIntegerField
+      FieldName = 'TIPO_IMPRESSAO'
+      Origin = 'TIPO_IMPRESSAO'
+    end
+    object qryParametrosCERTIFICADO: TStringField
+      FieldName = 'CERTIFICADO'
+      Origin = 'CERTIFICADO'
+      Size = 120
+    end
+    object qryParametrosID_UNIDADE_PADRAO_ENTRADA: TIntegerField
+      FieldName = 'ID_UNIDADE_PADRAO_ENTRADA'
+      Origin = 'ID_UNIDADE_PADRAO_ENTRADA'
+    end
+    object qryParametrosID_UNIDADE_PADRAO_PRODUTO: TIntegerField
+      FieldName = 'ID_UNIDADE_PADRAO_PRODUTO'
+      Origin = 'ID_UNIDADE_PADRAO_PRODUTO'
+    end
+    object qryParametrosCRITICAR_ESTOQUE: TStringField
+      FieldName = 'CRITICAR_ESTOQUE'
+      Origin = 'CRITICAR_ESTOQUE'
+      FixedChar = True
+      Size = 1
+    end
+    object qryParametrosMENSAGEM_IMPRIMIR: TStringField
+      FieldName = 'MENSAGEM_IMPRIMIR'
+      Origin = 'MENSAGEM_IMPRIMIR'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object qryUsuarios: TFDQuery
+    Connection = ConexaoLocal
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'select * from usuarios ORDER BY nome')
+    Left = 664
+    Top = 112
+    object qryUsuariosID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryUsuariosSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      Size = 30
+    end
+    object qryUsuariosNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 120
+    end
+    object qryUsuariosPW: TStringField
+      FieldName = 'PW'
+      Origin = 'PW'
+      Size = 120
+    end
+    object qryUsuariosCPF: TStringField
+      FieldName = 'CPF'
+      LookupDataSet = qryClientes
+      Origin = 'CPF'
+      EditMask = '999.999.999-99;0;_'
+      FixedChar = True
+      Size = 11
+    end
+    object qryUsuarioscalcUsuario: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'calcUsuario'
+      Size = 10
+      Calculated = True
+    end
+    object qryUsuariosFILTRO_CADASTRO_EMPRESA: TStringField
+      FieldName = 'FILTRO_CADASTRO_EMPRESA'
+      Origin = 'FILTRO_CADASTRO_EMPRESA'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_CADASTRO_USUARIOS: TStringField
+      FieldName = 'FILTRO_CADASTRO_USUARIOS'
+      Origin = 'FILTRO_CADASTRO_USUARIOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_CADASTRO_FUNCIONARIOS: TStringField
+      FieldName = 'FILTRO_CADASTRO_FUNCIONARIOS'
+      Origin = 'FILTRO_CADASTRO_FUNCIONARIOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_CADASTRO_CLIENTES: TStringField
+      FieldName = 'FILTRO_CADASTRO_CLIENTES'
+      Origin = 'FILTRO_CADASTRO_CLIENTES'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_CADASTRO_UNIDADES: TStringField
+      FieldName = 'FILTRO_CADASTRO_UNIDADES'
+      Origin = 'FILTRO_CADASTRO_UNIDADES'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_CADASTRO_PRODUTOS: TStringField
+      FieldName = 'FILTRO_CADASTRO_PRODUTOS'
+      Origin = 'FILTRO_CADASTRO_PRODUTOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_CADASTRO_PAGAMENTOS: TStringField
+      FieldName = 'FILTRO_CADASTRO_PAGAMENTOS'
+      Origin = 'FILTRO_CADASTRO_PAGAMENTOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_VENDAS: TStringField
+      FieldName = 'FILTRO_ACESSO_VENDAS'
+      Origin = 'FILTRO_ACESSO_VENDAS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_EXPORTACOES: TStringField
+      FieldName = 'FILTRO_ACESSO_EXPORTACOES'
+      Origin = 'FILTRO_ACESSO_EXPORTACOES'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_RELATORIOS: TStringField
+      FieldName = 'FILTRO_ACESSO_RELATORIOS'
+      Origin = 'FILTRO_ACESSO_RELATORIOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_CONFIGURACOES: TStringField
+      FieldName = 'FILTRO_ACESSO_CONFIGURACOES'
+      Origin = 'FILTRO_ACESSO_CONFIGURACOES'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_PED_ATIVOS: TStringField
+      FieldName = 'FILTRO_ACESSO_PED_ATIVOS'
+      Origin = 'FILTRO_ACESSO_PED_ATIVOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_PED_CANCELADOS: TStringField
+      FieldName = 'FILTRO_ACESSO_PED_CANCELADOS'
+      Origin = 'FILTRO_ACESSO_PED_CANCELADOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_CANC_VENDA: TStringField
+      FieldName = 'FILTRO_ACESSO_CANC_VENDA'
+      Origin = 'FILTRO_ACESSO_CANC_VENDA'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_CANC_PEDIDO: TStringField
+      FieldName = 'FILTRO_ACESSO_CANC_PEDIDO'
+      Origin = 'FILTRO_ACESSO_CANC_PEDIDO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_GERAR_PEDIDO: TStringField
+      FieldName = 'FILTRO_GERAR_PEDIDO'
+      Origin = 'FILTRO_GERAR_PEDIDO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFILTRO_ACESSO_FECHAMENTO: TStringField
+      FieldName = 'FILTRO_ACESSO_FECHAMENTO'
+      Origin = 'FILTRO_ACESSO_FECHAMENTO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosCADASTRO_FORNECEDORES: TStringField
+      FieldName = 'CADASTRO_FORNECEDORES'
+      Origin = 'CADASTRO_FORNECEDORES'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosCADASTRO_CATEGORIA: TStringField
+      FieldName = 'CADASTRO_CATEGORIA'
+      Origin = 'CADASTRO_CATEGORIA'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosCADASTRO_KIT_PRODUTOS: TStringField
+      FieldName = 'CADASTRO_KIT_PRODUTOS'
+      Origin = 'CADASTRO_KIT_PRODUTOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosCADASTRO_CAIXAS: TStringField
+      FieldName = 'CADASTRO_CAIXAS'
+      Origin = 'CADASTRO_CAIXAS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosCADASTRO_PROMOCOES: TStringField
+      FieldName = 'CADASTRO_PROMOCOES'
+      Origin = 'CADASTRO_PROMOCOES'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosENTRADA_MANUAL: TStringField
+      FieldName = 'ENTRADA_MANUAL'
+      Origin = 'ENTRADA_MANUAL'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosIMPORTACAO_DE_XML: TStringField
+      FieldName = 'IMPORTACAO_DE_XML'
+      Origin = 'IMPORTACAO_DE_XML'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFIADO: TStringField
+      FieldName = 'FIADO'
+      Origin = 'FIADO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosREL_VENDAS_POR_PERIODO: TStringField
+      FieldName = 'REL_VENDAS_POR_PERIODO'
+      Origin = 'REL_VENDAS_POR_PERIODO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosREL_PRODUTOS_MAIS_VENDIDOS: TStringField
+      FieldName = 'REL_PRODUTOS_MAIS_VENDIDOS'
+      Origin = 'REL_PRODUTOS_MAIS_VENDIDOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosREL_ESTOQUE_PRODUTOS: TStringField
+      FieldName = 'REL_ESTOQUE_PRODUTOS'
+      Origin = 'REL_ESTOQUE_PRODUTOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosREL_CONTROLE_FIADO_CLIENTE: TStringField
+      FieldName = 'REL_CONTROLE_FIADO_CLIENTE'
+      Origin = 'REL_CONTROLE_FIADO_CLIENTE'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosBLOQUEAR_CLIENTE_VENDA_FIADO: TStringField
+      FieldName = 'BLOQUEAR_CLIENTE_VENDA_FIADO'
+      Origin = 'BLOQUEAR_CLIENTE_VENDA_FIADO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosRECEBIMENTO_DE_PG_FIADOS: TStringField
+      FieldName = 'RECEBIMENTO_DE_PG_FIADOS'
+      Origin = 'RECEBIMENTO_DE_PG_FIADOS'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosCANCELAR_VENDA: TStringField
+      FieldName = 'CANCELAR_VENDA'
+      Origin = 'CANCELAR_VENDA'
+      FixedChar = True
+      Size = 1
+    end
+    object qryUsuariosFECHAMENTO_DE_CAIXA: TStringField
+      FieldName = 'FECHAMENTO_DE_CAIXA'
+      Origin = 'FECHAMENTO_DE_CAIXA'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object dtsUsuarios: TDataSource
+    DataSet = qryUsuarios
+    Left = 664
+    Top = 168
+  end
+  object qryEmpresa: TFDQuery
+    Connection = ConexaoLocal
+    UpdateOptions.AssignedValues = [uvUpdateMode]
+    UpdateOptions.UpdateMode = upWhereAll
+    SQL.Strings = (
+      'select * from empresa ORDER BY fantasia')
+    Left = 744
+    Top = 112
+    object qryEmpresaID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      Required = True
+    end
+    object qryEmpresaCNPJ: TStringField
+      FieldName = 'CNPJ'
+      Origin = 'CNPJ'
+      EditMask = '99.999.999/9999-99;0;_'
+      FixedChar = True
+      Size = 14
+    end
+    object qryEmpresaRAZAO_SOCIAL: TStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Size = 120
+    end
+    object qryEmpresaFANTASIA: TStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 100
+    end
+    object qryEmpresaFONE: TStringField
+      FieldName = 'FONE'
+      Origin = 'FONE'
+      FixedChar = True
+      Size = 10
+    end
+    object qryEmpresaCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Origin = 'CELULAR'
+      FixedChar = True
+      Size = 11
+    end
+    object qryEmpresaEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 100
+    end
+    object qryEmpresaSITE: TStringField
+      FieldName = 'SITE'
+      Origin = 'SITE'
+      Size = 100
+    end
+    object qryEmpresaBASE_LOCAL: TStringField
+      FieldName = 'BASE_LOCAL'
+      Origin = 'BASE_LOCAL'
+      FixedChar = True
+      Size = 1
+    end
+    object qryEmpresaULTIMO_NSU: TIntegerField
+      FieldName = 'ULTIMO_NSU'
+      Origin = 'ULTIMO_NSU'
+    end
+    object qryEmpresaCODIGO_UF: TIntegerField
+      FieldName = 'CODIGO_UF'
+      Origin = 'CODIGO_UF'
+    end
+    object qryEmpresaDATA_HORA_BLOQUEIO_XML: TSQLTimeStampField
+      FieldName = 'DATA_HORA_BLOQUEIO_XML'
+      Origin = 'DATA_HORA_BLOQUEIO_XML'
+    end
+    object qryEmpresaID_MUNICIPIO: TIntegerField
+      FieldName = 'ID_MUNICIPIO'
+      Origin = 'ID_MUNICIPIO'
+    end
+  end
+  object dtsEmpresa: TDataSource
+    DataSet = qryEmpresa
+    Left = 744
+    Top = 168
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 576
+    Top = 126
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Method = rmPOST
+    Params = <
+      item
+        Kind = pkREQUESTBODY
+        Name = 'body'
+        Options = [poDoNotEncode]
+        ContentType = ctAPPLICATION_JSON
+      end>
+    Response = RESTResponse1
+    ConnectTimeout = 1000000000
+    ReadTimeout = 1000000000
+    SynchronizedEvents = False
+    Left = 632
+    Top = 70
+  end
+end

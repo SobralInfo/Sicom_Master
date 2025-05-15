@@ -1,0 +1,33 @@
+unit BaseLocalSuprimentoController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalSuprimentoVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client, generics.collections;
+
+Type TBaseLocalSuprimentoController = class
+
+   public
+      class Procedure GravarSuprimento(suprimento: tBaseLocalsuprimentoVO);
+      class Procedure AlterarSuprimento(suprimento: tBaseLocalsuprimentoVO);
+      class Function RetornarSuprimentoPorData(suprimento: tBaseLocalsuprimentoVO): ;
+
+
+end;
+
+implementation
+
+{ TBaseLocalSuprimentoController }
+
+class procedure TBaseLocalSuprimentoController.AlterarSuprimento(suprimento: tBaseLocalsuprimentoVO);
+begin
+
+end;
+
+class procedure TBaseLocalSuprimentoController.GravarSuprimento(suprimento: tBaseLocalsuprimentoVO);
+begin
+
+end;
+
+end.

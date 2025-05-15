@@ -1,0 +1,49 @@
+unit PedidoSqlController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, PedidousuariosVO, unitConfiguracoes, PedidoSqlVO;
+
+Type TPedidoSqlController = class
+
+   public
+      class Procedure GravarSQL(SQL: TPedidoSqlVO);
+
+end;
+
+implementation
+
+{ TPedidoSqlController }
+
+class procedure TPedidoSqlController.GravarSQL(SQL: TPedidoSqlVO);
+Var vjsonObject: TJSONObject;
+begin
+
+      Try
+
+         vjsonObject := TJson.ObjectToJsonObject(SQL);
+         frmPrincipal.CarregarRest();
+
+         frmPrincipal.RESTRequest1.Resource := '/PedidoSql/{bd}';
+         frmPrincipal.RESTRequest1.Method := TRESTRequestMethod.rmPUT;
+         frmPrincipal.RESTRequest1.Params.AddUrlSegment('bd',Trim(frmPrincipal.bd));
+         frmPrincipal.RESTRequest1.AddBody(SQL.ToString, ContentTypeFromString('application/json'));
+         frmPrincipal.RESTRequest1.Execute;
+
+         if frmPrincipal.RESTResponse1.StatusCode = 201 then Begin
+            prcMsgInf('Registro inserido com sucesso');
+         End
+         else
+            prcMsgAdv('Falha ao inserir o registro.');
+
+      Except
+
+         prcMsgErro('Erro ao inserir o registro');
+
+      End;
+
+
+end;
+
+end.

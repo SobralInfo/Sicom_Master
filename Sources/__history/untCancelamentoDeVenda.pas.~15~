@@ -1,0 +1,159 @@
+unit untCancelamentoDeVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, untIntegracaoFidelidade,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, JvExStdCtrls, JvEdit, BaseLocalVendaCabecalhoController,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, unitConfiguracoes, baselocalpedidoCabecalhoController, generics.Collections,
+  BaseLocalVendaCabecalhoVO, BaseLocalProdutosController, BaseLocalVendaDetalheController, BaseLocalVendaDetalheVO;
+
+type
+  TfrmCancelamentoDeVenda = class(TForm)
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    edtVenda: TJvEdit;
+    Label1: TLabel;
+    procedure Image1Click(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Image4Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure edtVendaKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure Confirmar;
+  end;
+
+var
+  frmCancelamentoDeVenda: TfrmCancelamentoDeVenda;
+
+implementation
+
+{$R *.dfm}
+
+uses untPrincipal;
+
+procedure TfrmCancelamentoDeVenda.Confirmar;
+Var venda: TBaseLocalVendaCabecalhoVO;
+    Itens: TObjectList<TBaseLocalVendaDetalheVO>;
+    i: Integer;
+    fidelidade: TLancamentos;
+begin
+
+   if Trim(edtVenda.Text) = '' then Begin
+
+      prcMsgAdv('Informe uma venda.');
+      Exit;
+
+   End;
+
+   if fctMsgConfirmDefaultButtonNo('Confirma o cancelamento da venda?') = false then
+      Exit;
+
+   Try
+
+      venda := TBaseLocalVendaCabecalhoVO.Create;
+      venda := TBaseLocalVendaCabecalhoController.RetornarIDPorNumeroPedido(StrToInt(edtVenda.Text));
+      Itens := TObjectList<TBaseLocalVendaDetalheVO>.Create;
+      Itens := TBaseLocalVendaDetalheController.RetornarListaDeProdutosDaVenda(StrToInt(edtVenda.Text));
+
+      if venda.ID > 0 then Begin
+
+         if venda.STATUS = 'C' then Begin
+            prcMsgAdv('Venda já consta como cancelada.');
+            Exit;
+         End;
+
+         if venda.STATUS <> 'F' then Begin
+            prcMsgAdv('Venda não localizada..');
+            Exit;
+         End;
+
+         for i := 0 to Itens.Count - 1 do Begin
+
+           TBaseLocalProdutosController.GravarMovimetacaoProduto(Itens[i].ID_PRODUTO,
+                                                                 (Itens[i].QUANTIDADE),
+                                                                 1,
+                                                                 'E',
+                                                                 0,
+                                                                 VENDA.ID,
+                                                                 0,
+                                                                 0.00);
+
+         End;
+
+         TBaseLocalVendaCabecalhoController.MudarStatusVenda(venda.ID.ToString, 'C');
+         frmPrincipal.ImprimirCancelamentoDeVenda(venda.ID);
+
+         Try
+            fidelidade := TLancamentos.Create;
+            fidelidade.id_cliente     := -1;
+            fidelidade.tipo           := 'X';
+            fidelidade.valor_compra   := venda.VALOR_VENDA*-1;
+            fidelidade.pontuacao      := Trunc(venda.VALOR_VENDA*-1);
+            fidelidade.data_compra    := Date;
+            fidelidade.id_funcionario := 0;
+            TLancamentos.GravarLancamento(fidelidade);
+         Finally
+            FreeAndNil(fidelidade);
+         End;
+
+      End else
+         prcMsgAdv('Venda não localizada.');
+
+   Finally
+      FreeAndNil(venda);
+   End;
+
+end;
+
+procedure TfrmCancelamentoDeVenda.edtVendaKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+
+   if  not ( Key in ['0'..'9', Chr(8)] ) then
+      Key := #0
+
+end;
+
+procedure TfrmCancelamentoDeVenda.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+      VK_F12: Confirmar;
+
+   end;
+
+end;
+
+procedure TfrmCancelamentoDeVenda.Image1Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+procedure TfrmCancelamentoDeVenda.Image3Click(Sender: TObject);
+begin
+
+   confirmar;
+
+end;
+
+procedure TfrmCancelamentoDeVenda.Image4Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+end.

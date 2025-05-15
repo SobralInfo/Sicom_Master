@@ -1,0 +1,182 @@
+object frmExportacaoDeProdutos: TfrmExportacaoDeProdutos
+  Left = 0
+  Top = 0
+  Caption = 'frmExportacaoDeProdutos'
+  ClientHeight = 661
+  ClientWidth = 984
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedButton3: TSpeedButton
+    Left = 335
+    Top = 612
+    Width = 154
+    Height = 37
+    Caption = 'Carregar Dados'
+    OnClick = SpeedButton3Click
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 509
+    Top = 612
+    Width = 154
+    Height = 37
+    Caption = 'Exportar Produtos'
+    OnClick = SpeedButton1Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 20
+    Width = 956
+    Height = 586
+    DataSource = dtsProdutos
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'DESCRICAO'
+        Width = 463
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'STATUS'
+        Title.Alignment = taCenter
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PRECO'
+        Title.Alignment = taCenter
+        Width = 104
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'QUANTIDADE'
+        Title.Alignment = taCenter
+        Width = 106
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'UNIDADE'
+        Title.Alignment = taCenter
+        Width = 75
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'FATOR'
+        Title.Alignment = taCenter
+        Width = 91
+        Visible = True
+      end>
+  end
+  object dtsProdutos: TDataSource
+    DataSet = qryProduto
+    Left = 672
+    Top = 360
+  end
+  object qryProduto: TFDQuery
+    Connection = frmPrincipal.Conexao
+    SQL.Strings = (
+      
+        '      SELECT p.codproduto AS id, p.situacao as STATUS, p.produto' +
+        ' AS descricao, CAST(p.preco_venda AS double precision) as preco,'
+      
+        '      CAST(e.estoque_atual AS double precision) as quantidade, C' +
+        'AST('#39'1'#39' AS double precision) as fator,'
+      
+        '      p.unidade_prod as UNIDADE from produtos p, estoque_prod e ' +
+        'WHERE p.codproduto = e.cod_prod_estoque')
+    Left = 616
+    Top = 360
+    object qryProdutoID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'CODPRODUTO'
+      Required = True
+    end
+    object qryProdutoSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'SITUACAO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryProdutoDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'PRODUTO'
+      Required = True
+      Size = 120
+    end
+    object qryProdutoPRECO: TFloatField
+      AutoGenerateValue = arDefault
+      FieldName = 'PRECO'
+      Origin = 'PRECO'
+      ProviderFlags = []
+      ReadOnly = True
+      DisplayFormat = '#0.00'
+    end
+    object qryProdutoQUANTIDADE: TFloatField
+      AutoGenerateValue = arDefault
+      FieldName = 'QUANTIDADE'
+      Origin = 'QUANTIDADE'
+      ProviderFlags = []
+      ReadOnly = True
+      DisplayFormat = '#0.000'
+    end
+    object qryProdutoFATOR: TFloatField
+      AutoGenerateValue = arDefault
+      FieldName = 'FATOR'
+      Origin = 'FATOR'
+      ProviderFlags = []
+      ReadOnly = True
+      DisplayFormat = '#0.00'
+    end
+    object qryProdutoUNIDADE: TStringField
+      FieldName = 'UNIDADE'
+      Origin = 'UNIDADE_PROD'
+      FixedChar = True
+      Size = 10
+    end
+  end
+  object dtsLista: TDataSource
+    DataSet = qryLista
+    Left = 664
+    Top = 288
+  end
+  object qryLista: TFDMemTable
+    Active = True
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 616
+    Top = 288
+    object qryListadescricao: TStringField
+      FieldName = 'descricao'
+      Size = 120
+    end
+  end
+end

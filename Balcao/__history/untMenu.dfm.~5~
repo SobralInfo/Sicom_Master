@@ -1,0 +1,35 @@
+object frmMenu: TfrmMenu
+  Left = 0
+  Top = 0
+  Caption = 'frmMenu'
+  ClientHeight = 459
+  ClientWidth = 675
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedButton1: TSpeedButton
+    Left = 40
+    Top = 32
+    Width = 105
+    Height = 33
+    OnClick = SpeedButton1Click
+  end
+  object ConexaoLocal: TFDConnection
+    Params.Strings = (
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'Database=C:\Users\sobra\OneDrive\Pedido (OnLine)\DB\PEDIDO.FDB'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 207
+    Top = 136
+  end
+end

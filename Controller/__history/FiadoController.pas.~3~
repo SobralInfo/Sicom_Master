@@ -1,0 +1,60 @@
+unit FiadoController;
+
+interface
+
+uses FiadoVO, FireDAC.Comp.Client, generics.Collections, system.sysutils, untPrincipal;
+
+Type TFiadoController = class
+
+   public
+      Procedure GravarVendaFiado(fiado: TFiadoVO);
+
+
+end;
+
+implementation
+
+{ TFiadoController }
+
+procedure TFiadoController.GravarVendaFiado(fiado: TFiadoVO);
+Var query: TFDQuery;
+begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.Conexao;
+
+      query.SQL.Add(' INSERT INTO fiado ');
+      query.SQL.Add(' ( ');
+      query.SQL.Add(' id_venda, valor_venda, data_venda ');
+      query.SQL.Add(' ) ');
+      query.SQL.Add(' VALUES ');
+      query.SQL.Add(' ( ');
+      query.SQL.Add(' :id_venda, :valor_venda, :data_venda ');
+      query.SQL.Add(' ) ');
+
+      query.Params.ParamByName('id_venda').AsInteger    := fiado.id_venda;
+      query.Params.ParamByName('valor_venda').AsFloat   := fiado.valor_venda;
+      query.Params.ParamByName('data_venda').AsDateTime := fiado.data_venda;
+
+      Try
+
+         query.ExecSQL;
+         frmPrincipal.Conexao.Commit;
+
+      Except
+
+         frmPrincipal.Conexao.Rollback;
+
+      End;
+
+   Finally
+
+      FreeAndNil(query)
+
+   End;
+
+end;
+
+end.

@@ -1,0 +1,58 @@
+unit PedidoSqlVO;
+
+interface
+
+Type
+   TPedidoSqlVO = class
+  private
+    Fid: integer;
+    Fsql_tipo_documentos: string;
+    Fsql_produtos: String;
+    Fsql_condicao_pagamento: string;
+    Fsql_funcionarios: string;
+    procedure Setid(const Value: integer);
+    procedure Setsql_condicao_pagamento(const Value: string);
+    procedure Setsql_funcionarios(const Value: string);
+    procedure Setsql_produtos(const Value: String);
+    procedure Setsql_tipo_documentos(const Value: string);
+
+  published
+
+      property id: integer read Fid write Setid;
+      property sql_produtos: String read Fsql_produtos write Setsql_produtos;
+      property sql_funcionarios: string read Fsql_funcionarios write Setsql_funcionarios;
+      property sql_tipo_documentos: string read Fsql_tipo_documentos write Setsql_tipo_documentos;
+      property sql_condicao_pagamento: string read Fsql_condicao_pagamento write Setsql_condicao_pagamento;
+
+   end;
+
+implementation
+
+{ TPedidoSqlVO }
+
+procedure TPedidoSqlVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TPedidoSqlVO.Setsql_condicao_pagamento(const Value: string);
+begin
+  Fsql_condicao_pagamento := Value;
+end;
+
+procedure TPedidoSqlVO.Setsql_funcionarios(const Value: string);
+begin
+  Fsql_funcionarios := Value;
+end;
+
+procedure TPedidoSqlVO.Setsql_produtos(const Value: String);
+begin
+  Fsql_produtos := Value;
+end;
+
+procedure TPedidoSqlVO.Setsql_tipo_documentos(const Value: string);
+begin
+  Fsql_tipo_documentos := Value;
+end;
+
+end.

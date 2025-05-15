@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><NFe xmlns="http://www.portalfiscal.inf.br/nfe"><infNFe versao="4.00" Id="NFe23220303282301000143550010040229681656199147"><ide><cUF>23</cUF><cNF>65619914</cNF><natOp>Venda producao do estabelecimento</natOp><mod>55</mod><serie>1</serie><nNF>4022968</nNF><dhEmi>2022-03-25T19:17:43-03:00</dhEmi><tpNF>1</tpNF><idDest>1</idDest><cMunFG>2307650</cMunFG><tpImp>1</tpImp><tpEmis>1</tpEmis><cDV>7</cDV><tpAmb>1</tpAmb><finNFe>1</finNFe><indFinal>0</indFinal><indPres>9</indPres><indIntermed>0</indIntermed><procEmi>0</procEmi><verProc>SAP NFE 10.0</verProc></ide><emit><CNPJ>03282301000143</CNPJ><xNome>POLE ALIMENTOS LTDA</xNome><xFant>Pole Matriz</xFant><enderEmit><xLgr>AV. PARQUE SUL</xLgr><nro>401</nro><xBairro>DISTRITO INDUSTRIAL</xBairro><cMun>2307650</cMun><xMun>MARACANAU</xMun><UF>CE</UF><CEP>61939000</CEP><xPais>Brasil</xPais><fone>40203495</fone></enderEmit><IE>062841955</IE><IM>1246613</IM><CNAE>1234567</CNAE><CRT>3</CRT></emit><dest><CNPJ>13931743000127</CNPJ><xNome>Nossa Senhora Aparecida Comercio de Produtos Alimenticios L</xNome><enderDest><xLgr>Rod. Doutor Mendel Steinbruch</xLgr><nro>S/N</nro><xBairro>Pajucara</xBairro><cMun>2307650</cMun><xMun>Maracanau</xMun><UF>CE</UF><CEP>61932005</CEP><cPais>1058</cPais><xPais>Brasil</xPais><fone>8532931602</fone></enderDest><indIEDest>1</indIEDest><IE>065826523</IE><email>joelcalou@hotmail.com</email></dest><autXML><CNPJ>03282301000143</CNPJ></autXML><det nItem="1"><prod><cProd>000000000000300530</cProd><cEAN>7898249771415</cEAN><xProd>Lanche Gostosinha Cx20kg</xProd><NCM>16010000</NCM><CFOP>5101</CFOP><uCom>CX</uCom><qCom>20.0000</qCom><vUnCom>108.0000000000</vUnCom><vProd>2160.00</vProd><cEANTrib>7898249771415</cEANTrib><uTrib>KG</uTrib><qTrib>20.0000</qTrib><vUnTrib>108.0000000000</vUnTrib><indTot>1</indTot></prod><imposto><ICMS><ICMS20><orig>0</orig><CST>20</CST><modBC>3</modBC><pRedBC>61.1100</pRedBC><vBC>840.02</vBC><pICMS>18.0000</pICMS><vICMS>151.20</vICMS></ICMS20></ICMS><IPI><cEnq>999</cEnq><IPINT><CST>51</CST></IPINT></IPI><PIS><PISAliq><CST>01</CST><vBC>2160.00</vBC><pPIS>1.6500</pPIS><vPIS>35.64</vPIS></PISAliq></PIS><COFINS><COFINSAliq><CST>01</CST><vBC>2160.00</vBC><pCOFINS>7.6000</pCOFINS><vCOFINS>164.16</vCOFINS></COFINSAliq></COFINS></imposto><infAdProd>A lei 16.177-16 altera a CF.Art.41 do Dec 24569-97 Inc. I Par. 3(o) e 4(o) atualizando a Base Calc. Red para 61,11%</infAdProd></det><total><ICMSTot><vBC>840.02</vBC><vICMS>151.20</vICMS><vICMSDeson>0.00</vICMSDeson><vFCP>0.00</vFCP><vBCST>0.00</vBCST><vST>0.00</vST><vFCPST>0.00</vFCPST><vFCPSTRet>0.00</vFCPSTRet><vProd>2160.00</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vIPIDevol>0.00</vIPIDevol><vPIS>35.64</vPIS><vCOFINS>164.16</vCOFINS><vOutro>0.00</vOutro><vNF>2160.00</vNF></ICMSTot></total><transp><modFrete>0</modFrete></transp><cobr><fat><nFat>0093438204</nFat><vOrig>2160.00</vOrig><vDesc>0.00</vDesc><vLiq>2160.00</vLiq></fat><dup><nDup>001</nDup><dVenc>2022-04-16</dVenc><vDup>2160.00</vDup></dup></cobr><pag><detPag><tPag>15</tPag><vPag>2160.00</vPag></detPag></pag><infAdic><infCpl>Ordem: 0003541900 | Remessa: 0083460622 | Fatura: 0093438204 | Vendedor: Valdesir Raimundo da Costa | Nome Fantasia: Frios Irmaos Caloou | Ponto Referencia: Dentro da Ceasa frios irmaos calou | Janela Atendimento: Manha:06:0012:00Tarde:00:0000:00 | Desconto de Reposicoes: 0,00 | Numero Pedido do Cliente: A lei 16.17716 altera a CF.Art.41 do Dec 2456997 Inc. I Par. 3(o) e 4(o) atualizando a Base Calc. Red para 61,11%</infCpl></infAdic><infRespTec><CNPJ>74544297000192</CNPJ><xContato>AP Product Engineering</xContato><email>responsavel.tecnico@sap.com</email><fone>1155032400</fone></infRespTec></infNFe><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#NFe23220303282301000143550010040229681656199147"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>cpqNoe099Yq47i7CY1Qid3ByaG4=</DigestValue></Reference></SignedInfo><SignatureValue>nc4hoX6X4WgLXRtkRcesKBAlE+5DB5vAxJuQuqxOul3rhY1XRaZsmiuVWm0qotKnuwpth8JL+1iE
+zXboONcw4y8VWqBTAnUyX9vzMO/q0CdL9q8oGyT3bD7oSpm79zkEi5zxX2k8OGGE40LrL6lMKejP
+CkFP2rm8njsrciPXdpJrEU7ACw1ZVOxniP/DGqD5sTZZyytXVet1KEk0Sz1l+VTZThc9XxQm1alA
+tuAN3AcYbYfSTv5vc/y3JCfIcsE6U7pQT7/+aok8uedTw2ni+ea087We8zCqLmeBsCh/smdS7klm
+5ST91p2+2J8qpW6mGw6KW4qdFEiOrCFbRpqyMw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIHvzCCBaegAwIBAgIIebVL4BNxaL8wDQYJKoZIhvcNAQELBQAwdjELMAkGA1UEBhMCQlIxEzAR
+BgNVBAoTCklDUC1CcmFzaWwxNjA0BgNVBAsTLVNlY3JldGFyaWEgZGEgUmVjZWl0YSBGZWRlcmFs
+IGRvIEJyYXNpbCAtIFJGQjEaMBgGA1UEAxMRQUMgU0FGRVdFQiBSRkIgdjUwHhcNMjExMjA2MTgy
+NjQ4WhcNMjIxMjA2MTgyNjQ4WjCB7jELMAkGA1UEBhMCQlIxEzARBgNVBAoTCklDUC1CcmFzaWwx
+CzAJBgNVBAgTAkNFMRIwEAYDVQQHEwlNQVJBQ0FOQVUxNjA0BgNVBAsTLVNlY3JldGFyaWEgZGEg
+UmVjZWl0YSBGZWRlcmFsIGRvIEJyYXNpbCAtIFJGQjEWMBQGA1UECxMNUkZCIGUtQ05QSiBBMTEX
+MBUGA1UECxMOMzY3MTAzOTIwMDAxMjAxEzARBgNVBAsTCnByZXNlbmNpYWwxKzApBgNVBAMTIlBP
+TEUgQUxJTUVOVE9TIExUREE6MDMyODIzMDEwMDAxNDMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQC6C9FonBADb5NJfSxoeWVm4c+zefdSFCcW3Cct83DTHk05XcgRXpOdXJGLfE4YavuY
+r8oFwioQ+vLnfmrp+uYZuL/dTr/IWTr/EUT2MN8nWKKszX9K11+NXbzPpLmOpqD5xR7EcOvmj5U0
+cwexR4edE43BLQ3l+HZdTaExIkODk3miInMmHgT/2g0A9XG0HsjUgQYMTmzLzQtwWe0KNz1eIqJ9
+2kacgnXBFNTu6mCeVrG89Q3PtZ7CexFHPRZpTY/xKD4/cIWvxLY/Usoq1TpasxvS9xfNS8iJUzvv
+DnwS3Iu3OCICB2INvY5iczR0ijJl9quUkwUkp5NWnNJbnvh5AgMBAAGjggLWMIIC0jAfBgNVHSME
+GDAWgBQpXkvVRky7/hanY8EdxCby3djzBTAOBgNVHQ8BAf8EBAMCBeAwbQYDVR0gBGYwZDBiBgZg
+TAECATMwWDBWBggrBgEFBQcCARZKaHR0cDovL3JlcG9zaXRvcmlvLmFjc2FmZXdlYi5jb20uYnIv
+YWMtc2FmZXdlYnJmYi9hYy1zYWZld2ViLXJmYi1wYy1hMS5wZGYwga4GA1UdHwSBpjCBozBPoE2g
+S4ZJaHR0cDovL3JlcG9zaXRvcmlvLmFjc2FmZXdlYi5jb20uYnIvYWMtc2FmZXdlYnJmYi9sY3It
+YWMtc2FmZXdlYnJmYnY1LmNybDBQoE6gTIZKaHR0cDovL3JlcG9zaXRvcmlvMi5hY3NhZmV3ZWIu
+Y29tLmJyL2FjLXNhZmV3ZWJyZmIvbGNyLWFjLXNhZmV3ZWJyZmJ2NS5jcmwwgYsGCCsGAQUFBwEB
+BH8wfTBRBggrBgEFBQcwAoZFaHR0cDovL3JlcG9zaXRvcmlvLmFjc2FmZXdlYi5jb20uYnIvYWMt
+c2FmZXdlYnJmYi9hYy1zYWZld2VicmZidjUucDdiMCgGCCsGAQUFBzABhhxodHRwOi8vb2NzcC5h
+Y3NhZmV3ZWIuY29tLmJyMIHGBgNVHREEgb4wgbuBHU1BTk9FTC5FU1RFVkFNLkxJTUFAR01BSUwu
+Q09NoCwGBWBMAQMCoCMTIVRJU1NJQU5BIFNUVURBUlQgTElNQSBWQVNDT05DRUxPU6AZBgVgTAED
+A6AQEw4wMzI4MjMwMTAwMDE0M6A4BgVgTAEDBKAvEy0xODA5MTk3NjQ1NjMzMDk2MzA0MDAwMDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDCgFwYFYEwBAwegDhMMMDAwMDAwMDAwMDAwMB0GA1UdJQQWMBQG
+CCsGAQUFBwMCBggrBgEFBQcDBDAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBCwUAA4ICAQAzFMUF8ZXa
+73BbmdFwGw2ULMpDGSlntDr9Sk6x/VAaKuAe5YaZay6+GzgVRow1Zv/XO43BfPJ0cVToZbGmj9bD
+jLX/96s03IwJVuucU0bm1CDL7gfCFPQ/rGU7YEban8SmkQaLZdHT0EFIuryCrMRXURSEx2yIeCG0
+84zgUaYi0DELYmjGcf8NNLDJ9JFEZp4D8dIzsrp+fs9eYwVMnxryJf+OhIbO8CES3+Tq7C2ks8dZ
+WNNeWThJDYoUpGcFadrzAy3Cgu7monPgx64yHjai7EU5z8rQ5+zGJxNJI/PJSdnYmZDJVmDKNHe1
+uY56PaxkJxNs5O72tEg4wifr0LTz1fwyzBFHov/SjVjLsGQZGPvHNbpJQunDl+a7me2vywgx/7Co
+tOgSTtrwKsIhSwy7o1Cei8207l7aTMUcMR4KqRZlAoyjrks4jBoSQ+FlGUcU4bVaOWR4mRRee2sD
+rsU0h5FaQhEyjvqC94n2ehvr8ymqHsfNmgwBGn/3uIQ9zWlGf1zb3L9qD5Ifa7zOKLrZncJHiClJ
+0izs03MJSBilWQQjgWxyB07S0nYxiHA2zTt08a/XdO3uuHJxS5g+xbJWftOVtnnctme1idCl5w5r
+ShdyEJsrL1B8u1DdKVT4oGegZeNEZX70j1rXG5SRyAYQkKoIb8OqKYuFUmUHHTy08A==</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><infProt><tpAmb>1</tpAmb><verAplic>SVRS202202101007</verAplic><chNFe>23220303282301000143550010040229681656199147</chNFe><dhRecbto>2022-03-25T19:17:51-03:00</dhRecbto><nProt>323220017751157</nProt><digVal>cpqNoe099Yq47i7CY1Qid3ByaG4=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>

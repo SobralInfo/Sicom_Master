@@ -1,0 +1,16 @@
+unit PedidoConexaoController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, PedidoConexaoVO;
+
+Type TPedidoConexaoController = class
+
+
+
+end;
+
+implementation
+
+end.

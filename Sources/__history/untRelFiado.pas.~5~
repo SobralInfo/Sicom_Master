@@ -1,0 +1,111 @@
+unit untRelFiado;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, JvExStdCtrls, JvEdit, JvValidateEdit, Vcl.Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, RLReport;
+
+type
+  TfrmRelFiado = class(TForm)
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    Label1: TLabel;
+    SpeedButton5: TSpeedButton;
+    edtProduto: TJvValidateEdit;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    chkPromocao: TCheckBox;
+    CheckBox1: TCheckBox;
+    qryRel: TFDQuery;
+    qryRelID: TIntegerField;
+    qryRelSTATUS: TStringField;
+    qryRelDESCRICAO: TStringField;
+    qryRelQTDE_ESTOQUE: TFloatField;
+    qryRelREFERENCIA: TStringField;
+    qryRelID_UNIDADE: TIntegerField;
+    qryRelCODIGO_BARRAS: TStringField;
+    qryRelVALOR_UNITARIO: TFloatField;
+    qryRelID_ORIGINAL: TStringField;
+    qryRelIMPRIMIR_COZINHA: TStringField;
+    qryRelID_CATEGORIA: TIntegerField;
+    qryRelSIGLA: TStringField;
+    qryRelCATEGORIA: TStringField;
+    qryRelcalc_valor_medio: TFloatField;
+    qryRelcalc_data_ult_entrada: TStringField;
+    dtsRel: TDataSource;
+    Panel1: TPanel;
+    RLReport1: TRLReport;
+    RLBand1: TRLBand;
+    lblFiltro01: TRLLabel;
+    RLLabel1: TRLLabel;
+    RLSystemInfo2: TRLSystemInfo;
+    RLBand3: TRLBand;
+    RLLabel7: TRLLabel;
+    RLLabel5: TRLLabel;
+    RLLabel6: TRLLabel;
+    RLLabel4: TRLLabel;
+    RLLabel3: TRLLabel;
+    RLLabel2: TRLLabel;
+    RLBand5: TRLBand;
+    RLSystemInfo1: TRLSystemInfo;
+    RLBand4: TRLBand;
+    RLDBResult1: TRLDBResult;
+    RLGroup1: TRLGroup;
+    RLBand2: TRLBand;
+    RLDBText1: TRLDBText;
+    RLDBText2: TRLDBText;
+    RLDBText3: TRLDBText;
+    RLDBText4: TRLDBText;
+    RLDBText5: TRLDBText;
+    RLDBText6: TRLDBText;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Image1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    Procedure Confirmar;
+  end;
+
+var
+  frmRelFiado: TfrmRelFiado;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmRelFiado.Confirmar;
+begin
+
+   RLReport1.PreviewModal;
+
+end;
+
+procedure TfrmRelFiado.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+
+   end;
+
+end;
+
+procedure TfrmRelFiado.Image1Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+end.

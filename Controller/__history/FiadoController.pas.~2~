@@ -1,0 +1,24 @@
+unit FiadoController;
+
+interface
+
+uses FiadoVO;
+
+Type TFiadoController = class
+
+   public
+      Procedure GravarVendaFiado(fiado: TFiadoController);
+
+
+end;
+
+implementation
+
+{ TFiadoController }
+
+procedure TFiadoController.GravarVendaFiado(fiado: TFiadoController);
+begin
+
+end;
+
+end.

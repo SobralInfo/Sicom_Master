@@ -1,0 +1,13 @@
+unit FiadoVO;
+
+interface
+
+Type TFiadoVO = class
+
+
+
+end;
+
+implementation
+
+end.

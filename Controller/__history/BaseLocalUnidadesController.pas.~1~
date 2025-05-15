@@ -1,0 +1,12 @@
+unit BaseLocalUnidadesController;
+
+interface
+
+Type TBaseLocalUnidadesController = class
+
+
+end;
+
+implementation
+
+end.

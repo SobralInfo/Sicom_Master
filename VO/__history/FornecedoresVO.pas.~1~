@@ -1,0 +1,13 @@
+unit FornecedoresVO;
+
+interface
+
+Type TFornecedoresVO = class
+
+
+
+end;
+
+implementation
+
+end.

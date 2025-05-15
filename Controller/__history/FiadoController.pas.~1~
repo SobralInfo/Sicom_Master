@@ -1,0 +1,11 @@
+unit FiadoController;
+
+interface
+
+Type TFiadoController = class
+
+end;
+
+implementation
+
+end.

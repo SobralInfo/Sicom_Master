@@ -1,0 +1,105 @@
+unit untPainelRelatorios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TfrmPainelRelatorios = class(TForm)
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton5Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPainelRelatorios: TfrmPainelRelatorios;
+
+implementation
+
+{$R *.dfm}
+
+uses untRelVendasPorPeriodo, untRelProdutosMaisVendidos, untControleFiado,
+  untPrincipal, untCadastrarFornecedores;
+
+procedure TfrmPainelRelatorios.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+
+   end;
+
+end;
+
+procedure TfrmPainelRelatorios.Image1Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+procedure TfrmPainelRelatorios.SpeedButton1Click(Sender: TObject);
+begin
+
+   Application.CreateForm(TfrmRelVendasPorPeriodo, frmRelVendasPorPeriodo);
+   frmRelVendasPorPeriodo.ShowModal;
+
+end;
+
+procedure TfrmPainelRelatorios.SpeedButton2Click(Sender: TObject);
+begin
+
+   Application.CreateForm(TfrmRelProdutosMaisVendidos, frmRelProdutosMaisVendidos);
+   frmRelProdutosMaisVendidos.ShowModal;
+
+end;
+
+procedure TfrmPainelRelatorios.SpeedButton3Click(Sender: TObject);
+begin
+
+   frmPrincipal.HabilitarTelaAzul;
+   Application.CreateForm(TfrmControleFiado, frmControleFiado);
+   frmControleFiado.ShowModal;
+   frmPrincipal.DesabilitarTelaAzul;
+
+end;
+
+procedure TfrmPainelRelatorios.SpeedButton4Click(Sender: TObject);
+begin
+
+  frmPrincipal.ImportarXML;
+
+end;
+
+procedure TfrmPainelRelatorios.SpeedButton5Click(Sender: TObject);
+begin
+
+   frmPrincipal.HabilitarTelaAzul;
+   Application.CreateForm(TfrmCadastrarFornecedores, frmCadastrarFornecedores);
+   frmCadastrarFornecedores.ShowModal;
+   frmPrincipal.DesabilitarTelaAzul;
+
+end;
+
+end.

@@ -1,0 +1,46 @@
+unit PedidoSqlVO;
+
+interface
+
+Type
+   TPedidoSqlVO = class
+  private
+    Fid: integer;
+    Fsql: string;
+    Ftipo: string;
+    procedure Setid(const Value: integer);
+    procedure Setsql(const Value: string);
+    procedure Settipo(const Value: string);
+  published
+
+      property id: integer read Fid write Setid;
+      property tipo: string read Ftipo write Settipo;
+      property sql: string read Fsql write Setsql;
+
+
+   end;
+
+implementation
+
+{ TPedidoSQL }
+
+
+
+{ TPedidoSqlVO }
+
+procedure TPedidoSqlVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TPedidoSqlVO.Setsql(const Value: string);
+begin
+  Fsql := Value;
+end;
+
+procedure TPedidoSqlVO.Settipo(const Value: string);
+begin
+  Ftipo := Value;
+end;
+
+end.

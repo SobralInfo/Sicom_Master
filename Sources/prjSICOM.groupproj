@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{875C67AA-8480-4125-B383-8F1E80C42474}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="prjPedidos.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Balcao\prjBalcao.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="prjPedidos">
+        <MSBuild Projects="prjPedidos.dproj"/>
+    </Target>
+    <Target Name="prjPedidos:Clean">
+        <MSBuild Projects="prjPedidos.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjPedidos:Make">
+        <MSBuild Projects="prjPedidos.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="prjBalcao">
+        <MSBuild Projects="..\Balcao\prjBalcao.dproj"/>
+    </Target>
+    <Target Name="prjBalcao:Clean">
+        <MSBuild Projects="..\Balcao\prjBalcao.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjBalcao:Make">
+        <MSBuild Projects="..\Balcao\prjBalcao.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="prjPedidos;prjBalcao"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="prjPedidos:Clean;prjBalcao:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="prjPedidos:Make;prjBalcao:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

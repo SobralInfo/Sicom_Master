@@ -1,0 +1,32 @@
+unit untQtdeParcelas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  JvExStdCtrls, JvEdit, JvValidateEdit;
+
+type
+  TfrmQtdeParcelas = class(TForm)
+    Label1: TLabel;
+    edtRecebido: TJvValidateEdit;
+    Panel1: TPanel;
+    Label4: TLabel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmQtdeParcelas: TfrmQtdeParcelas;
+
+implementation
+
+{$R *.dfm}
+
+end.

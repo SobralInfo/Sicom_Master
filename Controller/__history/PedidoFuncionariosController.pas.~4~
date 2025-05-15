@@ -1,0 +1,70 @@
+unit PedidoFuncionariosController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, PedidoFuncionariosVO;
+
+
+
+Type
+   TPedidoFuncionariosController = class
+
+      private
+
+      public
+         class Procedure GravarFuncionarios(listaFuncionarios: TObjectList<TPedidoFuncionariosVO>);
+
+   end;
+
+implementation
+
+{ TPedidoUsuarioController }
+
+class procedure TPedidoFuncionariosController.GravarFuncionarios(listaFuncionarios: TObjectList<TPedidoFuncionariosVO>);
+Var vjsonObject: TJSONObject;
+    vJsonArray: TJSONArray;
+    FuncionarioVO: TPedidoFuncionariosVO;
+    i: integer;
+begin
+
+      Try
+
+         vJsonArray := TJSONArray.Create;
+
+         for I := 0 to listaFuncionarios.Count -1 do Begin
+            vjsonObject := TJSONObject.Create;
+            //vjsonObject := TJSONObject.ParseJSONValue(TEncoding.ASCII.GetBytes(listaProdutos.Items[i].descricao), 0) as TJSONObject;
+            vjsonObject.AddPair(TJSONPair.Create('id_empresa', TJSONString.Create(listaFuncionarios.Items[i].id_empresa.ToString)));
+            vjsonObject.AddPair(TJSONPair.Create('id_funcionario', TJSONString.Create(listaFuncionarios.Items[i].id_funcionario.tostring)));
+            vjsonObject.AddPair(TJSONPair.Create('nome', TJSONString.Create(listaFuncionarios.Items[i].nome)));
+            vjsonObject.AddPair(TJSONPair.Create('status', TJSONString.Create(listaFuncionarios.Items[i].status)));
+            vJsonArray.Add(vjsonObject);
+         End;
+
+         frmPrincipal.CarregarRest();
+
+         //prcMsgInf(vJsonArray.ToString);
+
+         frmPrincipal.RESTRequest1.Resource := '/PedidoFuncionarios/{bd}';
+         frmPrincipal.RESTRequest1.Method := TRESTRequestMethod.rmPUT;
+         frmPrincipal.RESTRequest1.Params.AddUrlSegment('bd',Trim(frmPrincipal.bd));
+         frmPrincipal.RESTRequest1.AddBody(vJsonArray.ToString, ContentTypeFromString('application/json'));
+         frmPrincipal.RESTRequest1.Execute;
+
+         if frmPrincipal.RESTResponse1.StatusCode = 201 then Begin
+            prcMsgInf('Registro inserido com sucesso');
+         End
+         else
+            prcMsgAdv('Falha ao inserir o registro.');
+
+      Except
+
+         prcMsgErro('Erro ao inserir o registro');
+
+      End;
+
+
+end;
+
+end.

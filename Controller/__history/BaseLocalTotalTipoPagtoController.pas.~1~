@@ -1,0 +1,15 @@
+unit BaseLocalTotalTipoPagtoController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalTotalTipoPagtoVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalTotalTipoPagtoController = class
+
+end;
+
+implementation
+
+end.

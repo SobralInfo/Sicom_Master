@@ -1,0 +1,168 @@
+unit untPesquisarFormaPG;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Mask,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, JvExDBGrids, JvDBGrid, unitConfiguracoes,
+  Vcl.Imaging.pngimage, BaseLocalFormasPagamentoController, BaseLocalFormasPagamentoVO,
+  RxDBCtrl;
+
+type
+  TfrmPesquisarFormaPG = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    mkeDescricao: TMaskEdit;
+    Panel2: TPanel;
+    lblTotal: TLabel;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Panel4: TPanel;
+    JvDBGrid1: TRxDBGrid;
+    procedure mkeDescricaoChange(Sender: TObject);
+    procedure mkeDescricaoKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure JvDBGrid1DblClick(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure JvDBGrid1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure Filtrar;
+    procedure Confirmar;
+  end;
+
+var
+  frmPesquisarFormaPG: TfrmPesquisarFormaPG;
+
+implementation
+
+{$R *.dfm}
+
+uses untPrincipal, untCadastrarFormaPG;
+
+procedure TfrmPesquisarFormaPG.Confirmar;
+begin
+
+   if frmPrincipal.qryFormaPG.IsEmpty then Begin
+
+      prcMsgAdv('Selecione um registro.');
+      Exit;
+
+   End;
+
+   frmCadastrarFormaPG.HabilitarDesabilitarBotoes('E');
+   frmCadastrarFormaPG.HabilitarDesabilitarCampos('H');
+   frmCadastrarFormaPG.LimparCampos;
+   frmCadastrarFormaPG.DAO := 'U';
+
+   if frmPrincipal.qryFormaPGSTATUS.AsString = 'A' then
+      frmCadastrarFormaPG.cbbStatus.ItemIndex := 0
+   else
+      frmCadastrarFormaPG.cbbStatus.ItemIndex := 1;
+
+   if frmPrincipal.qryFormaPGPERMITE_TROCO.AsString = 'S' then
+      frmCadastrarFormaPG.cbbTroco.ItemIndex := 0
+   else
+      frmCadastrarFormaPG.cbbTroco.ItemIndex := 1;
+
+   frmCadastrarFormaPG.edtDescricao.Text := Trim(frmPrincipal.qryFormaPGNOME.AsString);
+   frmCadastrarFormaPG.idFormaPG         := frmPrincipal.qryFormaPGID.AsInteger;
+
+   close;
+
+end;
+
+procedure TfrmPesquisarFormaPG.Filtrar;
+begin
+
+   frmPrincipal.qryFormaPG.close;
+   frmPrincipal.qryFormaPG.Filtered := False;
+   frmPrincipal.qryFormaPG.Filter := ' UPPER(nome) LIKE '+QuotedStr(UpperCase(Trim(mkeDescricao.Text))+'%');
+   frmPrincipal.qryFormaPG.Filtered := True;
+   frmPrincipal.qryFormaPG.Open;
+
+   lblTotal.Caption := 'Total de Formas de Pagamento: '+frmPrincipal.qryFormaPG.RecordCount.ToString;
+   frmPrincipal.qryFormaPG.First;
+
+end;
+
+procedure TfrmPesquisarFormaPG.FormCreate(Sender: TObject);
+begin
+
+   Filtrar;
+
+end;
+
+procedure TfrmPesquisarFormaPG.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+      VK_F12: confirmar;
+
+   end;
+
+end;
+
+procedure TfrmPesquisarFormaPG.Image3Click(Sender: TObject);
+begin
+
+   Confirmar;
+
+end;
+
+procedure TfrmPesquisarFormaPG.Image4Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+procedure TfrmPesquisarFormaPG.JvDBGrid1DblClick(Sender: TObject);
+begin
+
+   Confirmar;
+
+end;
+
+procedure TfrmPesquisarFormaPG.JvDBGrid1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case Key of
+
+      VK_RETURN: Confirmar;
+
+   end;
+
+end;
+
+procedure TfrmPesquisarFormaPG.mkeDescricaoChange(Sender: TObject);
+begin
+
+   Filtrar;
+
+end;
+
+procedure TfrmPesquisarFormaPG.mkeDescricaoKeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+
+   if key = VK_DOWN then
+      JvDBGrid1.SetFocus;
+
+end;
+
+end.

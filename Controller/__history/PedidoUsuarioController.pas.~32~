@@ -1,0 +1,145 @@
+unit PedidoUsuarioController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, PedidousuariosVO, unitConfiguracoes, PedidoProdutosVO;
+
+
+
+Type
+   TPedidoUsuarioController = class
+
+      private
+
+      public
+         class Function ValidarUsuario(cnpj, cpf, senha: string): TPedidoUsuariosVO;
+         class Procedure GravarProduto(listaProdutos: TObjectList<TPedidoProdutosVO>);
+         class Function RetornarListaDeProdutos: TObjectList<TPedidoProdutosVO>;
+
+   end;
+
+implementation
+
+{ TEDSUsuarioController }
+
+class procedure TPedidoUsuarioController.GravarProduto(listaProdutos: TObjectList<TPedidoProdutosVO>);
+Var vjsonObject: TJSONObject;
+    vJsonArray: TJSONArray;
+    clienteVO: TPedidoProdutosVO;
+    i: integer;
+begin
+
+      Try
+
+         vJsonArray := TJSONArray.Create;
+
+         for I := 0 to listaProdutos.Count -1 do Begin
+            vjsonObject := TJSONObject.Create;
+            //vjsonObject := TJSONObject.ParseJSONValue(TEncoding.ASCII.GetBytes(listaProdutos.Items[i].descricao), 0) as TJSONObject;
+            vjsonObject.AddPair(TJSONPair.Create('descricao'  , TJSONString.Create(listaProdutos.Items[i].descricao)));
+            vjsonObject.AddPair(TJSONPair.Create('id'  , TJSONString.Create(listaProdutos.Items[i].id.ToString)));
+            vjsonObject.AddPair(TJSONPair.Create('id_empresa'  , TJSONString.Create(listaProdutos.Items[i].id_empresa.ToString)));
+            vjsonObject.AddPair(TJSONPair.Create('id_produto'  , TJSONString.Create(listaProdutos.Items[i].id_produto)));
+            vjsonObject.AddPair(TJSONPair.Create('status'  , TJSONString.Create(listaProdutos.Items[i].status)));
+            vjsonObject.AddPair(TJSONPair.Create('unidade'  , TJSONString.Create(listaProdutos.Items[i].unidade)));
+            vjsonObject.AddPair(TJSONPair.Create('valor_unitario'  , TJSONString.Create(listaProdutos.Items[i].valor_unitario.ToString)));
+            vjsonObject.AddPair(TJSONPair.Create('qtde_estoque'  , TJSONString.Create(listaProdutos.Items[i].qtde_estoque.ToString)));
+            vJsonArray.Add(vjsonObject);
+         End;
+
+         frmPrincipal.CarregarRest();
+
+         //prcMsgInf(vJsonArray.ToString);
+
+         frmPrincipal.RESTRequest1.Resource := '/PedidoProdutos/{bd}';
+         frmPrincipal.RESTRequest1.Method := TRESTRequestMethod.rmPUT;
+         frmPrincipal.RESTRequest1.Params.AddUrlSegment('bd',Trim(frmPrincipal.bd));
+         frmPrincipal.RESTRequest1.AddBody(vJsonArray.ToString, ContentTypeFromString('application/json'));
+         frmPrincipal.RESTRequest1.Execute;
+
+         prcMsgInf(vJsonArray.Count.ToString);
+
+         if frmPrincipal.RESTResponse1.StatusCode = 201 then Begin
+            prcMsgInf('Registro inserido com sucesso');
+         End
+         else
+            prcMsgAdv('Falha ao inserir o registro.');
+
+      Except
+
+         prcMsgErro('Erro ao inserir o registro');
+
+      End;
+
+
+end;
+
+class function TPedidoUsuarioController.RetornarListaDeProdutos: TObjectList<TPedidoProdutosVO>;
+Var vjsonObject: TJSONObject;
+    i: integer;
+    vJsonPair:TJSONPair;
+    vJsonArray: TJSONArray;
+    lista: TObjectList<TPedidoProdutosVO>;
+    produtos: TPedidoProdutosVO;
+
+begin
+
+  Try
+
+   frmPrincipal.CarregarRest();
+
+   frmPrincipal.RESTRequest1.Resource := '/GetPedidoListarProdutos/{schema}';
+   frmPrincipal.RESTRequest1.Method := TRESTRequestMethod.rmGET;
+   frmPrincipal.RESTRequest1.Params.AddUrlSegment('schema',Trim(frmPrincipal.bd));
+   frmPrincipal.RESTRequest1.Execute;
+
+   vJsonArray := TJsonobject.ParseJSONValue(frmPrincipal.RESTResponse1.JSONText) as TJSONArray;
+   lista := TObjectList<TPedidoProdutosVO>.Create();
+
+   for I := 0 to vJsonArray.Count - 1 do Begin
+
+      produtos := TJson.JsonToObject<TPedidoProdutosVO>(VJsonArray.Get(i).ToJSON);
+      lista.Add(produtos);
+
+   End;
+
+   Result := lista;
+
+  Except
+  End;
+
+end;
+
+class function TPedidoUsuarioController.ValidarUsuario(cnpj, cpf, senha: string): TPedidoUsuariosVO;
+Var vjsonObject: TJSONObject;
+    vJsonArray: TJSONArray;
+    usuarioVO: TPedidoUsuariosVO;
+begin
+
+   Try
+
+      frmPrincipal.CarregarRest();
+
+      frmPrincipal.RESTRequest1.Resource := '/GetPedidoValidarUsuarioEmpresas/{cnpj}/{cpf}/{senha}';
+      frmPrincipal.RESTRequest1.Method := TRESTRequestMethod.rmGET;
+      frmPrincipal.RESTRequest1.Params.AddUrlSegment('cnpj',Trim(cnpj));
+      frmPrincipal.RESTRequest1.Params.AddUrlSegment('cpf',Trim(cpf));
+      frmPrincipal.RESTRequest1.Params.AddUrlSegment('senha',Trim(senha));
+      frmPrincipal.RESTRequest1.Execute;
+
+      usuarioVO := TPedidoUsuariosVO.Create;
+      vjsonObject := frmPrincipal.RESTResponse1.JSONValue as TJSONObject;
+      usuarioVO := TJson.JsonToObject<TPedidoUsuariosVO>(vjsonObject.ToJSON);
+
+      Result := usuarioVO;
+
+   Except
+
+      prcMsgErro('Falha na validação');
+
+   End;
+
+end;
+
+end.

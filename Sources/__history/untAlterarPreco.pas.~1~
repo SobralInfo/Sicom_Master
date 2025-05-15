@@ -1,0 +1,29 @@
+unit untAlterarPreco;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  JvExStdCtrls, JvEdit, JvValidateEdit, Vcl.Buttons;
+
+type
+  TfrmAlterarPreco = class(TForm)
+    Panel6: TPanel;
+    Label3: TLabel;
+    edtValor: TJvValidateEdit;
+    SpeedButton1: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAlterarPreco: TfrmAlterarPreco;
+
+implementation
+
+{$R *.dfm}
+
+end.

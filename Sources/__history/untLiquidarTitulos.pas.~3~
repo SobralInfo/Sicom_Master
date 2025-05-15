@@ -1,0 +1,68 @@
+unit untLiquidarTitulos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, JvExStdCtrls, JvEdit, JvValidateEdit,
+  Vcl.Mask, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TfrmLiquidarTitulos = class(TForm)
+    Panel3: TPanel;
+    lblCaption: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Label4: TLabel;
+    edtClienteFornecedor: TEdit;
+    Label5: TLabel;
+    mkeDtVencimento: TMaskEdit;
+    Label6: TLabel;
+    edtValor: TJvValidateEdit;
+    Label1: TLabel;
+    mkeDtPagamento: TMaskEdit;
+    Label2: TLabel;
+    edtValorPago: TJvValidateEdit;
+    Panel1: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel7: TPanel;
+    Panel2: TPanel;
+    procedure Image1Click(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure Confirmar;
+  end;
+
+var
+  frmLiquidarTitulos: TfrmLiquidarTitulos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmLiquidarTitulos.Confirmar;
+begin
+
+end;
+
+procedure TfrmLiquidarTitulos.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+   case key of
+      VK_ESCAPE: close;
+      VK_F12: Confirmar;
+   end;
+end;
+
+procedure TfrmLiquidarTitulos.Image1Click(Sender: TObject);
+begin
+   close;
+end;
+
+end.

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><NFe xmlns="http://www.portalfiscal.inf.br/nfe"><infNFe Id="NFe23220410483444000260550010069083981207111845" versao="4.00"><ide><cUF>23</cUF><cNF>20711184</cNF><natOp>Devolução de venda de produção do estabelecimento</natOp><mod>55</mod><serie>1</serie><nNF>6908398</nNF><dhEmi>2022-04-19T17:19:01-03:00</dhEmi><tpNF>0</tpNF><idDest>1</idDest><cMunFG>2308708</cMunFG><tpImp>1</tpImp><tpEmis>1</tpEmis><cDV>5</cDV><tpAmb>1</tpAmb><finNFe>4</finNFe><indFinal>0</indFinal><indPres>0</indPres><procEmi>0</procEmi><verProc>SAP NFE 10.0</verProc><NFref><refNFe>23220410483444000260550010069074921513031621</refNFe></NFref></ide><emit><CNPJ>10483444000260</CNPJ><xNome>BETÂNIA LÁCTEOS S/A.</xNome><xFant>Morada Nova</xFant><enderEmit><xLgr>Rodovia CE 046</xLgr><nro>S/N</nro><xBairro>Planalto do Aeroporto</xBairro><cMun>2308708</cMun><xMun>Morada Nova</xMun><UF>CE</UF><CEP>62940000</CEP><xPais>Brasil</xPais><fone>558834226600</fone></enderEmit><IE>068719469</IE><IM>ISENTA</IM><CNAE>1052000</CNAE><CRT>3</CRT></emit><dest><CNPJ>13931743000127</CNPJ><xNome>NOSSA SENHORA APARECIDA COMERCIO DE PRODUTOS ALIMENTICIOS</xNome><enderDest><xLgr>ROD DR MENDEL STEINBRUCH</xLgr><nro>SN</nro><xBairro>INDUSTRIAL</xBairro><cMun>2307650</cMun><xMun>MARACANAU</xMun><UF>CE</UF><CEP>61925660</CEP><cPais>1058</cPais><xPais>Brasil</xPais><fone>85989461972</fone></enderDest><indIEDest>1</indIEDest><IE>065826523</IE><email>nsaparecida13@hotmail.com</email></dest><det nItem="1"><prod><cProd>000000000000401614</cProd><cEAN>7898403780499</cEAN><xProd>BEB LAC UHT CHOCOLATE BETANIA KIDS 200ML</xProd><NCM>04039000</NCM><CEST>1702100</CEST><CFOP>1201</CFOP><uCom>UN</uCom><qCom>810.0000</qCom><vUnCom>0.9800000000</vUnCom><vProd>793.80</vProd><cEANTrib>07898403780499</cEANTrib><uTrib>UN</uTrib><qTrib>810.0000</qTrib><vUnTrib>0.9800000000</vUnTrib><vOutro>3.00</vOutro><indTot>1</indTot></prod><imposto><ICMS><ICMS10><orig>0</orig><CST>10</CST><modBC>3</modBC><vBC>796.80</vBC><pICMS>18.0000</pICMS><vICMS>143.42</vICMS><modBCST>4</modBCST><vBCST>877.80</vBCST><pICMSST>18.0000</pICMSST><vICMSST>14.58</vICMSST></ICMS10></ICMS><IPI><cEnq>999</cEnq><IPINT><CST>53</CST></IPINT></IPI><PIS><PISOutr><CST>73</CST><vBC>0.00</vBC><pPIS>0.0000</pPIS><vPIS>0.00</vPIS></PISOutr></PIS><COFINS><COFINSOutr><CST>73</CST><vBC>0.00</vBC><pCOFINS>0.0000</pCOFINS><vCOFINS>0.00</vCOFINS></COFINSOutr></COFINS></imposto><impostoDevol><pDevol>0.00</pDevol><IPI><vIPIDevol>0.00</vIPIDevol></IPI></impostoDevol><infAdProd>Sujeito a ICMS e Sub.Trib. Conforme Artigo 532 a 533 Dec. 24.569-97</infAdProd></det><total><ICMSTot><vBC>796.80</vBC><vICMS>143.42</vICMS><vICMSDeson>0.00</vICMSDeson><vFCP>0.00</vFCP><vBCST>877.80</vBCST><vST>14.58</vST><vFCPST>0.00</vFCPST><vFCPSTRet>0.00</vFCPSTRet><vProd>793.80</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vIPIDevol>0.00</vIPIDevol><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>3.00</vOutro><vNF>811.38</vNF></ICMSTot></total><transp><modFrete>0</modFrete><vol><pesoL>162.000</pesoL><pesoB>181.440</pesoB></vol></transp><pag><detPag><tPag>90</tPag><vPag>0.00</vPag></detPag></pag><infAdic><infCpl>Sujeito a ICMS e Sub.Trib. Conforme Artigo 532 á 533 Dec. 24.569/97 N° da Ordem Venda: 0061042441 Taxa de Boleto: R$ 3,00 N° Remessa(s): , 0061042441 N° Fatura: 5406112248 Cód. do Cliente 0001030499 Devolução referente à Nota Fiscal 006907492-001 Mercadoria será retirada no Depósito Fechado localizado na R. Carlos Câmara,1454 A - Jardim América Fortaleza/Ce - CEP: 60.425-180, CNPJ 10.483.444/0024-75 e IE 06.398.926-3</infCpl></infAdic></infNFe><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#NFe23220410483444000260550010069083981207111845"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>1BcZB7eIgO2PlgZiTcCbksYoARs=</DigestValue></Reference></SignedInfo><SignatureValue>MJ38wBJbZwuxdFXWdJOwj05dpNvIpytCRmc1SgifuGfCP9Miq5tCLKbDcbZ7AyvAeUK0+OQVvtkC
+yiBFc1xeJxdt2Ftr6kqKnHyBRFrwpjcLoKsWe3dmYrU5k+DZyIl9qRUlDhIdBF5dfQt1/DLrhRen
+K17nBKyWaGUaw62rmBaB8n4NhkklRK+zPUheSEskgPqyr0kSGxYEv0UCzzobvFTDlLo6IAw7E/DR
+njuQbvOIXOVKl7Hfbo2jsleo24HOTw+l84z/jK5Xf3tr/NUpKPcpT4Njm0UHAmVsJ5J+6kll6A84
+O8naj5WPGdQ4se05ppO0c9wQVi09VzCPltwgQQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIIDDCCBfSgAwIBAgIQJMaQcok2pPJq0iIz+yDh2zANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQG
+EwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRh
+IEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRwwGgYDVQQDExNBQyBDZXJ0aXNpZ24gUkZCIEc1MB4X
+DTIxMTIwOTEzNTAyNFoXDTIyMTIwOTEzNTAyNFowge4xCzAJBgNVBAYTAkJSMRMwEQYDVQQKDApJ
+Q1AtQnJhc2lsMQswCQYDVQQIDAJDRTESMBAGA1UEBwwJRm9ydGFsZXphMRMwEQYDVQQLDApQcmVz
+ZW5jaWFsMRcwFQYDVQQLDA4wMDI1MDM1NDAwMDE5NDE2MDQGA1UECwwtU2VjcmV0YXJpYSBkYSBS
+ZWNlaXRhIEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRYwFAYDVQQLDA1SRkIgZS1DTlBKIEExMSsw
+KQYDVQQDDCJCRVRBTklBIExBQ1RFT1MgUyBBOjEwNDgzNDQ0MDAwMTg5MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAtJC4XLXU4ZVEM0BdMqUYrXRbIg2vYwBFFC2+xpnykTWYv9TAFof5
+LJp2+i2T5sQZnajccSybJXrfDSheti5O9P/iWxqVY1WIbRE44Xp7Pydb1dPvnC7TmOa8BCy//qN4
+ytZVqRuDK0Tc5jyV2XU28U6QNmUE49tZW09bJei5eItRp/5aCm0A0x3knLh8yRtUVeG+kQjZq0oE
+8CETTcl7bUpnRVCDyK3KbLPxGgFEUKt5UFBw4uuCiUxdUq8HKJ9SReGhmwABkxrKmbOB+BoWVZxS
+xQd97kuO12K8knfzgpLgLQdkO2F28Vi55V9xeqOtGZ0JBpYe8mB6pnLwhVgIJwIDAQABo4IDGTCC
+AxUwgcgGA1UdEQSBwDCBvaA/BgVgTAEDBKA2BDQwMTA5MTk3NzQ0MDk1MDIzMzY4MDAwMDAwMDAw
+MDAwMDAwOTEwMDIwNTU4NzZTU1BEU0NFoCQGBWBMAQMCoBsEGVZJVE9SIEJSVU5PIE1BQ0hBRE8g
+R0lSQU+gGQYFYEwBAwOgEAQOMTA0ODM0NDQwMDAxODmgFwYFYEwBAwegDgQMMDAwMDAwMDAwMDAw
+gSB0cmlidXRhcmlvQGJldGFuaWFsYWN0ZW9zLmNvbS5icjAJBgNVHRMEAjAAMB8GA1UdIwQYMBaA
+FFN9f52+0WHQILran+OJpxNzWM1CMH8GA1UdIAR4MHYwdAYGYEwBAgEMMGowaAYIKwYBBQUHAgEW
+XGh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vZHBjL0FDX0Nl
+cnRpc2lnbl9SRkIvRFBDX0FDX0NlcnRpc2lnbl9SRkIucGRmMIG8BgNVHR8EgbQwgbEwV6BVoFOG
+UWh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vbGNyL0FDQ2Vy
+dGlzaWduUkZCRzUvTGF0ZXN0Q1JMLmNybDBWoFSgUoZQaHR0cDovL2ljcC1icmFzaWwub3V0cmFs
+Y3IuY29tLmJyL3JlcG9zaXRvcmlvL2xjci9BQ0NlcnRpc2lnblJGQkc1L0xhdGVzdENSTC5jcmww
+DgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCBrAYIKwYBBQUH
+AQEEgZ8wgZwwXwYIKwYBBQUHMAKGU2h0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIv
+cmVwb3NpdG9yaW8vY2VydGlmaWNhZG9zL0FDX0NlcnRpc2lnbl9SRkJfRzUucDdjMDkGCCsGAQUF
+BzABhi1odHRwOi8vb2NzcC1hYy1jZXJ0aXNpZ24tcmZiLmNlcnRpc2lnbi5jb20uYnIwDQYJKoZI
+hvcNAQELBQADggIBAFjHCWh7Bz8Je5HzApbf9Sa65SbJTPu4w1G7ywDaNadOplx60eQd8Clj2Lby
+zJhj/xgfQ1aMoVTOzRh5mslwjiIIqKsmGZI9d9WQcJrLV6izGvGXxKGJmOxf/v3MG0xYrWRtb4fN
+ilvHHLrH8AZq1zCWuhbpfuvpLVINiZbptlO7zmatFd+tNpP8t2izj7TKy0CRGBhvrPF2Cm7IvIK8
+X8v7nCDtCAVzfE4C271g3Ui1AZ3wrIM/3QkIcAyKt2chmOgizdXudFsRp6a5O1FN8XFGsGuXVZeh
+faa/QNXGq4PhSbinvlUu9eUkZBYecQI2jF7eWpYcPm+rj9Vs/zh/lyQjylTIB78fRguCjJzN+2WN
+F2XqxCRTkG0sli8Y00GRVYyZ6TIQcvXR1jfdZgDkGZHrNAKXFVrgAXJMb8co89M5MhLDNKOiGr1A
+bRvHMgxa34FosurbBVkYtypEWHiGwscdga9QGLBOPhA2nQ7TNFzDxqlchWRyrBm/VBfz7ufv4hQE
+kE//q0XeMuJmyXHBIauemRGh+qlQgaP/jyZu4g5TI/80ZfNiq2SodtQL5RKzFirBcjiN8PKgIv2N
+O3I72bZPfZ4vZYU5Oq60Rwz01NgYcuIMste87m19MFt4WYSCeVnVeZUsYF30W7g509nUOrFckusZ
+h6h1bMlNqZMc49nJ</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><infProt><tpAmb>1</tpAmb><verAplic>SVRS202204131008</verAplic><chNFe>23220410483444000260550010069083981207111845</chNFe><dhRecbto>2022-04-19T17:20:44-03:00</dhRecbto><nProt>323220023232396</nProt><digVal>1BcZB7eIgO2PlgZiTcCbksYoARs=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>

@@ -1,0 +1,41 @@
+unit EDSUsuariosVO;
+
+interface
+
+Type
+   TEDSUsuariosVO = class
+  private
+    FSENHA: String;
+    FCODUSUARIO: INTEGER;
+    FUSUARIO: String;
+    procedure SetCODUSUARIO(const Value: INTEGER);
+    procedure SetSENHA(const Value: String);
+    procedure SetUSUARIO(const Value: String);
+  published
+
+      property CODUSUARIO: INTEGER read FCODUSUARIO write SetCODUSUARIO;
+      property USUARIO: String read FUSUARIO write SetUSUARIO;
+      property SENHA: String read FSENHA write SetSENHA;
+
+   end;
+
+implementation
+
+{ TEDSUsuariosVO }
+
+procedure TEDSUsuariosVO.SetCODUSUARIO(const Value: INTEGER);
+begin
+  FCODUSUARIO := Value;
+end;
+
+procedure TEDSUsuariosVO.SetSENHA(const Value: String);
+begin
+  FSENHA := Value;
+end;
+
+procedure TEDSUsuariosVO.SetUSUARIO(const Value: String);
+begin
+  FUSUARIO := Value;
+end;
+
+end.

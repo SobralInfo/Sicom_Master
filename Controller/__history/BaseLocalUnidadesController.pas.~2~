@@ -1,0 +1,78 @@
+unit BaseLocalUnidadesController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalUnidadesVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalUnidadesController = class
+
+   class Procedure AlterarCliente(unidade: TBaseLocalUnidadesVO);
+   class Procedure GravarCliente(unidade: TBaseLocalUnidadesVO);
+
+end;
+
+implementation
+
+{ TBaseLocalUnidadesController }
+
+class procedure TBaseLocalUnidadesController.AlterarCliente(unidade: TBaseLocalUnidadesVO);
+var query: TFDQuery;
+begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' UPDATE UNIDADE_PRODUTOS SET STATUS, ');
+      query.SQL.Add('                             DESCRICAO, ');
+      query.SQL.Add('                             SIGLA, ');
+      query.SQL.Add('                             FATOR, ');
+      query.SQL.Add('                             PODE_FRACIONAR ');
+      query.SQL.Add('  WHERE id = :id ');
+
+      query.Params.ParamByName('status').AsString         := Trim(unidade.STATUS);
+      query.Params.ParamByName('DESCRICAO').AsString      := Trim(unidade.DESCRICAO);
+      query.Params.ParamByName('SIGLA').AsString          := Trim(unidade.SIGLA);
+      query.Params.ParamByName('FATOR').AsFloat           := unidade.fator;
+      query.Params.ParamByName('PODE_FRACIONAR').AsString := Trim(unidade.);
+      query.Params.ParamByName('id').AsInteger            := unidade.id;
+
+      Try
+         query.ExecSQL;
+         frmPrincipal.ConexaoLocal.Commit;
+         Try
+            frmPrincipal.qryClientes.Refresh;
+         Except
+            frmPrincipal.qryClientes.Close;
+            frmPrincipal.qryClientes.Open;
+         End;
+         prcMsgInf('Registro alterado com sucesso.');
+      Except
+         frmPrincipal.ConexaoLocal.Rollback;
+         Try
+            frmPrincipal.qryClientes.Refresh;
+         Except
+            frmPrincipal.qryClientes.Close;
+            frmPrincipal.qryClientes.Open;
+         End;
+         prcMsgErro('Não foi possível alterar o registro.');
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+class procedure TBaseLocalUnidadesController.GravarCliente(cliente: TBaseLocalUnidadesVO);
+begin
+
+end;
+
+end.

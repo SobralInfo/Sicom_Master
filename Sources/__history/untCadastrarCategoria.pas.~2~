@@ -1,0 +1,145 @@
+unit untCadastrarCategoria;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask;
+
+type
+  TfrmCadastrarCategoria = class(TForm)
+    speNovo: TSpeedButton;
+    speSalvar: TSpeedButton;
+    speCancelar: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel4: TPanel;
+    Label4: TLabel;
+    cbbStatus: TComboBox;
+    Label1: TLabel;
+    edtDescricao: TMaskEdit;
+    procedure Image1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    Var DAO: String;
+        idCategoria: integer;
+    procedure Novo;
+    procedure Salvar;
+    procedure CANCELAR;
+    procedure HabilitarDesabilitarBotoes(tipo: string);
+    procedure HabilitarDesabilitarCampos(tipo: string);
+    procedure LimparCampos;
+  end;
+
+var
+  frmCadastrarCategoria: TfrmCadastrarCategoria;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadastrarCategoria.CANCELAR;
+begin
+
+end;
+
+procedure TfrmCadastrarCategoria.HabilitarDesabilitarBotoes(tipo: string);
+begin
+
+   if tipo = 'N' then Begin
+
+      speNovo.Enabled     := False;
+      speSalvar.Enabled   := True;
+      speCancelar.Enabled := True;
+
+   End;
+
+   if tipo = 'E' then Begin
+
+      speNovo.Enabled     := False;
+      speSalvar.Enabled   := True;
+      speCancelar.Enabled := True;
+
+   End;
+
+   if tipo = 'X' then Begin
+
+      speNovo.Enabled     := True;
+      speSalvar.Enabled   := False;
+      speCancelar.Enabled := False;
+
+   End;
+
+   if tipo = 'C' then Begin
+
+      speNovo.Enabled     := True;
+      speSalvar.Enabled   := False;
+      speCancelar.Enabled := False;
+
+   End;
+
+   if tipo = 'S' then Begin
+
+      speNovo.Enabled     := True;
+      speSalvar.Enabled   := False;
+      speCancelar.Enabled := False;
+
+   End;
+
+end;
+
+procedure TfrmCadastrarCategoria.HabilitarDesabilitarCampos(tipo: string);
+begin
+
+   if tipo = 'H' then Begin
+
+      cbbStatus.Enabled       := True;
+      edtDescricao.Enabled    := True;
+
+   End else if tipo = 'D' then Begin
+
+      cbbStatus.Enabled       := False;
+      edtDescricao.Enabled    := False;
+
+   End;
+
+
+end;
+
+procedure TfrmCadastrarCategoria.Image1Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+procedure TfrmCadastrarCategoria.LimparCampos;
+begin
+
+end;
+
+procedure TfrmCadastrarCategoria.Novo;
+begin
+
+   HabilitarDesabilitarBotoes('N');
+   HabilitarDesabilitarCampos('H');
+   LimparCampos;
+   cbbStatus.ItemIndex := 0;
+   cbbStatus.SetFocus;
+   DAO := 'N';
+
+end;
+
+procedure TfrmCadastrarCategoria.Salvar;
+begin
+
+end;
+
+end.

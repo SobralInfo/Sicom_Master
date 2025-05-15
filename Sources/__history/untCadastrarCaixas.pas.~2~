@@ -1,0 +1,39 @@
+unit untCadastrarCaixas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmCadastrarCaixas = class(TForm)
+    speNovo: TSpeedButton;
+    speSalvar: TSpeedButton;
+    speCancelar: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    Label4: TLabel;
+    Label1: TLabel;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    Panel1: TPanel;
+    cbbStatus: TComboBox;
+    edtDescricao: TMaskEdit;
+    Panel2: TPanel;
+    Panel4: TPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastrarCaixas: TfrmCadastrarCaixas;
+
+implementation
+
+{$R *.dfm}
+
+end.

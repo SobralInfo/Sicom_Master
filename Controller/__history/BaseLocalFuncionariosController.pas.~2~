@@ -1,0 +1,51 @@
+unit BaseLocalFuncionariosController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalFuncionariosVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalFuncionariosController = class
+
+   class Function RetornarFuncionarioPorID(id: integer): TBaseLocalFuncionariosVO;
+
+end;
+
+implementation
+
+{ TBaseLocalFuncionariosController }
+
+class function TBaseLocalFuncionariosController.RetornarFuncionarioPorID(id: integer): TBaseLocalFuncionariosVO;
+Var query: TFDQuery;
+    funcionario: TBaseLocalFuncionariosVO;
+
+Begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' SELECT * FROM funcionarios WHERE id = '+id.ToString);
+      query.open;
+
+      funcionario := TBaseLocalFuncionariosVO.Create;
+
+      if Not(query.IsEmpty) then Begin
+
+         funcionario.nome     := Trim(query.FieldByName('nome').AsString);
+         Result := funcionario;
+
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+end.

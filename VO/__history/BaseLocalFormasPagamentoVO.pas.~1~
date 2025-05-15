@@ -1,0 +1,40 @@
+unit BaseLocalFormasPagamentoVO;
+
+interface
+
+type TBaseLocalFormasPagamentoVO = class
+  private
+    Fid: integer;
+    Fstatus: string;
+    Fnome: string;
+    procedure Setid(const Value: integer);
+    procedure Setnome(const Value: string);
+    procedure Setstatus(const Value: string);
+  published
+
+   property id: integer read Fid write Setid;
+   property status: string read Fstatus write Setstatus;
+   property nome: string read Fnome write Setnome;
+
+end;
+
+implementation
+
+{ TBaseLocalFormasPagamentoVO }
+
+procedure TBaseLocalFormasPagamentoVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TBaseLocalFormasPagamentoVO.Setnome(const Value: string);
+begin
+  Fnome := Value;
+end;
+
+procedure TBaseLocalFormasPagamentoVO.Setstatus(const Value: string);
+begin
+  Fstatus := Value;
+end;
+
+end.

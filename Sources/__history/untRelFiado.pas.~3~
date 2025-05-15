@@ -1,0 +1,57 @@
+unit untRelFiado;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, JvExStdCtrls, JvEdit, JvValidateEdit, Vcl.Buttons;
+
+type
+  TfrmRelFiado = class(TForm)
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    Label1: TLabel;
+    SpeedButton5: TSpeedButton;
+    edtProduto: TJvValidateEdit;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    chkPromocao: TCheckBox;
+    CheckBox1: TCheckBox;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Image1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelFiado: TfrmRelFiado;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmRelFiado.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+
+   end;
+
+end;
+
+procedure TfrmRelFiado.Image1Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+end.

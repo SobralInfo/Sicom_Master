@@ -1,0 +1,200 @@
+object frmExportacaoDeClientes: TfrmExportacaoDeClientes
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 'Exporta'#231#227'o de Clientes'
+  ClientHeight = 661
+  ClientWidth = 974
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedButton3: TSpeedButton
+    Left = 335
+    Top = 614
+    Width = 154
+    Height = 37
+    Caption = 'Carregar Dados'
+    OnClick = SpeedButton3Click
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 509
+    Top = 615
+    Width = 154
+    Height = 37
+    Caption = 'Exportar Produtos'
+    OnClick = SpeedButton1Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 6
+    Top = 8
+    Width = 956
+    Height = 595
+    DataSource = dtsClientes
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Width = 350
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FANTASIA'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF_CNPJ'
+        Title.Caption = 'CPF/CNPJ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LOGRADOURO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NUMERO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'COMPLEMENTO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'BAIRRO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ID_MUNICIPIO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CELULAR'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FONE_FIXO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'STATUS'
+        Visible = True
+      end>
+  end
+  object qryClientes: TFDQuery
+    Connection = frmPrincipal.Conexao
+    SQL.Strings = (
+      'SELECT c.codcliente as  id_cliente,'
+      'c.nome_cli AS nome,'
+      'c.nome_cli as fantasia,'
+      'c.cpf cpf_cnpj,'
+      'c.logradouro,'
+      'c.numero,'
+      'c.complemento,'
+      'c.bairro,'
+      'c.cod_uf as id_municipio,'
+      'c.celular,'
+      'c.telefone as fone_fixo,'
+      #39'A'#39' as status FROM clientes c')
+    Left = 592
+    Top = 360
+    object qryClientesID_CLIENTE: TIntegerField
+      FieldName = 'ID_CLIENTE'
+      Origin = 'CODCLIENTE'
+      Required = True
+    end
+    object qryClientesNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME_CLI'
+      Required = True
+      Size = 65
+    end
+    object qryClientesFANTASIA: TStringField
+      FieldName = 'FANTASIA'
+      Origin = 'NOME_CLI'
+      ProviderFlags = []
+      Required = True
+      Size = 65
+    end
+    object qryClientesCPF_CNPJ: TStringField
+      FieldName = 'CPF_CNPJ'
+      Origin = 'CPF'
+      FixedChar = True
+      Size = 23
+    end
+    object qryClientesLOGRADOURO: TStringField
+      FieldName = 'LOGRADOURO'
+      Origin = 'LOGRADOURO'
+      Size = 120
+    end
+    object qryClientesNUMERO: TStringField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+      FixedChar = True
+      Size = 30
+    end
+    object qryClientesCOMPLEMENTO: TStringField
+      FieldName = 'COMPLEMENTO'
+      Origin = 'COMPLEMENTO'
+      Size = 100
+    end
+    object qryClientesBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Size = 55
+    end
+    object qryClientesID_MUNICIPIO: TIntegerField
+      FieldName = 'ID_MUNICIPIO'
+      Origin = 'COD_UF'
+    end
+    object qryClientesCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Origin = 'CELULAR'
+      FixedChar = True
+      Size = 18
+    end
+    object qryClientesFONE_FIXO: TStringField
+      FieldName = 'FONE_FIXO'
+      Origin = 'TELEFONE'
+      FixedChar = True
+      Size = 18
+    end
+    object qryClientesSTATUS: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      ProviderFlags = []
+      ReadOnly = True
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object dtsClientes: TDataSource
+    DataSet = qryClientes
+    Left = 672
+    Top = 360
+  end
+end

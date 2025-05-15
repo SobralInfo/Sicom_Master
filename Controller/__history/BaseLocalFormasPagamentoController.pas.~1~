@@ -1,0 +1,13 @@
+unit BaseLocalFormasPagamentoController;
+
+interface
+
+Type TBaseLocalFormasPagamentoController = class
+
+   public
+
+end;
+
+implementation
+
+end.

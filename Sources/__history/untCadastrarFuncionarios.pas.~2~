@@ -1,0 +1,65 @@
+unit untCadastrarFuncionarios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls, Vcl.Mask, Vcl.StdCtrls, JvExStdCtrls, JvEdit, JvValidateEdit;
+
+type
+  TfrmCadastrarFuncionarios = class(TForm)
+    ComboBox1: TComboBox;
+    JvValidateEdit1: TJvValidateEdit;
+    Label1: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label8: TLabel;
+    MaskEdit2: TMaskEdit;
+    mkeDescricao: TMaskEdit;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    Panel4: TPanel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Image1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastrarFuncionarios: TfrmCadastrarFuncionarios;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadastrarFuncionarios.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+
+   end;
+
+end;
+
+procedure TfrmCadastrarFuncionarios.Image1Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+end.

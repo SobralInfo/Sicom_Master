@@ -1,0 +1,24 @@
+unit untPesquisarContasFinanceiras;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmPesquisarContasFinanceiras = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPesquisarContasFinanceiras: TfrmPesquisarContasFinanceiras;
+
+implementation
+
+{$R *.dfm}
+
+end.

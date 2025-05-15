@@ -1,0 +1,164 @@
+unit untPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, Data.DB,
+  FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
+  FireDAC.DApt, FireDAC.Comp.DataSet, dxGDIPlusClasses, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    ConexaoLocal: TFDConnection;
+    dtsClientes: TDataSource;
+    qryClientes: TFDQuery;
+    qryClientesID: TIntegerField;
+    qryClientesSTATUS: TStringField;
+    qryClientesCPF_CNPJ: TStringField;
+    qryClientesNOME: TStringField;
+    qryClientesLOGRADOURO: TStringField;
+    qryClientesNUMERO: TStringField;
+    qryClientesCOMPLEMENTO: TStringField;
+    qryClientesBAIRRO: TStringField;
+    qryClientesCIDADE: TIntegerField;
+    qryClientesCONTATO: TStringField;
+    qryClientesFONE_FIXO: TStringField;
+    qryClientesREFERENCIA: TStringField;
+    qryClientesCELULAR: TStringField;
+    qryClientescalcCPFCNPJ: TStringField;
+    dtsMunicipio: TDataSource;
+    qryMunicipio: TFDQuery;
+    qryMunicipioID: TIntegerField;
+    qryMunicipioCID_CODIGO: TStringField;
+    qryMunicipioUF_SIGLA: TStringField;
+    qryMunicipioCID_NOME: TStringField;
+    qryFuncionarios: TFDQuery;
+    qryFuncionariosID: TIntegerField;
+    qryFuncionariosSTATUS: TStringField;
+    qryFuncionariosCODIGO: TStringField;
+    qryFuncionariosNOME: TStringField;
+    qryFuncionariosPERCENTUAL_COMISSAO: TFloatField;
+    dtsFuncionarios: TDataSource;
+    dtsUnidades: TDataSource;
+    qryUnidades: TFDQuery;
+    qryUnidadesID: TIntegerField;
+    qryUnidadesSTATUS: TStringField;
+    qryUnidadesDESCRICAO: TStringField;
+    qryUnidadesSIGLA: TStringField;
+    qryUnidadesFATOR: TFloatField;
+    qryUnidadesPODE_FRACIONAR: TStringField;
+    qryUnidadescalcSTATUS: TStringField;
+    qryProdutos: TFDQuery;
+    qryProdutosID: TIntegerField;
+    qryProdutosSTATUS: TStringField;
+    qryProdutosDESCRICAO: TStringField;
+    qryProdutosQTDE_ESTOQUE: TFloatField;
+    qryProdutosREFERENCIA: TStringField;
+    qryProdutosID_UNIDADE: TIntegerField;
+    qryProdutosCODIGO_BARRAS: TStringField;
+    qryProdutosVALOR_UNITARIO: TFloatField;
+    qryProdutosUNIDADE: TStringField;
+    qryProdutosFATOR: TFloatField;
+    qryProdutosIMPRIMIR_COZINHA: TStringField;
+    qryProdutosID_CATEGORIA: TIntegerField;
+    qryProdutosKIT: TStringField;
+    dtsProdutos: TDataSource;
+    dtsParametros: TDataSource;
+    qryParametros: TFDQuery;
+    qryParametrosID: TIntegerField;
+    qryParametrosBASE_LOCAL: TStringField;
+    qryParametrosCAIXA: TStringField;
+    qryParametrosTIPO_DESCONTO_PEDIDO: TStringField;
+    qryParametrosTIPO_IMPRESSAO: TIntegerField;
+    qryParametrosCERTIFICADO: TStringField;
+    qryParametrosID_UNIDADE_PADRAO_ENTRADA: TIntegerField;
+    qryParametrosID_UNIDADE_PADRAO_PRODUTO: TIntegerField;
+    qryParametrosCRITICAR_ESTOQUE: TStringField;
+    qryParametrosMENSAGEM_IMPRIMIR: TStringField;
+    Panel2: TPanel;
+    lblCaption: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Image22: TImage;
+    Panel7: TPanel;
+    Image12: TImage;
+    Panel1: TPanel;
+    CategoryPanelGroup1: TCategoryPanelGroup;
+    CategoryPanel2: TCategoryPanel;
+    SpeedButton6: TSpeedButton;
+    Image9: TImage;
+    CategoryPanel1: TCategoryPanel;
+    SpeedButton5: TSpeedButton;
+    Image3: TImage;
+    SpeedButton1: TSpeedButton;
+    procedure Image2Click(Sender: TObject);
+    procedure Image22Click(Sender: TObject);
+    procedure SpeedButton5Click(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    var idUser: integer;
+    procedure ImprimirPedido(id:integer);
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses untBalcao, untPedidosPendentes, untPedidosCancelados;
+
+procedure TfrmPrincipal.Image22Click(Sender: TObject);
+begin
+
+   frmPrincipal.WindowState := wsMinimized;
+
+end;
+
+procedure TfrmPrincipal.Image2Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+procedure TfrmPrincipal.ImprimirPedido(id: integer);
+begin
+
+end;
+
+procedure TfrmPrincipal.SpeedButton1Click(Sender: TObject);
+begin
+
+   Application.CreateForm(TfrmPedidosPendentes, frmPedidosPendentes);
+   frmPedidosPendentes.ShowModal;
+
+end;
+
+procedure TfrmPrincipal.SpeedButton5Click(Sender: TObject);
+begin
+
+   Application.CreateForm(TfrmBalcao, frmBalcao);
+   frmBalcao.ShowModal;
+
+end;
+
+procedure TfrmPrincipal.SpeedButton6Click(Sender: TObject);
+begin
+
+   Application.CreateForm(TfrmPedidosCancelados, frmPedidosCancelados);
+   frmPedidosCancelados.ShowModal;
+
+end;
+
+end.

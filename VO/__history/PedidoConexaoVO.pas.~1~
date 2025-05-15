@@ -1,0 +1,32 @@
+unit PedidoConexaoVO;
+
+interface
+
+Type TPedidoConexaoVO = class
+  private
+    Fid: integer;
+    Fid_empresa: integer;
+    procedure Setid(const Value: integer);
+    procedure Setid_empresa(const Value: integer);
+
+   public
+       property id: integer read Fid write Setid;
+       property id_empresa: integer read Fid_empresa write Setid_empresa;
+
+end;
+
+implementation
+
+{ TPedidoConexaoVO }
+
+procedure TPedidoConexaoVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TPedidoConexaoVO.Setid_empresa(const Value: integer);
+begin
+  Fid_empresa := Value;
+end;
+
+end.

@@ -1,0 +1,63 @@
+unit PedidoEmpresasVO;
+
+interface
+
+Type TPedidoEmpresasVO = class
+
+   public
+      property id: integer;
+      property id_empresa: integer;
+      property id_produto: string;
+      property status: string;
+      property descricao: string;
+      property unidade: string;
+      property valor_unitario: double;
+      property qtde_estoque: double;
+
+end;
+
+implementation
+
+{ TPedidoEmpresasVO }
+
+procedure TPedidoEmpresasVO.Setdescricao(const Value: string);
+begin
+  Fdescricao := Value;
+end;
+
+procedure TPedidoEmpresasVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TPedidoEmpresasVO.Setid_empresa(const Value: integer);
+begin
+  Fid_empresa := Value;
+end;
+
+procedure TPedidoEmpresasVO.Setid_produto(const Value: string);
+begin
+  Fid_produto := Value;
+end;
+
+procedure TPedidoEmpresasVO.Setqtde_estoque(const Value: double);
+begin
+  Fqtde_estoque := Value;
+end;
+
+procedure TPedidoEmpresasVO.Setstatus(const Value: string);
+begin
+  Fstatus := Value;
+end;
+
+procedure TPedidoEmpresasVO.Setunidade(const Value: string);
+begin
+  Funidade := Value;
+end;
+
+procedure TPedidoEmpresasVO.Setvalor_unitario(const Value: double);
+begin
+  Fvalor_unitario := Value;
+end;
+
+end.

@@ -1,0 +1,58 @@
+unit FiadoVO;
+
+interface
+
+Type TFiadoVO = class
+  private
+    Fid_venda: integer;
+    Fid: integer;
+    Fdata_venda: TDateTime;
+    Fvalor_venda: Double;
+    Fid_cliente: integer;
+    procedure Setdata_venda(const Value: TDateTime);
+    procedure Setid(const Value: integer);
+    procedure Setid_venda(const Value: integer);
+    procedure Setvalor_venda(const Value: Double);
+    procedure Setid_cliente(const Value: integer);
+
+public
+   property id: integer read Fid write Setid;
+   property id_venda: integer read Fid_venda write Setid_venda;
+   property valor_venda: Double read Fvalor_venda write Setvalor_venda;
+   property data_venda: TDateTime read Fdata_venda write Setdata_venda;
+   property id_cliente: integer read Fid_cliente write Setid_cliente;
+
+
+
+end;
+
+implementation
+
+{ TFiadoVO }
+
+procedure TFiadoVO.Setdata_venda(const Value: TDateTime);
+begin
+  Fdata_venda := Value;
+end;
+
+procedure TFiadoVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TFiadoVO.Setid_cliente(const Value: integer);
+begin
+  Fid_cliente := Value;
+end;
+
+procedure TFiadoVO.Setid_venda(const Value: integer);
+begin
+  Fid_venda := Value;
+end;
+
+procedure TFiadoVO.Setvalor_venda(const Value: Double);
+begin
+  Fvalor_venda := Value;
+end;
+
+end.

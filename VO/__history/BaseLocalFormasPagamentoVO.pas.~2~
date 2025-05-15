@@ -1,0 +1,48 @@
+unit BaseLocalFormasPagamentoVO;
+
+interface
+
+type TBaseLocalFormasPagamentoVO = class
+  private
+    Fid: integer;
+    Fstatus: string;
+    Fnome: string;
+    Fpermite_troco: string;
+    procedure Setid(const Value: integer);
+    procedure Setnome(const Value: string);
+    procedure Setstatus(const Value: string);
+    procedure Setpermite_troco(const Value: string);
+  published
+
+   property id: integer read Fid write Setid;
+   property status: string read Fstatus write Setstatus;
+   property nome: string read Fnome write Setnome;
+   property permite_troco: string read Fpermite_troco write Setpermite_troco;
+
+end;
+
+implementation
+
+{ TBaseLocalFormasPagamentoVO }
+
+procedure TBaseLocalFormasPagamentoVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TBaseLocalFormasPagamentoVO.Setnome(const Value: string);
+begin
+  Fnome := Value;
+end;
+
+procedure TBaseLocalFormasPagamentoVO.Setpermite_troco(const Value: string);
+begin
+  Fpermite_troco := Value;
+end;
+
+procedure TBaseLocalFormasPagamentoVO.Setstatus(const Value: string);
+begin
+  Fstatus := Value;
+end;
+
+end.

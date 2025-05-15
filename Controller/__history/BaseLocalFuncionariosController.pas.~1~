@@ -1,0 +1,13 @@
+unit BaseLocalFuncionariosController;
+
+interface
+
+Type TBaseLocalFuncionariosController = class
+
+
+
+end;
+
+implementation
+
+end.

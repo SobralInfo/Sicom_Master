@@ -1,0 +1,54 @@
+unit untAlterarPreco;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  JvExStdCtrls, JvEdit, JvValidateEdit, Vcl.Buttons, Vcl.Imaging.pngimage;
+
+type
+  TfrmAlterarPreco = class(TForm)
+    Panel6: TPanel;
+    Label3: TLabel;
+    edtValor: TJvValidateEdit;
+    SpeedButton1: TSpeedButton;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Image3: TImage;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Image3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAlterarPreco: TfrmAlterarPreco;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmAlterarPreco.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case Key of
+
+      VK_ESCAPE: close;
+
+   end;
+
+end;
+
+procedure TfrmAlterarPreco.Image3Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+end.

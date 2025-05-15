@@ -1,0 +1,110 @@
+unit BaseLocalPedidoDetalheController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalPedidoDetalheVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalPedidoDetalheController = class
+
+   class Function RetornarPedidoDetalhePorID(id: integer): TBaseLocalPedidoDetalheVO;
+   class Procedure AlterarPedidoDetalhe(pedidoDetalhe: TBaseLocalPedidoDetalheVO);
+   class Procedure GravarPedidoDetalhe(pedidoDetalhe: TBaseLocalPedidoDetalheVO);
+
+end;
+
+implementation
+
+{ TBaseLocalPedidoDetalheController }
+
+class procedure TBaseLocalPedidoDetalheController.AlterarPedidoDetalhe(pedidoDetalhe: TBaseLocalPedidoDetalheVO);
+var query: TFDQuery;
+begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' UPDATE pedido_detalhe SET id_pedido = :id_pedido, ');
+      query.SQL.Add('                           id_produto = :id_produto, ');
+      query.SQL.Add('                           quantidade = :quantidade, ');
+      query.SQL.Add('                           valor_unitario = :valor_unitario, ');
+      query.SQL.Add('                           observacao = :observacao ');
+      query.SQL.Add('  WHERE id = :id ');
+
+      query.Params.ParamByName('id').AsInteger           := pedidoDetalhe.id;
+      query.Params.ParamByName('id_pedido').AsInteger    := pedidoDetalhe.id_pedido;
+      query.Params.ParamByName('id_produto').AsInteger   := pedidoDetalhe.id_produto;
+      query.Params.ParamByName('quantidade').AsFloat     := pedidoDetalhe.quantidade;
+      query.Params.ParamByName('valor_unitario').AsFloat := pedidoDetalhe.valor_unitario;
+      query.Params.ParamByName('observacao').AsString    := TRim(pedidoDetalhe.observacao);
+
+      Try
+         query.ExecSQL;
+         frmPrincipal.ConexaoLocal.Commit;
+         prcMsgInf('Registro alterado com sucesso.');
+      Except
+         frmPrincipal.ConexaoLocal.Rollback;
+         prcMsgErro('Não foi possível alterar o registro.');
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+class procedure TBaseLocalPedidoDetalheController.GravarPedidoDetalhe(pedidoDetalhe: TBaseLocalPedidoDetalheVO);
+var query: TFDQuery;
+begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' INSERT INTO pedido_detalhe ');
+      query.SQL.Add(' (  ');
+      query.SQL.Add(' id_pedido, id_produto, quantidade, valor_unitario, observacao ');
+      query.SQL.Add(' ) ');
+      query.SQL.Add(' VALUES ');
+      query.SQL.Add(' (  ');
+      query.SQL.Add(' :id_pedido, :id_produto, :quantidade, :valor_unitario, :observacao ');
+      query.SQL.Add(' ) ');
+
+      query.Params.ParamByName('id_pedido').AsInteger    := pedidoDetalhe.id_pedido;
+      query.Params.ParamByName('id_produto').AsInteger   := pedidoDetalhe.id_produto;
+      query.Params.ParamByName('quantidade').AsFloat     := pedidoDetalhe.quantidade;
+      query.Params.ParamByName('valor_unitario').AsFloat := pedidoDetalhe.valor_unitario;
+      query.Params.ParamByName('observacao').AsString    := TRim(pedidoDetalhe.observacao);
+
+
+      Try
+         query.ExecSQL;
+         frmPrincipal.ConexaoLocal.Commit;
+         prcMsgInf('Registro inserido com sucesso.');
+      Except
+         frmPrincipal.ConexaoLocal.Rollback;
+         prcMsgErro('Não foi possível gravar o registro.');
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+class function TBaseLocalPedidoDetalheController.RetornarPedidoDetalhePorID(id: integer): TBaseLocalPedidoDetalheVO;
+begin
+
+end;
+
+end.

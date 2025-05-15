@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><NFe xmlns="http://www.portalfiscal.inf.br/nfe"><infNFe Id="NFe23220439250213001774550010000022791813990706" versao="4.00"><ide><cUF>23</cUF><cNF>81399070</cNF><natOp>Remessa em Bonificacao</natOp><mod>55</mod><serie>1</serie><nNF>2279</nNF><dhEmi>2022-04-25T16:27:43-03:00</dhEmi><dhSaiEnt>2022-04-25T16:47:11-03:00</dhSaiEnt><tpNF>1</tpNF><idDest>1</idDest><cMunFG>2304400</cMunFG><tpImp>1</tpImp><tpEmis>1</tpEmis><cDV>6</cDV><tpAmb>1</tpAmb><finNFe>1</finNFe><indFinal>0</indFinal><indPres>1</indPres><indIntermed>0</indIntermed><procEmi>0</procEmi><verProc>SAP NFE 4.00</verProc></ide><emit><CNPJ>39250213001774</CNPJ><xNome>Prime Pet Distribuidora Ltda</xNome><xFant>PRIMEPET-DISTRIB-CE</xFant><enderEmit><xLgr>R NOGUEIRA</xLgr><nro>1505</nro><xBairro>CENTRO</xBairro><cMun>2304400</cMun><xMun>FORTALEZA</xMun><UF>CE</UF><CEP>60110401</CEP><xPais>Brasil</xPais><fone>6230974999</fone></enderEmit><IE>062447564</IE><CRT>3</CRT></emit><dest><CNPJ>29571327000103</CNPJ><xNome>ALDENORA SOARES TRINDADE</xNome><enderDest><xLgr>R MARIA GOMES DE SA</xLgr><nro>1548</nro><xBairro>MONDUBIM</xBairro><cMun>2304400</cMun><xMun>FORTALEZA</xMun><UF>CE</UF><CEP>60765173</CEP><cPais>1058</cPais><xPais>Brasil</xPais><fone>8532626706</fone></enderDest><indIEDest>1</indIEDest><IE>067463762</IE></dest><det nItem="1"><prod><cProd>000000000000920564</cProd><cEAN>SEM GTIN</cEAN><xProd>SACOLA ECOLOGICA FINOTRATO M AZUL</xProd><NCM>42029200</NCM><CFOP>5910</CFOP><uCom>UN</uCom><qCom>10.0000</qCom><vUnCom>7.0000000000</vUnCom><vProd>70.00</vProd><cEANTrib>SEM GTIN</cEANTrib><uTrib>UN</uTrib><qTrib>10.0000</qTrib><vUnTrib>7.0000000000</vUnTrib><indTot>1</indTot><xPed>205742.20220419</xPed></prod><imposto><vTotTrib>12.60</vTotTrib><ICMS><ICMS00><orig>0</orig><CST>00</CST><modBC>3</modBC><vBC>70.00</vBC><pICMS>18.0000</pICMS><vICMS>12.60</vICMS></ICMS00></ICMS><IPI><cEnq>999</cEnq><IPINT><CST>53</CST></IPINT></IPI><PIS><PISOutr><CST>49</CST><vBC>0.00</vBC><pPIS>0.0000</pPIS><vPIS>0.00</vPIS></PISOutr></PIS><COFINS><COFINSOutr><CST>49</CST><vBC>0.00</vBC><pCOFINS>0.0000</pCOFINS><vCOFINS>0.00</vCOFINS></COFINSOutr></COFINS></imposto></det><total><ICMSTot><vBC>70.00</vBC><vICMS>12.60</vICMS><vICMSDeson>0.00</vICMSDeson><vFCP>0.00</vFCP><vBCST>0.00</vBCST><vST>0.00</vST><vFCPST>0.00</vFCPST><vFCPSTRet>0.00</vFCPSTRet><vProd>70.00</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vIPIDevol>0.00</vIPIDevol><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>0.00</vOutro><vNF>70.00</vNF><vTotTrib>12.60</vTotTrib></ICMSTot></total><transp><modFrete>0</modFrete><vol><qVol>10</qVol></vol><vol><qVol>10</qVol><esp>UN</esp><pesoL>7.500</pesoL><pesoB>7.500</pesoB></vol></transp><cobr><fat><nFat>0090391654</nFat><vOrig>70.00</vOrig><vDesc>0.00</vDesc><vLiq>70.00</vLiq></fat></cobr><pag><detPag><tPag>90</tPag><vPag>0.00</vPag></detPag></pag><infAdic><infAdFisco>Cliente:0000129607 Vendedor:0000205742 Pedido:0080218529 PROCON CE - R.Major Facundo, 869 - Centro, 60025-100 Fortaleza - CE, Tel. 85 3105-1138 Forma de Pagamento:D Endereco Entrega:R MARIA GOMES DE SA, 1548 MONDUBIM - FORTALEZA / CE - CEP:60765-173</infAdFisco><infCpl>PROCON CE - R. Major Facundo, 869 - Centro, 60025-100 Fortaleza - CE, Tel. 85 3105-1138 Sera entregue por VB Alimentos Ind. e Com. LTDA, CNPJ 04955487000117, IE 132076756 localizada em ROD BR 364 LOTES 97 A 1 SN, K, JACIARA, MT, CEP 78820000.</infCpl></infAdic></infNFe><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#NFe23220439250213001774550010000022791813990706"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>67J2olAzwOqjhl7rxGuacxmQpI4=</DigestValue></Reference></SignedInfo><SignatureValue>gGQoUgUzfo7dVm9DFsKy0CT9dNTQ9e8aCPRI5qqktVRdE1OormOtt1q4gg5ave9QzVmjlJ6YLosX
+gRhcxoHLBaMg0e197a8iZPDhZcMv1N0o+Sq72Y6U5vyPNFdsj43++ET2elHh+YPjs0V2Kl7UO0Pk
+lMvlIqQ7sqjDdOYAUvvsApTsAQtC/7RmKmrl/0/6N7MLiAkCh9rD/bgAPRFMMj3YAY4CPZQmznt0
+ZeTZBTS7VkkpPMztZ8lYw+y2vIAZjMaAfHgLSZH67hCuoPBL1+BHuVP2sWNa/LGkdZzWlqHHgOaI
+JkpIDClyJVQletBbsnN9BBGJQY4bRcEg/LCy1Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIIFTCCBf2gAwIBAgIIVaazMO6c5CEwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCQlIxEzAR
+BgNVBAoTCklDUC1CcmFzaWwxNjA0BgNVBAsTLVNlY3JldGFyaWEgZGEgUmVjZWl0YSBGZWRlcmFs
+IGRvIEJyYXNpbCAtIFJGQjEZMBcGA1UEAxMQQUMgT05MSU5FIFJGQiB2NTAeFw0yMTEwMDkxMzMw
+MjdaFw0yMjEwMDkxMzMwMjdaMIIBIzELMAkGA1UEBhMCQlIxCzAJBgNVBAgTAkdPMRAwDgYDVQQH
+EwdHT0lBTklBMRMwEQYDVQQKEwpJQ1AtQnJhc2lsMTYwNAYDVQQLEy1TZWNyZXRhcmlhIGRhIFJl
+Y2VpdGEgRmVkZXJhbCBkbyBCcmFzaWwgLSBSRkIxFjAUBgNVBAsTDVJGQiBlLUNOUEogQTExJzAl
+BgNVBAsTHkFSIFZBUlpFQSBHUkFOREUgQ0VSVElGSUNBRE9SQTEZMBcGA1UECxMQVmlkZW9jb25m
+ZXJlbmNpYTEXMBUGA1UECxMOMjE2ODQ0OTgwMDAxMjkxMzAxBgNVBAMTKlBSSU1FUEVUIERJU1RS
+SUJVSURPUkEgTFREQTozOTI1MDIxMzAwMDEwNzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBANZ7V1feVa3ZXulZnLGyNVJLkjx5w+5VzB1bUinKFWPrEO4ldxo1PNiOkXTIXxr5725Nm3LT
+iZ0RF4z34ydQTWw0oajdSeWNp4arX7adSbX7frlpSFKmkfX1v1yPvIz4LwDVPkgmYZmUU8+jF9q3
+3t+4fToj7hDu/E8BJOJWNqmgt4/EytOVucFr66v27uCg9ge4iC+rdiTdn16wg3hfm31/KH72fAco
+L7DNxcFHnFL5qdLIG6lF7dm8forUJo45MXYIATQ2RC3oCRiaCMqOYGZsSucgHXordBEY+VMpI+NE
+UOm8GsPJwna+4dzPuM0XEyUyX4csGOtHBKCDWJH2/1sCAwEAAaOCAvcwggLzMIGjBggrBgEFBQcB
+AQSBljCBkzBcBggrBgEFBQcwAoZQaHR0cDovL2ljcC1icmFzaWwudnBraS52YWxpZGNlcnRpZmlj
+YWRvcmEuY29tLmJyL2FjLW9ubGluZXJmYi9hYy1vbmxpbmVyZmJ2NS5wN2IwMwYIKwYBBQUHMAGG
+J2h0dHA6Ly9vY3NwdjUudmFsaWRjZXJ0aWZpY2Fkb3JhLmNvbS5icjAJBgNVHRMEAjAAMB8GA1Ud
+IwQYMBaAFOzJzKuyKNWhvHdArt+Qb8Ptf7zpMHcGA1UdIARwMG4wbAYGYEwBAgE3MGIwYAYIKwYB
+BQUHAgEWVGh0dHA6Ly9pY3AtYnJhc2lsLnZwa2kudmFsaWRjZXJ0aWZpY2Fkb3JhLmNvbS5ici9h
+Yy1vbmxpbmVyZmIvZHBjLWFjLW9ubGluZXJmYnY1LnBkZjCBugYDVR0fBIGyMIGvMFWgU6BRhk9o
+dHRwOi8vaWNwLWJyYXNpbC52YWxpZGNlcnRpZmljYWRvcmEuY29tLmJyL2FjLW9ubGluZXJmYi9s
+Y3ItYWMtb25saW5lcmZidjUuY3JsMFagVKBShlBodHRwOi8vaWNwLWJyYXNpbDIudmFsaWRjZXJ0
+aWZpY2Fkb3JhLmNvbS5ici9hYy1vbmxpbmVyZmIvbGNyLWFjLW9ubGluZXJmYnY1LmNybDAOBgNV
+HQ8BAf8EBAMCBeAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMIG5BgNVHREEgbEwga6B
+FmxlYW5kcm9AZ3J1cG92Yi5jb20uYnKgOAYFYEwBAwSgLwQtMjYwNjE5ODI5NTg5NTAwMDEzNDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwoCYGBWBMAQMCoB0EG0xFQU5EUk8gUEFDSEVDTyBERSBD
+QVJWQUxIT6AZBgVgTAEDA6AQBA4zOTI1MDIxMzAwMDEwN6AXBgVgTAEDB6AOBAwwMDAwMDAwMDAw
+MDAwDQYJKoZIhvcNAQELBQADggIBABLpPz2TBABkfW16ZT77D5wuiAxHK50F0xWYlVNb1GNvtZHb
+Z79mXDOOR05bOQM2khrNdl/Ysc48KBML+hRtpKCczyO7/ox6iw5QG4H2PhBMAK6QU57v889RlExY
+2kR81KcEpYe58TqV3u07tugjPQBKHnd4GVDtQJJKSxQx4+vNBv+yl6hEkm2GaOeIGldczB7pYgVe
+kug/vT1vHAt8vAiaru2JBIU8mmF7HYKvp6OYi/zmESe2jdKCzyo4VFMNjDdb2PQIiu8ID8J/GHfS
+fIqXk+0XyTvyF667YY/peKbcYQ0SkNj6n9vYDXRkzPsJ2L5KiENYlWw1KbRLbK9BfCr1hkjX8BL7
+UcTgPUE4rsMiXlddv9ZE+aII36x/w5JKUp19dkfPoXntUehbUBdjPW4McrgEmqzybwCEImiEHeqq
+5YG4erFkpHFs6g7e1niyiU6keiRgC0o/Xo7SwhdT7zQjl/OppsoU00uwgO5ZDIVasegwZkRgh44l
+JSRxs4f6j+o7nOEdyEs+zo8/8Zh/Azmh5xRETVTMXZO+xgWLX2IGE7WGr3Zk4ISPlK+89dR7u50Y
+Nh2g+nB4cCVj+8bKhSNt/quGu7z94DoHY4K9jONMnl2YtEoV7tzalyt2uSgw0fxEmnr+Al1bvnxx
+RKE85aY4cuwWm4Hv5Q8RyTi/tjUQ</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><infProt><tpAmb>1</tpAmb><verAplic>SVRS202204131008</verAplic><chNFe>23220439250213001774550010000022791813990706</chNFe><dhRecbto>2022-04-25T16:27:51-03:00</dhRecbto><nProt>323220024404209</nProt><digVal>67J2olAzwOqjhl7rxGuacxmQpI4=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>

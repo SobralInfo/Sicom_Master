@@ -1,0 +1,13 @@
+unit NotaEntradaCabecalhoVO;
+
+interface
+
+Type TNotaEntradaCabecalhoVO = class
+
+
+
+end;
+
+implementation
+
+end.

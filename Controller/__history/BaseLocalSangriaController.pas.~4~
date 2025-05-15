@@ -1,0 +1,104 @@
+unit BaseLocalSangriaController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalSangriaVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalSangriaController = class
+
+    public
+       class Procedure GravarSangria(sangria: tBaseLocalSangriaVO);
+       class Function RetornarListaDeSangriaPorData(sangria: tBaseLocalSangriaVO):TObjectList<TBaseLocalSangriaVO>;
+
+end;
+
+implementation
+
+{ TBaseLocalSangriaController }
+
+class procedure TBaseLocalSangriaController.GravarSangria(sangria: tBaseLocalSangriaVO);
+var query: TFDQuery;
+begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' INSERT INTO sangria ');
+      query.SQL.Add(' (  ');
+      query.SQL.Add(' descricao, valor, data, id_usuario  ');
+      query.SQL.Add(' )   ');
+      query.SQL.Add(' VALUES   ');
+      query.SQL.Add(' (  ');
+      query.SQL.Add(' :descricao, :valor, :data, :id_usuario ');
+      query.SQL.Add(' ) ');
+
+      query.Params.ParamByName('descricao').AsString   := Trim(sangria.descricao);
+      query.Params.ParamByName('valor').AsFloat        := sangria.valor;
+      query.Params.ParamByName('data').AsDateTime      := sangria.data;
+      query.Params.ParamByName('id_usuario').AsInteger := 1;
+
+      Try
+         query.ExecSQL;
+         frmPrincipal.ConexaoLocal.Commit;
+         prcMsgInf('Registro inserido com sucesso.');
+      Except
+         frmPrincipal.ConexaoLocal.Rollback;
+         prcMsgErro('Não foi possível gravar o registro.');
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+class function TBaseLocalSangriaController.RetornarListaDeSangriaPorData(sangria: tBaseLocalSangriaVO): TObjectList<TBaseLocalSangriaVO>;
+var query: TFDQuery;
+
+begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' INSERT INTO sangria ');
+      query.SQL.Add(' (  ');
+      query.SQL.Add(' descricao, valor, data, id_usuario  ');
+      query.SQL.Add(' )   ');
+      query.SQL.Add(' VALUES   ');
+      query.SQL.Add(' (  ');
+      query.SQL.Add(' :descricao, :valor, :data, :id_usuario ');
+      query.SQL.Add(' ) ');
+
+      query.Params.ParamByName('descricao').AsString   := Trim(sangria.descricao);
+      query.Params.ParamByName('valor').AsFloat        := sangria.valor;
+      query.Params.ParamByName('data').AsDateTime      := sangria.data;
+      query.Params.ParamByName('id_usuario').AsInteger := 1;
+
+      Try
+         query.ExecSQL;
+         frmPrincipal.ConexaoLocal.Commit;
+         prcMsgInf('Registro inserido com sucesso.');
+      Except
+         frmPrincipal.ConexaoLocal.Rollback;
+         prcMsgErro('Não foi possível gravar o registro.');
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+end.

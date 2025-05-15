@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><NFe xmlns="http://www.portalfiscal.inf.br/nfe"><infNFe Id="NFe23220810483444000260550010071791061592797511" versao="4.00"><ide><cUF>23</cUF><cNF>59279751</cNF><natOp>Remessa em bonificação, doação ou brinde</natOp><mod>55</mod><serie>1</serie><nNF>7179106</nNF><dhEmi>2022-08-28T01:45:53-03:00</dhEmi><tpNF>1</tpNF><idDest>1</idDest><cMunFG>2308708</cMunFG><tpImp>1</tpImp><tpEmis>1</tpEmis><cDV>1</cDV><tpAmb>1</tpAmb><finNFe>1</finNFe><indFinal>0</indFinal><indPres>0</indPres><procEmi>0</procEmi><verProc>SAP NFE 10.0</verProc></ide><emit><CNPJ>10483444000260</CNPJ><xNome>BETÂNIA LÁCTEOS S/A.</xNome><xFant>Morada Nova</xFant><enderEmit><xLgr>Rodovia CE 046</xLgr><nro>S/N</nro><xBairro>Planalto do Aeroporto</xBairro><cMun>2308708</cMun><xMun>Morada Nova</xMun><UF>CE</UF><CEP>62940000</CEP><xPais>Brasil</xPais><fone>558834226600</fone></enderEmit><IE>068719469</IE><IM>ISENTA</IM><CNAE>1052000</CNAE><CRT>3</CRT></emit><dest><CNPJ>31372760000153</CNPJ><xNome>FM ANDRADE COSTA ME</xNome><enderDest><xLgr>R PEDRO ALVES DA COSTA</xLgr><nro>62</nro><xBairro>CENTRO</xBairro><cMun>2310308</cMun><xMun>PARAMBU</xMun><UF>CE</UF><CEP>63680000</CEP><cPais>1058</cPais><xPais>Brasil</xPais><fone>88999563754</fone></enderDest><indIEDest>1</indIEDest><IE>067787983</IE><email>fernandaandradepbu@hotmail.com</email></dest><det nItem="1"><prod><cProd>000000000000400155</cProd><cEAN>7898403781632</cEAN><xProd>IOG BICAMADA MORANGO BETA 150G</xProd><NCM>04032000</NCM><CEST>1702100</CEST><CFOP>5910</CFOP><uCom>UN</uCom><qCom>3.0000</qCom><vUnCom>2.8900000000</vUnCom><vProd>8.67</vProd><cEANTrib>07898403781632</cEANTrib><uTrib>UN</uTrib><qTrib>3.0000</qTrib><vUnTrib>2.8900000000</vUnTrib><indTot>1</indTot></prod><imposto><ICMS><ICMS00><orig>0</orig><CST>00</CST><modBC>3</modBC><vBC>8.67</vBC><pICMS>18.0000</pICMS><vICMS>1.56</vICMS></ICMS00></ICMS><IPI><cEnq>999</cEnq><IPINT><CST>53</CST></IPINT></IPI><PIS><PISNT><CST>06</CST></PISNT></PIS><COFINS><COFINSNT><CST>06</CST></COFINSNT></COFINS></imposto></det><total><ICMSTot><vBC>8.67</vBC><vICMS>1.56</vICMS><vICMSDeson>0.00</vICMSDeson><vFCP>0.00</vFCP><vBCST>0.00</vBCST><vST>0.00</vST><vFCPST>0.00</vFCPST><vFCPSTRet>0.00</vFCPSTRet><vProd>8.67</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vIPIDevol>0.00</vIPIDevol><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>0.00</vOutro><vNF>8.67</vNF></ICMSTot></total><transp><modFrete>0</modFrete><transporta><CNPJ>17341582000172</CNPJ><xNome>SERRA AZUL TRANSPORTE E LOGISTICA L</xNome><IE>066260930</IE><xEnder>RUA HILDA CARVALHO DO NASCIMENTO 23</xEnder><xMun>QUIXADA</xMun><UF>CE</UF></transporta><vol><qVol>3</qVol><esp>UN</esp><nVol>UN</nVol><pesoL>0.450</pesoL><pesoB>0.498</pesoB></vol></transp><pag><detPag><tPag>90</tPag><vPag>0.00</vPag></detPag></pag><infAdic><infCpl>Cód. do Vendedor:0001501023 N° da Ordem Venda: 0201412257 N° Remessa(s): , 0117169739 N° Fatura: 5406667721 Doc. Transporte: 0000858533 Parceiro: 0001100005 Cód. do Cliente 0001087770 Se precisar falar com a gente, diga Oi no WhatsApp 8599229-6100 e fale com a Bela a assistente virtual da Betânia.</infCpl></infAdic></infNFe><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#NFe23220810483444000260550010071791061592797511"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>msyYzf0f2kYTiWU3s2S2p0MlYAM=</DigestValue></Reference></SignedInfo><SignatureValue>HMX6KV8MU1EMsabZD4/20O0WdU8UU8VCo14eHs6F/L8TABGK/8oE5Vy+36sJjRWOX/xKl/ZUSFim
+xCFEUN7CtAnwXYC9lJYhVPnusF+vseViIZmpdW5oscYAaqZjrPdOdnRjU/s8QjQ1YJFCIf4DaaEv
+764WdYqYha+SbrUksjf4bHhnPF9v7IakqsKzWoT3jJIAa6KmlxbTqwMpzbHqK8bFLkWiUeMVUkPM
+w/QFjCvBIDoEKV4WtcZfAcrTNihnI+XbmVIgyA+CYn8RMq3PmWVwskLbcJGoVz/rlMyXXZcZIbO9
+9YYonMRtQYo/9CtVRzqXrXiw9er9yZmrYJfAGQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIIDDCCBfSgAwIBAgIQJMaQcok2pPJq0iIz+yDh2zANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQG
+EwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRh
+IEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRwwGgYDVQQDExNBQyBDZXJ0aXNpZ24gUkZCIEc1MB4X
+DTIxMTIwOTEzNTAyNFoXDTIyMTIwOTEzNTAyNFowge4xCzAJBgNVBAYTAkJSMRMwEQYDVQQKDApJ
+Q1AtQnJhc2lsMQswCQYDVQQIDAJDRTESMBAGA1UEBwwJRm9ydGFsZXphMRMwEQYDVQQLDApQcmVz
+ZW5jaWFsMRcwFQYDVQQLDA4wMDI1MDM1NDAwMDE5NDE2MDQGA1UECwwtU2VjcmV0YXJpYSBkYSBS
+ZWNlaXRhIEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRYwFAYDVQQLDA1SRkIgZS1DTlBKIEExMSsw
+KQYDVQQDDCJCRVRBTklBIExBQ1RFT1MgUyBBOjEwNDgzNDQ0MDAwMTg5MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAtJC4XLXU4ZVEM0BdMqUYrXRbIg2vYwBFFC2+xpnykTWYv9TAFof5
+LJp2+i2T5sQZnajccSybJXrfDSheti5O9P/iWxqVY1WIbRE44Xp7Pydb1dPvnC7TmOa8BCy//qN4
+ytZVqRuDK0Tc5jyV2XU28U6QNmUE49tZW09bJei5eItRp/5aCm0A0x3knLh8yRtUVeG+kQjZq0oE
+8CETTcl7bUpnRVCDyK3KbLPxGgFEUKt5UFBw4uuCiUxdUq8HKJ9SReGhmwABkxrKmbOB+BoWVZxS
+xQd97kuO12K8knfzgpLgLQdkO2F28Vi55V9xeqOtGZ0JBpYe8mB6pnLwhVgIJwIDAQABo4IDGTCC
+AxUwgcgGA1UdEQSBwDCBvaA/BgVgTAEDBKA2BDQwMTA5MTk3NzQ0MDk1MDIzMzY4MDAwMDAwMDAw
+MDAwMDAwOTEwMDIwNTU4NzZTU1BEU0NFoCQGBWBMAQMCoBsEGVZJVE9SIEJSVU5PIE1BQ0hBRE8g
+R0lSQU+gGQYFYEwBAwOgEAQOMTA0ODM0NDQwMDAxODmgFwYFYEwBAwegDgQMMDAwMDAwMDAwMDAw
+gSB0cmlidXRhcmlvQGJldGFuaWFsYWN0ZW9zLmNvbS5icjAJBgNVHRMEAjAAMB8GA1UdIwQYMBaA
+FFN9f52+0WHQILran+OJpxNzWM1CMH8GA1UdIAR4MHYwdAYGYEwBAgEMMGowaAYIKwYBBQUHAgEW
+XGh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vZHBjL0FDX0Nl
+cnRpc2lnbl9SRkIvRFBDX0FDX0NlcnRpc2lnbl9SRkIucGRmMIG8BgNVHR8EgbQwgbEwV6BVoFOG
+UWh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vbGNyL0FDQ2Vy
+dGlzaWduUkZCRzUvTGF0ZXN0Q1JMLmNybDBWoFSgUoZQaHR0cDovL2ljcC1icmFzaWwub3V0cmFs
+Y3IuY29tLmJyL3JlcG9zaXRvcmlvL2xjci9BQ0NlcnRpc2lnblJGQkc1L0xhdGVzdENSTC5jcmww
+DgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCBrAYIKwYBBQUH
+AQEEgZ8wgZwwXwYIKwYBBQUHMAKGU2h0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIv
+cmVwb3NpdG9yaW8vY2VydGlmaWNhZG9zL0FDX0NlcnRpc2lnbl9SRkJfRzUucDdjMDkGCCsGAQUF
+BzABhi1odHRwOi8vb2NzcC1hYy1jZXJ0aXNpZ24tcmZiLmNlcnRpc2lnbi5jb20uYnIwDQYJKoZI
+hvcNAQELBQADggIBAFjHCWh7Bz8Je5HzApbf9Sa65SbJTPu4w1G7ywDaNadOplx60eQd8Clj2Lby
+zJhj/xgfQ1aMoVTOzRh5mslwjiIIqKsmGZI9d9WQcJrLV6izGvGXxKGJmOxf/v3MG0xYrWRtb4fN
+ilvHHLrH8AZq1zCWuhbpfuvpLVINiZbptlO7zmatFd+tNpP8t2izj7TKy0CRGBhvrPF2Cm7IvIK8
+X8v7nCDtCAVzfE4C271g3Ui1AZ3wrIM/3QkIcAyKt2chmOgizdXudFsRp6a5O1FN8XFGsGuXVZeh
+faa/QNXGq4PhSbinvlUu9eUkZBYecQI2jF7eWpYcPm+rj9Vs/zh/lyQjylTIB78fRguCjJzN+2WN
+F2XqxCRTkG0sli8Y00GRVYyZ6TIQcvXR1jfdZgDkGZHrNAKXFVrgAXJMb8co89M5MhLDNKOiGr1A
+bRvHMgxa34FosurbBVkYtypEWHiGwscdga9QGLBOPhA2nQ7TNFzDxqlchWRyrBm/VBfz7ufv4hQE
+kE//q0XeMuJmyXHBIauemRGh+qlQgaP/jyZu4g5TI/80ZfNiq2SodtQL5RKzFirBcjiN8PKgIv2N
+O3I72bZPfZ4vZYU5Oq60Rwz01NgYcuIMste87m19MFt4WYSCeVnVeZUsYF30W7g509nUOrFckusZ
+h6h1bMlNqZMc49nJ</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe"><infProt><tpAmb>1</tpAmb><verAplic>SVRS202208250849</verAplic><chNFe>23220810483444000260550010071791061592797511</chNFe><dhRecbto>2022-08-28T01:47:27-03:00</dhRecbto><nProt>323220055331023</nProt><digVal>msyYzf0f2kYTiWU3s2S2p0MlYAM=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>

@@ -1,0 +1,75 @@
+unit BaseLocalPedidoDetalheVO;
+
+interface
+
+uses BaseLocalProdutosVO;
+
+Type TBaseLocalPedidoDetalheVO = class
+  private
+    Fvalor_unitario: double;
+    Fobservacao: String;
+    Fid_produto: integer;
+    Fid_pedido: integer;
+    Fid: integer;
+    Fquantidade: double;
+    FBaseLocalProdutosVO: TBaseLocalProdutosVO;
+    procedure Setid(const Value: integer);
+    procedure Setid_pedido(const Value: integer);
+    procedure Setid_produto(const Value: integer);
+    procedure Setobservacao(const Value: String);
+    procedure Setquantidade(const Value: double);
+    procedure Setvalor_unitario(const Value: double);
+    procedure SetBaseLocalProdutosVO(const Value: TBaseLocalProdutosVO);
+  published
+
+   property id: integer read Fid write Setid;
+   property id_pedido: integer read Fid_pedido write Setid_pedido;
+   property id_produto: integer read Fid_produto write Setid_produto;
+   property quantidade: double read Fquantidade write Setquantidade;
+   property valor_unitario: double read Fvalor_unitario write Setvalor_unitario;
+   property observacao: String read Fobservacao write Setobservacao;
+   property BaseLocalProdutosVO: TBaseLocalProdutosVO read FBaseLocalProdutosVO write SetBaseLocalProdutosVO;
+
+end;
+
+implementation
+
+{ TBaseLocalPedidoDetalheVO }
+
+procedure TBaseLocalPedidoDetalheVO.SetBaseLocalProdutosVO(
+  const Value: TBaseLocalProdutosVO);
+begin
+  FBaseLocalProdutosVO := Value;
+end;
+
+procedure TBaseLocalPedidoDetalheVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TBaseLocalPedidoDetalheVO.Setid_pedido(const Value: integer);
+begin
+  Fid_pedido := Value;
+end;
+
+procedure TBaseLocalPedidoDetalheVO.Setid_produto(const Value: integer);
+begin
+  Fid_produto := Value;
+end;
+
+procedure TBaseLocalPedidoDetalheVO.Setobservacao(const Value: String);
+begin
+  Fobservacao := Value;
+end;
+
+procedure TBaseLocalPedidoDetalheVO.Setquantidade(const Value: double);
+begin
+  Fquantidade := Value;
+end;
+
+procedure TBaseLocalPedidoDetalheVO.Setvalor_unitario(const Value: double);
+begin
+  Fvalor_unitario := Value;
+end;
+
+end.

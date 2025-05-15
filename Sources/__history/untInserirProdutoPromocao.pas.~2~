@@ -1,0 +1,63 @@
+unit untInserirProdutoPromocao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, JvExStdCtrls, JvEdit,
+  JvValidateEdit, Vcl.ExtCtrls, Vcl.Imaging.pngimage;
+
+type
+  TfrmInserirProdutoPromocao = class(TForm)
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Label5: TLabel;
+    Panel1: TPanel;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Image1: TImage;
+    edtPercentual: TJvValidateEdit;
+    Panel2: TPanel;
+    JvValidateEdit1: TJvValidateEdit;
+    Panel4: TPanel;
+    JvValidateEdit2: TJvValidateEdit;
+    JvValidateEdit3: TJvValidateEdit;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Image1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmInserirProdutoPromocao: TfrmInserirProdutoPromocao;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmInserirProdutoPromocao.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+
+   end;
+
+end;
+
+procedure TfrmInserirProdutoPromocao.Image1Click(Sender: TObject);
+begin
+
+   close;
+
+end;
+
+end.

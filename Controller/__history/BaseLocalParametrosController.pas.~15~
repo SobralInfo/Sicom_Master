@@ -1,0 +1,106 @@
+unit BaseLocalParametrosController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalParametrosVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalParametrosController = class
+
+   public
+      Class Function retornarParametros: TBaseLocalParametrosVO;
+      class Procedure GravarParametros(config: TBaseLocalParametrosVO);
+      class Procedure AlterarParametros(config: TBaseLocalParametrosVO);
+
+
+end;
+
+implementation
+
+{ TBaseLocalParametrosController }
+
+class procedure TBaseLocalParametrosController.AlterarParametros(config: TBaseLocalParametrosVO);
+begin
+
+end;
+
+class procedure TBaseLocalParametrosController.GravarParametros(config: TBaseLocalParametrosVO);
+Var query: TFDQuery;
+    parametro: TBaseLocalParametrosVO;
+
+Begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' UPDATE configuracoes SET caixa = :caixa, ');
+      query.SQL.Add('                          base_local = :base, ');
+      query.SQL.Add('                          tipo_desconto_pedido = :tipo_desconto_pedido, ');
+      query.SQL.Add('                          certificado = :certificado, ');
+      query.SQL.Add('                          CRITICAR_ESTOQUE = :CRITICAR_ESTOQUE, ');
+      query.SQL.Add('                          MENSAGEM_IMPRIMIR = :MENSAGEM_IMPRIMIR ');
+      query.SQL.Add('  WHERE id = 1 ');
+      query.Params.ParamByName('caixa').AsString                 := config.CAIXA;
+      query.Params.ParamByName('base').AsString                  := 'S';
+      query.Params.ParamByName('tipo_desconto_pedido').AsString  := config.tipo_desconto_pedido;
+      query.Params.ParamByName('certificado').AsString           := config.CERTIFICADO;
+      query.Params.ParamByName('CRITICAR_ESTOQUE').AsString      := config.CRITICAR_ESTOQUE;
+      query.Params.ParamByName('MENSAGEM_IMPRIMIR').AsString     := config.MENSAGEM_IMPRIMIR;
+
+      Try
+         query.ExecSQL;
+         frmPrincipal.ConexaoLocal.Commit;
+         prcMsgInf('Registro salvo com sucesso.');
+      Except
+         frmPrincipal.ConexaoLocal.Rollback;
+         prcMsgInf('Falha ao salvar o registro.');
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+class function TBaseLocalParametrosController.retornarParametros: TBaseLocalParametrosVO;
+Var query: TFDQuery;
+    parametro: TBaseLocalParametrosVO;
+
+Begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.ConexaoLocal;
+
+      query.Close;
+      query.SQL.Add(' SELECT * FROM configuracoes ');
+      query.open;
+
+      parametro := TBaseLocalParametrosVO.Create;
+
+      if Not(query.IsEmpty) then Begin
+
+         parametro.ID                   := query.FieldByName('id').AsInteger;
+         parametro.BASE_LOCAL           := query.FieldByName('BASE_LOCAL').Asstring;
+         parametro.TIPO_DESCONTO_PEDIDO := query.FieldByName('TIPO_DESCONTO_PEDIDO').Asstring;
+         parametro.CERTIFICADO          := query.FieldByName('CERTIFICADO').Asstring;
+
+      End;
+
+      Result := parametro;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+end.

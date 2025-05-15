@@ -1,0 +1,57 @@
+unit PedidoUsuariosVO;
+
+interface
+
+Type
+   TPedidoUsuariosVO = class
+  private
+    Fbanco: string;
+    Fcnpj: string;
+    Fcpf: string;
+    Fid: integer;
+    Fstatus: string;
+    procedure Setbanco(const Value: string);
+    procedure Setcnpj(const Value: string);
+    procedure Setcpf(const Value: string);
+    procedure Setid(const Value: integer);
+    procedure Setstatus(const Value: string);
+  public
+   property id: integer read Fid write Setid;
+   property status: string read Fstatus write Setstatus;
+   property cnpj: string read Fcnpj write Setcnpj;
+   property cpf: string read Fcpf write Setcpf;
+   property banco: string read Fbanco write Setbanco;
+
+   end;
+
+implementation
+
+
+{ TPedidoUsuariosVO }
+
+procedure TPedidoUsuariosVO.Setbanco(const Value: string);
+begin
+  Fbanco := Value;
+end;
+
+procedure TPedidoUsuariosVO.Setcnpj(const Value: string);
+begin
+  Fcnpj := Value;
+end;
+
+procedure TPedidoUsuariosVO.Setcpf(const Value: string);
+begin
+  Fcpf := Value;
+end;
+
+procedure TPedidoUsuariosVO.Setid(const Value: integer);
+begin
+  Fid := Value;
+end;
+
+procedure TPedidoUsuariosVO.Setstatus(const Value: string);
+begin
+  Fstatus := Value;
+end;
+
+end.

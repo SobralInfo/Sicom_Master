@@ -1,0 +1,41 @@
+program prjBalcao;
+
+uses
+  Vcl.Forms,
+  untPrincipal in 'untPrincipal.pas' {frmPrincipal},
+  untBalcao in 'untBalcao.pas' {frmBalcao},
+  untPesquisarClientes in 'untPesquisarClientes.pas' {frmPesquisarClientes},
+  BaseLocalClientesVO in '..\VO\BaseLocalClientesVO.pas',
+  untBiblioteca in '..\Sources\untBiblioteca.pas',
+  BaseLocalClientesController in '..\Controller\BaseLocalClientesController.pas',
+  unitConfiguracoes in '..\Sources\unitConfiguracoes.pas',
+  untCadastrarClientes in 'untCadastrarClientes.pas' {frmCadastrarClientes},
+  untPesquisarFuncionarios in 'untPesquisarFuncionarios.pas' {frmPesquisarFuncionarios},
+  untPesquisarProdutos in 'untPesquisarProdutos.pas' {frmPesquisarProdutos},
+  PedidoProdutosVO in '..\VO\PedidoProdutosVO.pas',
+  BaseLocalUnidadesController in '..\Controller\BaseLocalUnidadesController.pas',
+  BaseLocalUnidadesVO in '..\VO\BaseLocalUnidadesVO.pas',
+  BaseLocalPedidoCabecalhoVO in '..\VO\BaseLocalPedidoCabecalhoVO.pas',
+  BaseLocalPedidoDetalheVO in '..\VO\BaseLocalPedidoDetalheVO.pas',
+  BaseLocalFuncionariosVO in '..\VO\BaseLocalFuncionariosVO.pas',
+  BaseLocalProdutosVO in '..\VO\BaseLocalProdutosVO.pas',
+  BaseLocalProdutosController in '..\Controller\BaseLocalProdutosController.pas',
+  BaseLocalPedidoCabecalhoController in '..\Controller\BaseLocalPedidoCabecalhoController.pas',
+  BaseLocalPedidoDetalheController in '..\Controller\BaseLocalPedidoDetalheController.pas',
+  untDescontoAcrescimo in 'untDescontoAcrescimo.pas' {frmDescontoAcrescimo},
+  untCancelamentoItemPedido in 'untCancelamentoItemPedido.pas' {frmCancelamentoItemPedido};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmPesquisarClientes, frmPesquisarClientes);
+  Application.CreateForm(TfrmCadastrarClientes, frmCadastrarClientes);
+  Application.CreateForm(TfrmPesquisarFuncionarios, frmPesquisarFuncionarios);
+  Application.CreateForm(TfrmPesquisarProdutos, frmPesquisarProdutos);
+  Application.CreateForm(TfrmDescontoAcrescimo, frmDescontoAcrescimo);
+  Application.CreateForm(TfrmCancelamentoItemPedido, frmCancelamentoItemPedido);
+  Application.Run;
+end.

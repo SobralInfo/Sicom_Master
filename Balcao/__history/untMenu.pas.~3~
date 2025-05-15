@@ -1,0 +1,36 @@
+unit untMenu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons;
+
+type
+  TfrmMenu = class(TForm)
+    SpeedButton1: TSpeedButton;
+    procedure SpeedButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMenu: TfrmMenu;
+
+implementation
+
+{$R *.dfm}
+
+uses untBalcao;
+
+procedure TfrmMenu.SpeedButton1Click(Sender: TObject);
+begin
+
+   Application.CreateForm(TfrmBalcao, frmBalcao);
+   frmBalcao.ShowModal;
+
+end;
+
+end.

@@ -1,0 +1,143 @@
+unit untExportacaoDeFuncionarios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option, PedidoSqlController,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, PedidoSqlVO, PedidoFuncionariosVO,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Vcl.Buttons, generics.collections,
+  Vcl.Grids, Vcl.DBGrids, FireDAC.Comp.Client, FireDAC.Comp.DataSet, PedidoFuncionariosController;
+
+type
+
+  ThreadSplashExportarFuncionarios = class (TThread)
+    public
+       constructor creeate();
+       procedure Execute; override;
+  end;
+
+  TfrmExportacaoDeFuncionarios = class(TForm)
+    dtsFuncionarios: TDataSource;
+    qryFuncionarios: TFDQuery;
+    qryFuncionariosID: TIntegerField;
+    qryFuncionariosNOME: TStringField;
+    qryFuncionariosSTATUS: TStringField;
+    DBGrid1: TDBGrid;
+    SpeedButton3: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+  private
+    { Private declarations }
+    FThreadSplashExportarFuncionarios: ThreadSplashExportarFuncionarios;
+  public
+    { Public declarations }
+    procedure ImportarFuncionarios;
+  end;
+
+var
+  frmExportacaoDeFuncionarios: TfrmExportacaoDeFuncionarios;
+
+implementation
+
+{$R *.dfm}
+
+uses untSplash, untPrincipal;
+
+
+{ TfrmExportacaoDeFuncionarios }
+
+procedure TfrmExportacaoDeFuncionarios.ImportarFuncionarios;
+Var sql: TPedidoSqlVO;
+begin
+
+   Try
+
+      Try
+
+         sql := TPedidoSqlVO.Create;
+         sql :=  TPedidoSqlController.RetornarSQL(1);
+
+         qryFuncionarios.Close;
+         qryFuncionarios.SQL.Clear;
+         qryFuncionarios.SQL.Add(sql.sql_funcionarios);
+         qryFuncionarios.Open;
+
+      Except
+
+         on e: exception do Begin
+            showmessage('Erro: '+e.Message);
+            Exit;
+         End;
+
+      end;
+
+   finally
+      FreeAndNil(sql);
+      frmSplash.Close;
+   End;
+
+end;
+
+{ ThreadSplashExportarFuncionarios }
+
+constructor ThreadSplashExportarFuncionarios.creeate;
+begin
+
+   inherited Create(false);
+
+end;
+
+procedure ThreadSplashExportarFuncionarios.Execute;
+begin
+
+   Try
+      frmExportacaoDeFuncionarios.ImportarFuncionarios;
+   Finally
+      FreeAndNil(frmSplash);
+   End;
+
+
+end;
+
+procedure TfrmExportacaoDeFuncionarios.SpeedButton1Click(Sender: TObject);
+Var listaFuncionarios: TObjectList<TPedidoFuncionariosVO>;
+    pedido: TPedidoFuncionariosVO;
+begin
+
+   Try
+
+      qryFuncionarios.First;
+      listaFuncionarios := TObjectList<TPedidoFuncionariosVO>.Create;
+
+      while not(qryFuncionarios.Eof) do Begin
+
+         pedido := TPedidoFuncionariosVO.Create;
+
+         pedido.id_funcionario := qryFuncionariosID.AsInteger;
+         pedido.nome           := Trim(qryFuncionariosNOME.AsString);
+         pedido.status         := Trim(qryFuncionariosSTATUS.AsString);
+         pedido.id_empresa     := frmPrincipal.idEmpresa;
+         listaFuncionarios.Add(pedido);
+         qryFuncionarios.Next;
+
+      End;
+
+      TPedidoFuncionariosController.GravarFuncionarios(listaFuncionarios);
+
+   Finally
+   End;
+
+end;
+procedure TfrmExportacaoDeFuncionarios.SpeedButton3Click(Sender: TObject);
+begin
+
+   FThreadSplashExportarFuncionarios := ThreadSplashExportarFuncionarios.creeate;
+   frmSplash := TfrmSplash.Create(Self);
+   frmSplash.Timer2.Enabled := True;
+   frmSplash.ShowModal;
+
+end;
+
+end.

@@ -1,0 +1,31 @@
+unit BaseLocalFormasPagamentoController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalFormasPagamentoVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalFormasPagamentoController = class
+
+   public
+      class Procedure AlterarFormaPG(FormaPG: TBaseLocalFormasPagamentoVO);
+      class Procedure GravarFormaPG(FormaPG: TBaseLocalFormasPagamentoVO);
+
+end;
+
+implementation
+
+{ TBaseLocalFormasPagamentoController }
+
+class procedure TBaseLocalFormasPagamentoController.AlterarFormaPG(FormaPG: TBaseLocalFormasPagamentoVO);
+begin
+
+end;
+
+class procedure TBaseLocalFormasPagamentoController.GravarFormaPG(FormaPG: TBaseLocalFormasPagamentoVO);
+begin
+
+end;
+
+end.

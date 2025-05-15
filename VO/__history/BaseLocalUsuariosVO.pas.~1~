@@ -1,0 +1,58 @@
+unit BaseLocalUsuariosVO;
+
+interface
+
+Type
+   TBaseLocalUsuariosVO = class
+  private
+    FCODIGO: string;
+    FID: integer;
+    FSTATUS: string;
+    FPW: string;
+    FNOME: string;
+    procedure SetCODIGO(const Value: string);
+    procedure SetID(const Value: integer);
+    procedure SetNOME(const Value: string);
+    procedure SetPW(const Value: string);
+    procedure SetSTATUS(const Value: string);
+  published
+
+
+      property ID: integer read FID write SetID;
+      property STATUS: string read FSTATUS write SetSTATUS;
+      property CODIGO: string read FCODIGO write SetCODIGO;
+      property NOME: string read FNOME write SetNOME;
+      property PW: string read FPW write SetPW;
+
+   end;
+
+implementation
+
+{ TBaseLocalUsuariosVO }
+
+procedure TBaseLocalUsuariosVO.SetCODIGO(const Value: string);
+begin
+  FCODIGO := Value;
+end;
+
+procedure TBaseLocalUsuariosVO.SetID(const Value: integer);
+begin
+  FID := Value;
+end;
+
+procedure TBaseLocalUsuariosVO.SetNOME(const Value: string);
+begin
+  FNOME := Value;
+end;
+
+procedure TBaseLocalUsuariosVO.SetPW(const Value: string);
+begin
+  FPW := Value;
+end;
+
+procedure TBaseLocalUsuariosVO.SetSTATUS(const Value: string);
+begin
+  FSTATUS := Value;
+end;
+
+end.

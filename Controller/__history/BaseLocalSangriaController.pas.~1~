@@ -1,0 +1,29 @@
+unit BaseLocalSangriaController;
+
+interface
+
+    Uses BaseLocalSangriaVO;
+
+Type TBaseLocalSangriaController = class
+
+    public
+       class Procedure GravarSangria(sangria: tBaseLocalSangriaVO);
+       class Procedure AlterarSangria(sangria: tBaseLocalSangriaVO);
+
+end;
+
+implementation
+
+{ TBaseLocalSangriaController }
+
+class procedure TBaseLocalSangriaController.AlterarSangria(sangria: tBaseLocalSangriaVO);
+begin
+
+end;
+
+class procedure TBaseLocalSangriaController.GravarSangria(sangria: tBaseLocalSangriaVO);
+begin
+
+end;
+
+end.

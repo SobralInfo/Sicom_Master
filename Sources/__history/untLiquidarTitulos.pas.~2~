@@ -1,0 +1,41 @@
+unit untLiquidarTitulos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, JvExStdCtrls, JvEdit, JvValidateEdit,
+  Vcl.Mask, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TfrmLiquidarTitulos = class(TForm)
+    Panel3: TPanel;
+    lblCaption: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Label4: TLabel;
+    edtClienteFornecedor: TEdit;
+    Label5: TLabel;
+    mkeDtVencimento: TMaskEdit;
+    Label6: TLabel;
+    edtValor: TJvValidateEdit;
+    Label1: TLabel;
+    mkeDtPagamento: TMaskEdit;
+    Label2: TLabel;
+    edtValorPago: TJvValidateEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLiquidarTitulos: TfrmLiquidarTitulos;
+
+implementation
+
+{$R *.dfm}
+
+end.

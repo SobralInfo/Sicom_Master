@@ -1,0 +1,125 @@
+unit untCadastrarSangria;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, baseLocalSangriaVO, baseLocalSangriaController, unitConfiguracoes,
+  JvEdit, Vcl.Mask, JvExMask, JvToolEdit, JvMaskEdit, Vcl.StdCtrls,
+  JvExStdCtrls, JvValidateEdit, Vcl.ExtCtrls;
+
+type
+  TfrmCadastrarSangria = class(TForm)
+    Panel3: TPanel;
+    Label2: TLabel;
+    edtValor: TJvValidateEdit;
+    edtData: TJvMaskEdit;
+    edtDescricao: TJvEdit;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure Confirmar;
+    procedure Imprimir(sangria:TBaseLocalSangriaVO);
+  end;
+
+var
+  frmCadastrarSangria: TfrmCadastrarSangria;
+
+implementation
+
+{$R *.dfm}
+
+uses untPrincipal;
+
+{ TfrmCadastrarSangria }
+
+procedure TfrmCadastrarSangria.Confirmar;
+Var sangria: TBaseLocalSangriaVO;
+begin
+
+   if Trim(edtDescricao.Text) = '' then Begin
+      prcMsgAdv('Informe uma descrição.');
+      edtDescricao.SetFocus;
+      Exit;
+   End;
+
+   Try
+      strtodate(edtData.Text)
+   Except
+      prcMsgAdv('Data inválida;.');
+      edtData.SetFocus;
+      Exit;
+   End;
+
+   if edtValor.AsFloat <= 0.00 then Begin
+      prcMsgAdv('Informe o valor da Sangria.');
+      edtValor.SetFocus;
+      Exit;
+   End;
+
+   Try
+
+      sangria :=  TBaseLocalSangriaVO.Create;
+
+      sangria.descricao := Trim(edtDescricao.Text);
+      sangria.data      := StrToDate(edtData.Text);
+      sangria.valor     := edtValor.AsFloat;
+
+      TBaseLocalSangriaController.GravarSangria(sangria);
+      Imprimir(sangria);
+
+   Finally
+
+      FreeAndNil(sangria);
+
+   End;
+
+
+end;
+
+procedure TfrmCadastrarSangria.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+   case key of
+
+      VK_ESCAPE: close;
+      VK_F12: Confirmar;
+
+   end;
+
+end;
+
+procedure TfrmCadastrarSangria.Imprimir(sangria: TBaseLocalSangriaVO);
+Var texto, texto1, texto2: string;
+begin
+
+
+   Try
+      frmPrincipal.PrepararImpressao;
+
+      Texto := '';
+      Texto :=  '</zera></ce>' +
+                '<n>SANGRIA</n>'#10 +
+                '</linha_simples>'+#10+#10;
+
+      Texto1 := 'Data/Hora: '+DateToStr(sangria.data)+#10+
+                'Valor: '+FormatFloat('###,#0.00',sangria.valor)+#10;
+
+      Texto1 := Texto1 + Trim(sangria.descricao)+#10+#10+#10;
+      Texto2 := '____________________________________'+#10+
+                '</zera></ce> Visto'+#10+#10+#10;
+
+      frmPrincipal.ACBrPosPrinter1.ImprimirLinha(Texto+texto1+texto2 );
+      frmPrincipal.ACBrPosPrinter1.CortarPapel(True);
+
+   Except
+      prcMsgAdv('Não foi possível imprimir a sangria.');
+      Exit;
+   End;
+
+end;
+
+end.

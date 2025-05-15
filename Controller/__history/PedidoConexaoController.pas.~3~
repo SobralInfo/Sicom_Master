@@ -1,0 +1,61 @@
+unit PedidoConexaoController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, PedidoConexaoVO;
+
+Type TPedidoConexaoController = class
+
+   public class
+      Procedure GravarPedidoConexao(conexao: TPedidoConexaoVO);
+
+
+
+end;
+
+implementation
+
+{ TPedidoConexaoController }
+
+class procedure TPedidoConexaoController.GravarPedidoConexao(conexao: TPedidoConexaoVO);
+Var vjsonObject: TJSONObject;
+    vJsonArray: TJSONArray;
+    conexaoVO: TPedidoConexaoVO;
+begin
+
+      Try
+
+         vjsonObject := TJson.ObjectToJsonObject(conexao);
+         frmPrincipal.CarregarRest();
+
+         frmPrincipal.CarregarRest();
+
+         //prcMsgInf(listaClientes.Count.ToString);
+
+         frmPrincipal.RESTRequest1.Resource := '/PedidoConexao/{bd}';
+         frmPrincipal.RESTRequest1.Method := TRESTRequestMethod.rmPUT;
+         frmPrincipal.RESTRequest1.Params.AddUrlSegment('bd',Trim(frmPrincipal.bd));
+         frmPrincipal.RESTRequest1.AddBody(vjsonObject.ToString, ContentTypeFromString('application/json'));
+         frmPrincipal.RESTRequest1.Execute;
+
+         //prcMsgInf(listaClientes.Count.ToString);
+
+         if frmPrincipal.RESTResponse1.StatusCode = 201 then Begin
+            prcMsgInf('Registro inserido com sucesso');
+            conexaoVO := TJson.JsonToObject<TPedidoConexaoVO>(frmPrincipal.RESTResponse1.JSONValue.ToJSON);
+         End
+         else
+            prcMsgAdv('Falha ao inserir o registro.');
+
+         frmPrincipal.RESTClient1.Disconnect;
+
+      Except
+
+         prcMsgErro('Erro ao inserir o registro');
+
+      End;
+
+end;
+
+end.

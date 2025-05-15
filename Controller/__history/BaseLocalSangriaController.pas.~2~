@@ -1,0 +1,31 @@
+unit BaseLocalSangriaController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, BaseLocalSangriaVO, FireDAC.Comp.DataSet,
+     FireDAC.Comp.Client;
+
+Type TBaseLocalSangriaController = class
+
+    public
+       class Procedure GravarSangria(sangria: tBaseLocalSangriaVO);
+       class Procedure AlterarSangria(sangria: tBaseLocalSangriaVO);
+
+end;
+
+implementation
+
+{ TBaseLocalSangriaController }
+
+class procedure TBaseLocalSangriaController.AlterarSangria(sangria: tBaseLocalSangriaVO);
+begin
+
+end;
+
+class procedure TBaseLocalSangriaController.GravarSangria(sangria: tBaseLocalSangriaVO);
+begin
+
+end;
+
+end.

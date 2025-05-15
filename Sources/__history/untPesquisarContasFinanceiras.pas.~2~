@@ -1,0 +1,43 @@
+unit untPesquisarContasFinanceiras;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untPrincipal, Data.DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  Vcl.Grids, Vcl.DBGrids, RxDBCtrl, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.Mask;
+
+type
+  TfrmPesquisarContasFinanceiras = class(TForm)
+    Panel3: TPanel;
+    Label2: TLabel;
+    Panel1: TPanel;
+    Label1: TLabel;
+    mkeDescricao: TMaskEdit;
+    Panel2: TPanel;
+    lblTotal: TLabel;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Panel4: TPanel;
+    JvDBGrid1: TRxDBGrid;
+    qryContasFinanceiras: TFDQuery;
+    dtsContasFinanceiras: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPesquisarContasFinanceiras: TfrmPesquisarContasFinanceiras;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,120 @@
+unit BaseLocalEmpresaVO;
+
+interface
+
+Type TBaseLocalEmpresaVO = class
+  private
+    FFONE: string;
+    FFANTASIA: string;
+    FCNPJ: string;
+    FSITE: string;
+    FEMAIL: string;
+    FRAZAO_SOCIAL: string;
+    FBASE_LOCAL: string;
+    FID: integer;
+    FCELULAR: string;
+    FCODIGO_UF: integer;
+    FCODIGO_CIDADE: integer;
+    FULTIMO_NSU: integer;
+    FDATA_HORA_BLOQUEIO_XML: TDateTime;
+    procedure SetBASE_LOCAL(const Value: string);
+    procedure SetCELULAR(const Value: string);
+    procedure SetCNPJ(const Value: string);
+    procedure SetEMAIL(const Value: string);
+    procedure SetFANTASIA(const Value: string);
+    procedure SetFONE(const Value: string);
+    procedure SetID(const Value: integer);
+    procedure SetRAZAO_SOCIAL(const Value: string);
+    procedure SetSITE(const Value: string);
+    procedure SetCODIGO_CIDADE(const Value: integer);
+    procedure SetCODIGO_UF(const Value: integer);
+    procedure SetULTIMO_NSU(const Value: integer);
+    procedure SetDATA_HORA_BLOQUEIO_XML(const Value: TDateTime);
+  published
+
+   property ID: integer read FID write SetID;
+   property CNPJ: string read FCNPJ write SetCNPJ;
+   property RAZAO_SOCIAL: string read FRAZAO_SOCIAL write SetRAZAO_SOCIAL;
+   property FANTASIA: string read FFANTASIA write SetFANTASIA;
+   property FONE: string read FFONE write SetFONE;
+   property CELULAR: string read FCELULAR write SetCELULAR;
+   property EMAIL: string read FEMAIL write SetEMAIL;
+   property SITE: string read FSITE write SetSITE;
+   property BASE_LOCAL: string read FBASE_LOCAL write SetBASE_LOCAL;
+   property CODIGO_UF: integer read FCODIGO_UF write SetCODIGO_UF;
+   property CODIGO_CIDADE: integer read FCODIGO_CIDADE write SetCODIGO_CIDADE;
+   property ULTIMO_NSU: integer read FULTIMO_NSU write SetULTIMO_NSU;
+   property DATA_HORA_BLOQUEIO_XML: TDateTime read FDATA_HORA_BLOQUEIO_XML write SetDATA_HORA_BLOQUEIO_XML;
+
+end;
+
+implementation
+
+{ tBaseLocalEmpresaVO }
+
+procedure tBaseLocalEmpresaVO.SetBASE_LOCAL(const Value: string);
+begin
+  FBASE_LOCAL := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetCELULAR(const Value: string);
+begin
+  FCELULAR := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetCNPJ(const Value: string);
+begin
+  FCNPJ := Value;
+end;
+
+procedure TBaseLocalEmpresaVO.SetCODIGO_CIDADE(const Value: integer);
+begin
+  FCODIGO_CIDADE := Value;
+end;
+
+procedure TBaseLocalEmpresaVO.SetCODIGO_UF(const Value: integer);
+begin
+  FCODIGO_UF := Value;
+end;
+
+procedure TBaseLocalEmpresaVO.SetDATA_HORA_BLOQUEIO_XML(const Value: TDateTime);
+begin
+  FDATA_HORA_BLOQUEIO_XML := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetEMAIL(const Value: string);
+begin
+  FEMAIL := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetFANTASIA(const Value: string);
+begin
+  FFANTASIA := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetFONE(const Value: string);
+begin
+  FFONE := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetID(const Value: integer);
+begin
+  FID := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetRAZAO_SOCIAL(const Value: string);
+begin
+  FRAZAO_SOCIAL := Value;
+end;
+
+procedure tBaseLocalEmpresaVO.SetSITE(const Value: string);
+begin
+  FSITE := Value;
+end;
+
+procedure TBaseLocalEmpresaVO.SetULTIMO_NSU(const Value: integer);
+begin
+  FULTIMO_NSU := Value;
+end;
+
+end.

@@ -1,0 +1,137 @@
+object frmPesquisarFormaPG: TfrmPesquisarFormaPG
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 'Pesquisar Forma de Pagamento'
+  ClientHeight = 661
+  ClientWidth = 984
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Padding.Left = 10
+  Padding.Top = 10
+  Padding.Right = 10
+  Padding.Bottom = 10
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 10
+    Top = 622
+    Width = 964
+    Height = 29
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    object lblTotal: TLabel
+      Left = 3
+      Top = 10
+      Width = 3
+      Height = 13
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 10
+    Top = 10
+    Width = 964
+    Height = 75
+    Align = alTop
+    Caption = 'Descricao'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    object mkeDescricao: TMaskEdit
+      Left = 17
+      Top = 30
+      Width = 931
+      Height = 24
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      Text = ''
+      OnChange = mkeDescricaoChange
+      OnKeyDown = mkeDescricaoKeyDown
+    end
+  end
+  object Panel1: TPanel
+    Left = 10
+    Top = 85
+    Width = 964
+    Height = 14
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 2
+  end
+  object JvDBGrid1: TJvDBGrid
+    Left = 10
+    Top = 99
+    Width = 964
+    Height = 523
+    Align = alClient
+    DataSource = dtsFormaPG
+    DrawingStyle = gdsGradient
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ParentFont = False
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    AlternateRowColor = 16774378
+    SelectColumnsDialogStrings.Caption = 'Select columns'
+    SelectColumnsDialogStrings.OK = '&OK'
+    SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
+    EditControls = <>
+    RowsHeight = 20
+    TitleRowHeight = 17
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'DESCRICAO'
+        Width = 669
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PERMITE_TROCO'
+        Width = 101
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'STATUS'
+        Width = 151
+        Visible = True
+      end>
+  end
+  object dtsFormaPG: TDataSource
+    DataSet = frmPrincipal.qryFormaPG
+    Left = 208
+    Top = 240
+  end
+end

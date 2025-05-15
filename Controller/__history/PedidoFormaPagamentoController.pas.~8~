@@ -1,0 +1,67 @@
+unit PedidoFormaPagamentoController;
+
+interface
+
+uses generics.Collections, system.sysutils,  system.JSON, rest.json, rest.types,
+     untPrincipal, unitConfiguracoes, PedidoFormaPagamentoVO;
+
+Type TPedidoFormaPagamentoController =  class
+
+   private
+      public
+      class Procedure GravarFormaDePagamento(listaFormaPG: TObjectList<TPedidoFormaPagamentoVO>);
+
+end;
+
+implementation
+
+{ TPedidoFormaPagamentoController }
+
+class procedure TPedidoFormaPagamentoController.GravarFormaDePagamento(listaFormaPG: TObjectList<TPedidoFormaPagamentoVO>);
+Var vjsonObject: TJSONObject;
+    vJsonArray: TJSONArray;
+    i: integer;
+begin
+
+      Try
+
+         vJsonArray := TJSONArray.Create;
+
+         for I := 0 to listaFormaPG.Count -1 do Begin
+            vjsonObject := TJSONObject.Create;
+            //vjsonObject := TJSONObject.ParseJSONValue(TEncoding.ASCII.GetBytes(listaProdutos.Items[i].descricao), 0) as TJSONObject;
+            vjsonObject.AddPair(TJSONPair.Create('id_empresa', TJSONString.Create(listaFormaPG.Items[i].id_empresa.ToString)));
+            vjsonObject.AddPair(TJSONPair.Create('ID_FORMA_PAGAMENTO', TJSONString.Create(listaFormaPG.Items[i].ID_FORMA_PAGAMENTO.ToString)));
+            vjsonObject.AddPair(TJSONPair.Create('DESCRICAO', TJSONString.Create(listaFormaPG.Items[i].DESCRICAO)));
+            vjsonObject.AddPair(TJSONPair.Create('STATUS', TJSONString.Create(listaFormaPG.Items[i].STATUS)));
+            vjsonObject.AddPair(TJSONPair.Create('PERMITE_TROCO', TJSONString.Create(listaFormaPG.Items[i].PERMITE_TROCO)));
+            vJsonArray.Add(vjsonObject);
+         End;
+
+         frmPrincipal.CarregarRest();
+
+         //prcMsgInf(listaClientes.Count.ToString);
+
+         frmPrincipal.RESTRequest1.Resource := '/PedidoFormaDePagamento/{bd}';
+         frmPrincipal.RESTRequest1.Method := TRESTRequestMethod.rmPUT;
+         frmPrincipal.RESTRequest1.Params.AddUrlSegment('bd',Trim(frmPrincipal.bd));
+         frmPrincipal.RESTRequest1.AddBody(vJsonArray.ToString, ContentTypeFromString('application/json'));
+         frmPrincipal.RESTRequest1.Execute;
+
+         if frmPrincipal.RESTResponse1.StatusCode = 201 then Begin
+            prcMsgInf('Registros atualizados com sucesso');
+         End
+         else
+            prcMsgAdv('Falha ao atualizar os registros.');
+
+      Except
+
+         prcMsgErro('Erro ao atualizar os registros');
+
+      End;
+
+
+
+end;
+
+end.
