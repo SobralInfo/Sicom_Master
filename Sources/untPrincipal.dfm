@@ -2191,7 +2191,7 @@ object frmPrincipal: TfrmPrincipal
     TipoCorte = ctParcial
     LinhasBuffer = 100
     Left = 409
-    Top = 152
+    Top = 136
   end
   object qryAUX1: TFDQuery
     Connection = ConexaoLocal

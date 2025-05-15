@@ -253,3 +253,4 @@ Sources/Win32/Release/untSQLs.dcu
 Sources/Win32/Release/untTelaAzul.dcu
 Sources/Win32/Release/untTelaDePedido.dcu
 *.dcu
+/Sources/__history
